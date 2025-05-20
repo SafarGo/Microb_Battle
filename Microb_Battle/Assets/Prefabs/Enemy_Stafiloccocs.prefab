@@ -316,7 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996ddc51b6ae8f44fafab98b38c0fa5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player_cam: {fileID: 0}
+  _player_cam: {fileID: 2121502279650390022, guid: c7a93a1be241fce44829ce0bcebab7ef,
+    type: 3}
 --- !u!1 &5382206904608751854
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +333,7 @@ GameObject:
   - component: {fileID: 5302251512189796106}
   m_Layer: 6
   m_Name: Enemy_Stafiloccocs
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,9 +366,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8282d37550543948a6040ee58c38863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
+  _target: {fileID: 4319987295987969695, guid: c7a93a1be241fce44829ce0bcebab7ef, type: 3}
   _attackTime: 1
   _damage: 10
+  _slider: {fileID: 6455587981295900602}
   agent: {fileID: 8097620971568598823}
 --- !u!195 &8097620971568598823
 NavMeshAgent:
@@ -501,7 +503,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 12da5d0d4f5a270489e8c53d7825485e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

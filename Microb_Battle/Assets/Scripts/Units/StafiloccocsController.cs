@@ -3,19 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
-[Serializable]
 public class StafiloccocsController : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    //[SerializeField] private Transform _target;
     [SerializeField] private float _attackTime;
     [SerializeField] private float _damage;
+    [SerializeField] private Slider _slider;
+    public static  float lives = 100f;
     public NavMeshAgent agent;
     private bool isAttacking = false;
 
     private void Start()
     {
-        agent.SetDestination(_target.position);
+        agent.SetDestination(GameObject.Find("Main_Tower_Prefab").transform.position);
+
     }
 
 
@@ -36,6 +39,16 @@ public class StafiloccocsController : MonoBehaviour
                 StartCoroutine(Attack());
 
             }
+        }
+    }
+
+    private void Update()
+    {
+        _slider.value = lives;
+        if(lives<=0)
+        {
+            Destroy(this.gameObject);
+            GameManager.Glukoza += 10;
         }
     }
 }
