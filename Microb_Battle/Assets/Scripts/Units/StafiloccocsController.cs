@@ -18,26 +18,24 @@ public class StafiloccocsController : MonoBehaviour
         agent.SetDestination(_target.position);
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("MainTower"))
-        {
-            Debug.Log("!");
-            if (!isAttacking)
-            {
-                isAttacking = true;
-                StartCoroutine(Attack());
-                
-            }
-        }
-    }
-    
 
     IEnumerator Attack()
     {
         MainTowerController.HP -= _damage;
         yield return new WaitForSeconds(_attackTime);
         isAttacking = false;
+        Debug.Log("Attack");
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("MainTower"))
+        {
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                StartCoroutine(Attack());
 
+            }
+        }
+    }
 }
