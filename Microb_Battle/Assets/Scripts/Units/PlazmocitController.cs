@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlazmocitController : MonoBehaviour
 {
-    public static float _attack_time = 1f;
-    public static GameObject _target;
+    public float _attack_time = 1f;
+    public GameObject _target;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,4 +28,5 @@ public class PlazmocitController : MonoBehaviour
             }
         }
     }
+
 }

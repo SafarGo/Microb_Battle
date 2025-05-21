@@ -11,7 +11,7 @@ public class StafiloccocsController : MonoBehaviour
     [SerializeField] private float _attackTime;
     [SerializeField] private float _damage;
     [SerializeField] private Slider _slider;
-    public static  float lives = 100f;
+    public float lives = 100f;
     public NavMeshAgent agent;
     private bool isAttacking = false;
 
@@ -47,8 +47,9 @@ public class StafiloccocsController : MonoBehaviour
         _slider.value = lives;
         if(lives<=0)
         {
-            Destroy(this.gameObject);
             GameManager.Glukoza += 10;
+            Destroy(this.gameObject);
+            
         }
     }
 }

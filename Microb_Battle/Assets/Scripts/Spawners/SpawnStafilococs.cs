@@ -12,6 +12,6 @@ public class SpawnStafilococs : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(prefab);
+        Instantiate(prefab, transform.position, transform.rotation);
     }
 }

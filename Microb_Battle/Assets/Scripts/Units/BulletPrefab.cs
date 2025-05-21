@@ -7,10 +7,11 @@ public class BulletPrefab : MonoBehaviour
     [SerializeField] private float speed;
 
 
+
     private void Update()
     {
-        if (PlazmocitController._target.transform != null)
-            transform.position = Vector3.MoveTowards(transform.position, PlazmocitController._target.transform.position, speed * Time.deltaTime);
+        if (transform.parent.GetComponent<PlazmocitController>()._target != null)
+            transform.position = Vector3.MoveTowards(transform.position, transform.parent.GetComponent<PlazmocitController>()._target.transform.position, speed * Time.deltaTime);
         else
             Destroy(gameObject);
     }
@@ -19,7 +20,8 @@ public class BulletPrefab : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            StafiloccocsController.lives -= 20f;
+            StafiloccocsController st = other.gameObject.GetComponent<StafiloccocsController>();
+            st.lives -= 20f;
             Destroy(gameObject);
         }
     }
