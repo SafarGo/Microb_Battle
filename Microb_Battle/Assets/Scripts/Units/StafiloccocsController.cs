@@ -56,5 +56,10 @@ public class StafiloccocsController : MonoBehaviour
             Destroy(this.gameObject);
             
         }
+        if(!agent.hasPath)
+        {
+            int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+            agent.SetDestination(GameManager.towers[index].transform.position);
+        }
     }
 }
