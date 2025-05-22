@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static List<Vector3> points = new List<Vector3>();
     public static int i = 0;
     public static int count_of_ready_walls = 0;
+    public static List<GameObject> towers = new List<GameObject>();
 
     private void Start()
     {

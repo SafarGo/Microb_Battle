@@ -309,8 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8282d37550543948a6040ee58c38863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackTime: 1
-  _damage: 10
+  _attackTime: 31
+  _damage: 20
   _slider: {fileID: 6768289674175658101}
   lives: 100
   agent: {fileID: 8097620971568598823}

@@ -17,7 +17,8 @@ public class StafiloccocsController : MonoBehaviour
 
     private void Start()
     {
-        agent.SetDestination(GameObject.Find("Main_Tower_Prefab").transform.position);
+        int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+        agent.SetDestination(GameManager.towers[index].transform.position);
 
     }
 
@@ -27,7 +28,7 @@ public class StafiloccocsController : MonoBehaviour
         IDamageable dama = obj.GetComponent<IDamageable>();
         if (dama != null)
         {
-            dama.TakeDamage(_damage);  // ”ниверсальный метод
+            dama.TakeDamage(_damage);
         }
         else
         {
@@ -39,8 +40,8 @@ public class StafiloccocsController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-            if (!isAttacking)
-            {
+            if (!isAttacking && other.CompareTag("Unit"))
+            { 
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
             }

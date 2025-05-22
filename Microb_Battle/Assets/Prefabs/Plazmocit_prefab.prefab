@@ -257,6 +257,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 710276751934098712}
+  - component: {fileID: 5760024187655582291}
+  - component: {fileID: 6539299540215855385}
+  - component: {fileID: 972838172800024136}
   m_Layer: 0
   m_Name: Plazmocit_prefab
   m_TagString: Untagged
@@ -281,6 +284,63 @@ Transform:
   - {fileID: 3798801349912994573}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5760024187655582291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527130300419300208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &6539299540215855385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527130300419300208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &972838172800024136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527130300419300208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &7031786354811348617
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +443,6 @@ GameObject:
   - component: {fileID: 8159187962909690008}
   - component: {fileID: 8259494452485076627}
   - component: {fileID: 8691725038010116146}
-  - component: {fileID: 5826205375135357730}
   m_Layer: 0
   m_Name: Zone
   m_TagString: Untagged
@@ -468,24 +527,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attack_time: 1
   _target: {fileID: 0}
+  slider: {fileID: 2569728758653264930}
+  parent: {fileID: 3527130300419300208}
   _bulletPrefab: {fileID: 9020706055452027388, guid: e1799ad7b31306c4c959729955eadca4,
     type: 3}
-  _lives: 100
-  slider: {fileID: 2569728758653264930}
---- !u!114 &5826205375135357730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899795686332397168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65c5d2eb53f38649981bdf33674ddeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attack_time: 0.1
-  _target: {fileID: 0}
 --- !u!1 &8360815408358721915
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,9 +544,10 @@ GameObject:
   - component: {fileID: 1690501079394734692}
   - component: {fileID: 8235242007837264617}
   - component: {fileID: 3343132467979127704}
+  - component: {fileID: 7377364411665100410}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591,8 +637,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.4463749, y: 1, z: 1.3489432}
+  m_Center: {x: 0.007905722, y: 0, z: 0.011800051}
 --- !u!114 &3343132467979127704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -612,6 +658,22 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!114 &7377364411665100410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8360815408358721915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65c5d2eb53f38649981bdf33674ddeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attack_time: 1
+  _target: {fileID: 0}
+  slider: {fileID: 2569728758653264930}
+  parent: {fileID: 3527130300419300208}
 --- !u!1 &8457112625682183751
 GameObject:
   m_ObjectHideFlags: 0
