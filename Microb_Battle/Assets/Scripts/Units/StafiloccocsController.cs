@@ -22,24 +22,28 @@ public class StafiloccocsController : MonoBehaviour
     }
 
 
-    IEnumerator Attack()
+    IEnumerator Attack(GameObject obj)
     {
-        MainTowerController.HP -= _damage;
+        IDamageable dama = obj.GetComponent<IDamageable>();
+        if (dama != null)
+        {
+            dama.TakeDamage(_damage);  // ”ниверсальный метод
+        }
+        else
+        {
+            Debug.LogError("ќбъект не реализует IDamageable: " + obj.name);
+        }
         yield return new WaitForSeconds(_attackTime);
         isAttacking = false;
         Debug.Log("Attack");
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("MainTower"))
-        {
             if (!isAttacking)
             {
                 isAttacking = true;
-                StartCoroutine(Attack());
-
+                StartCoroutine(Attack(other.gameObject));
             }
-        }
     }
 
     private void Update()

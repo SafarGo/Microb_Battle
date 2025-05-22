@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static int Glukoza = 10;
+    public static float Glukoza = 10;
     public static List<Vector3> points = new List<Vector3>();
     public static int i = 0;
     public static int count_of_ready_walls = 0;

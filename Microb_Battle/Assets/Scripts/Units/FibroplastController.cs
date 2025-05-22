@@ -8,6 +8,7 @@ public class FibroplastController : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject wallSegmentPrefab;
     private int myPointIndex;
+    public float HP = 100f;
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class FibroplastController : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
 
         GameObject wall = Instantiate(wallSegmentPrefab, currentPoint, rotation);
-        wall.GetComponent<Wall>().hp += 20;
+        wall.GetComponent<Wall>().HP += 20;
     }
 
     private void Update()

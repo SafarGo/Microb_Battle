@@ -7,10 +7,11 @@ public class TowerCanvasController : MonoBehaviour
 {
     [SerializeField] private GameObject _player_cam;
     [SerializeField] private Slider slider;
+    [SerializeField] private GameObject tower;
 
     private void Update()
     {
-        slider.value = MainTowerController.HP;
+        slider.value = tower.GetComponent<IDamageable>().HP;
         gameObject.transform.LookAt(_player_cam.transform);
     }
 }
