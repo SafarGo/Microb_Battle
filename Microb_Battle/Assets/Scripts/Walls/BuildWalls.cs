@@ -7,17 +7,22 @@ using Unity.AI.Navigation;
 public class BuildWalls : MonoBehaviour
 {
     public GameObject wallPrefab;
+    public GameObject towerPrefab;
     public LayerMask nodeLayer;  
     public float maxWallLength = 2f;
-    public Button buildButton; 
+    public Button buildButton;
+    public Button buildTurelbutton;
     public NavMeshSurface surface;
-    private List<Wall> walls = new List<Wall>();
+    public List<Wall> walls = new List<Wall>();
+    public List<GameObject> towers = new List<GameObject>();
     private Transform selectedNodeA, selectedNodeB;
 
     void Start()
     {
         buildButton.gameObject.SetActive(false);
+        buildTurelbutton.gameObject.SetActive(false);
         buildButton.onClick.AddListener(BuildWall);
+        buildTurelbutton.onClick.AddListener(BuildTower);
     }
 
     void Update()
@@ -32,12 +37,14 @@ public class BuildWalls : MonoBehaviour
                 {
                     selectedNodeA = hit.transform;
                     HighlightNode(selectedNodeA, true);
+                    buildTurelbutton.gameObject.SetActive(true);
                 }
                 else if (selectedNodeB == null && hit.transform != selectedNodeA)
                 {
                     selectedNodeB = hit.transform;
                     HighlightNode(selectedNodeB, true);
                     buildButton.gameObject.SetActive(true);
+                    buildTurelbutton.gameObject.SetActive(false);
                 }
             }
         }
@@ -53,7 +60,6 @@ public class BuildWalls : MonoBehaviour
     {
         if (selectedNodeA == null || selectedNodeB == null) return;
 
-        // Проверяем расстояние
         float distance = Vector3.Distance(selectedNodeA.position, selectedNodeB.position);
         if (distance > maxWallLength)
         {
@@ -62,7 +68,6 @@ public class BuildWalls : MonoBehaviour
             return;
         }
 
-        // Проверяем, нет ли уже стены
         if (WallExists(selectedNodeA, selectedNodeB))
         {
             Debug.Log("Здесь уже есть стена!");
@@ -70,14 +75,21 @@ public class BuildWalls : MonoBehaviour
             return;
         }
 
-
-        // Создаём стену
         GameObject newWall = Instantiate(wallPrefab);
         Wall wall = newWall.GetComponent<Wall>();
         wall.Setup(selectedNodeA, selectedNodeB);
         walls.Add(wall);
         surface.BuildNavMesh();
         ClearSelection();
+    }
+
+    public void BuildTower()
+    {
+        if (selectedNodeA == null) return;
+        GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
+        newTower.transform.position = selectedNodeA.position;   
+        ClearSelection();
+        surface.BuildNavMesh();
     }
 
     void ClearSelection()
@@ -87,6 +99,7 @@ public class BuildWalls : MonoBehaviour
         selectedNodeA = null;
         selectedNodeB = null;
         buildButton.gameObject.SetActive(false);
+        buildTurelbutton.gameObject.SetActive(false);
     }
 
     bool WallExists(Transform nodeA, Transform nodeB)
@@ -98,7 +111,7 @@ public class BuildWalls : MonoBehaviour
                 return true;
         }
         return false;
-    }
+    }   
 
     void HighlightNode(Transform node, bool highlight)
     {

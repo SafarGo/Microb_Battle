@@ -99,6 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeA: {fileID: 0}
   nodeB: {fileID: 0}
+  slider: {fileID: 0}
 --- !u!65 &4863616559399834869
 BoxCollider:
   m_ObjectHideFlags: 0

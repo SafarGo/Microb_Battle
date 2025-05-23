@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Wall : MonoBehaviour, IDamageable
 {
     public Transform nodeA, nodeB;
+    public Slider slider;
 
     public float HP { get; set; } = 100f;
 
@@ -10,6 +12,7 @@ public class Wall : MonoBehaviour, IDamageable
     {
         HP -= damage;
         if (HP <= 0)
+            GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
             Destroy(gameObject);
     }
     public void Setup(Transform a, Transform b)
@@ -33,5 +36,8 @@ public class Wall : MonoBehaviour, IDamageable
         );
     }
 
-    
+    void Update()
+    {
+        slider.value = HP;  
+    }
 }
