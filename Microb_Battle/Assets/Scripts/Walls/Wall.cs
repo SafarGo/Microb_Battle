@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class Wall : MonoBehaviour, IDamageable
 {
     public Transform nodeA, nodeB;
-    public Slider slider;
 
     public float HP { get; set; } = 100f;
 
@@ -30,14 +29,13 @@ public class Wall : MonoBehaviour, IDamageable
         transform.rotation = Quaternion.LookRotation(direction);
         float length = direction.magnitude;
         transform.localScale = new Vector3(
-            1,
-            5,
-            length
+            0.5f,
+            3f,
+            length+1.5f
         );
     }
 
     void Update()
-    {
-        slider.value = HP;  
+    { 
     }
 }

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5382206904608751854, guid: 754bec2e7ee9ed646a653f1d8d39dc12, type: 3}
-  dist: 1
+  dist: 6
 --- !u!4 &59167585
 Transform:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 5382206904608751854, guid: 754bec2e7ee9ed646a653f1d8d39dc12, type: 3}
-  dist: 1
+  dist: 10
 --- !u!4 &209147846
 Transform:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d881d782a26b744f8c406a8f19a6c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 188899689682572114, guid: 94b8a93d8dc8d6c4ea4ae1ba789ecee2,
+  wallPrefab: {fileID: 6323746397073679861, guid: 32d84e4bfe661284e89eae8e233c4b61,
     type: 3}
   towerPrefab: {fileID: 3527130300419300208, guid: 1de385c79d039a146b8584738832fe8c,
     type: 3}
