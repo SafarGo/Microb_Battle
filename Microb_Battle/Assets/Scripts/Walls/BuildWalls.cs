@@ -1,22 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 
-public class WallBuilder : MonoBehaviour
+public class BuildWalls : MonoBehaviour
 {
-    public GameObject wallPrefab; // Префаб стены (с мешем и коллайдером)
-    public LayerMask nodeLayer;   // Слой узлов
-    public float maxWallLength = 2f; // Макс. длина стены
-    public Button buildButton;    // Кнопка "Построить"
-    public LineRenderer previewLine; // Линия-превью
-
+    public GameObject wallPrefab;
+    public LayerMask nodeLayer;  
+    public float maxWallLength = 2f;
+    public Button buildButton; 
+    public NavMeshSurface surface;
     private List<Wall> walls = new List<Wall>();
     private Transform selectedNodeA, selectedNodeB;
 
     void Start()
     {
         buildButton.gameObject.SetActive(false);
-        previewLine.enabled = false;
         buildButton.onClick.AddListener(BuildWall);
     }
 
@@ -37,7 +37,6 @@ public class WallBuilder : MonoBehaviour
                 {
                     selectedNodeB = hit.transform;
                     HighlightNode(selectedNodeB, true);
-                    UpdatePreviewLine();
                     buildButton.gameObject.SetActive(true);
                 }
             }
@@ -71,22 +70,14 @@ public class WallBuilder : MonoBehaviour
             return;
         }
 
+
         // Создаём стену
         GameObject newWall = Instantiate(wallPrefab);
         Wall wall = newWall.GetComponent<Wall>();
         wall.Setup(selectedNodeA, selectedNodeB);
         walls.Add(wall);
-
+        surface.BuildNavMesh();
         ClearSelection();
-    }
-
-    void UpdatePreviewLine()
-    {
-        previewLine.enabled = true;
-        previewLine.SetPositions(new Vector3[] {
-            selectedNodeA.position,
-            selectedNodeB.position
-        });
     }
 
     void ClearSelection()
@@ -96,7 +87,6 @@ public class WallBuilder : MonoBehaviour
         selectedNodeA = null;
         selectedNodeB = null;
         buildButton.gameObject.SetActive(false);
-        previewLine.enabled = false;
     }
 
     bool WallExists(Transform nodeA, Transform nodeB)

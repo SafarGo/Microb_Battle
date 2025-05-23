@@ -1,16 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Wall : MonoBehaviour
+public class Wall : MonoBehaviour, IDamageable
 {
-    public int HP = 0;
+    public Transform nodeA, nodeB;
 
-    private void Update()
+    public float HP { get; set; } = 100f;
+
+    public void TakeDamage(float damage)
     {
-        if (HP == 100)
-        {
-            GameManager.count_of_ready_walls++;
-        }
+        HP -= damage;
+        if (HP <= 0)
+            Destroy(gameObject);
     }
+    public void Setup(Transform a, Transform b)
+    {
+        nodeA = a;
+        nodeB = b;
+        UpdateWallPosition();
+    }
+
+    void UpdateWallPosition()
+    {
+        transform.position = (nodeA.position + nodeB.position) / 2f;
+
+        Vector3 direction = nodeB.position - nodeA.position;
+        transform.rotation = Quaternion.LookRotation(direction);
+        float length = direction.magnitude;
+        transform.localScale = new Vector3(
+            1,
+            5,
+            length
+        );
+    }
+
+    
 }
