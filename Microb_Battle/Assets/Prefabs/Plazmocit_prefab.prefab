@@ -550,7 +550,7 @@ MonoBehaviour:
   _target: {fileID: 0}
   slider: {fileID: 2569728758653264930}
   parent: {fileID: 3527130300419300208}
-  _bulletPrefab: {fileID: 9020706055452027388, guid: e1799ad7b31306c4c959729955eadca4,
+  _bulletPrefab: {fileID: 1891967372587060619, guid: cab94182c5a33da4fae0e92cf74bc62f,
     type: 3}
 --- !u!1 &8457112625682183751
 GameObject:

@@ -2,117 +2,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class WallBuilder : MonoBehaviour
+public class BulletPrefab : MonoBehaviour
 {
-    public GameObject wallPrefab; // Префаб стены (с мешем и коллайдером)
-    public LayerMask nodeLayer;   // Слой узлов
-    public float maxWallLength = 2f; // Макс. длина стены
-    public Button buildButton;    // Кнопка "Построить"
-    public LineRenderer previewLine; // Линия-превью
+    public float speed;
 
-    private List<Wall> walls = new List<Wall>();
-    private Transform selectedNodeA, selectedNodeB;
-
-    void Start()
+    private void Update()
     {
-        buildButton.gameObject.SetActive(false);
-        previewLine.enabled = false;
-        buildButton.onClick.AddListener(BuildWall);
-    }
-
-    void Update()
-    {
-        // Выбор узлов
-        if (Input.GetMouseButtonDown(0))
+        GameObject target = GetComponentInParent<PlazmocitAttack>()._target;
+        if (target != null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, 100f, nodeLayer))
-            {
-                if (selectedNodeA == null)
-                {
-                    selectedNodeA = hit.transform;
-                    HighlightNode(selectedNodeA, true);
-                }
-                else if (selectedNodeB == null && hit.transform != selectedNodeA)
-                {
-                    selectedNodeB = hit.transform;
-                    HighlightNode(selectedNodeB, true);
-                    UpdatePreviewLine();
-                    buildButton.gameObject.SetActive(true);
-                }
-            }
+            gameObject.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         }
+        
+    }
 
-        // Отмена по ESC
-        if (Input.GetKeyDown(KeyCode.Escape))
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Enemy"))
         {
-            ClearSelection();
+            other.GetComponent<StafiloccocsController>().lives -= 20;
+            Destroy(gameObject);
         }
-    }
-
-    void BuildWall()
-    {
-        if (selectedNodeA == null || selectedNodeB == null) return;
-
-        // Проверяем расстояние
-        float distance = Vector3.Distance(selectedNodeA.position, selectedNodeB.position);
-        if (distance > maxWallLength)
-        {
-            Debug.Log("Слишком длинная стена!");
-            ClearSelection();
-            return;
-        }
-
-        // Проверяем, нет ли уже стены
-        if (WallExists(selectedNodeA, selectedNodeB))
-        {
-            Debug.Log("Здесь уже есть стена!");
-            ClearSelection();
-            return;
-        }
-
-        // Создаём стену
-        GameObject newWall = Instantiate(wallPrefab);
-        Wall wall = newWall.GetComponent<Wall>();
-        wall.Setup(selectedNodeA, selectedNodeB);
-        walls.Add(wall);
-
-        ClearSelection();
-    }
-
-    void UpdatePreviewLine()
-    {
-        previewLine.enabled = true;
-        previewLine.SetPositions(new Vector3[] {
-            selectedNodeA.position,
-            selectedNodeB.position
-        });
-    }
-
-    void ClearSelection()
-    {
-        if (selectedNodeA != null) HighlightNode(selectedNodeA, false);
-        if (selectedNodeB != null) HighlightNode(selectedNodeB, false);
-        selectedNodeA = null;
-        selectedNodeB = null;
-        buildButton.gameObject.SetActive(false);
-        previewLine.enabled = false;
-    }
-
-    bool WallExists(Transform nodeA, Transform nodeB)
-    {
-        foreach (Wall wall in walls)
-        {
-            if ((wall.nodeA == nodeA && wall.nodeB == nodeB) ||
-                (wall.nodeA == nodeB && wall.nodeB == nodeA))
-                return true;
-        }
-        return false;
-    }
-
-    void HighlightNode(Transform node, bool highlight)
-    {
-        node.GetComponent<Renderer>().material.color =
-            highlight ? Color.yellow : Color.white;
     }
 }

@@ -8,7 +8,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 {
     public static float speed_of_development;
     public Slider slider;
-    public TMP_Text text;
+    //public TMP_Text text;
     public float HP { get; set; } = 100f;
 
     public void TakeDamage(float damage)
@@ -32,7 +32,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     {
         GameManager.Glukoza += speed_of_development * HP;
         slider.value = HP;
-        text.text = $"Глюкоза {GameManager.Glukoza}";
+        //text.text = $"Глюкоза {GameManager.Glukoza}";
         ;
     }
 }

@@ -1196,7 +1196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1723149036}
-  text: {fileID: 1602855677}
 --- !u!54 &1367322256
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1441,18 +1440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surface: {fileID: 1472867545}
---- !u!114 &1602855677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6760949147872448530, guid: d9d75aefaba3437459c27d0578c37dc6,
-    type: 3}
-  m_PrefabInstance: {fileID: 4233290514227397422}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1620824197
 GameObject:
   m_ObjectHideFlags: 0

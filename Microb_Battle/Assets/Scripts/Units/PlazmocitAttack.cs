@@ -18,6 +18,7 @@ public class PlazmocitAttack : PlazmocitController
         if (_target != null && !isShooting)
         {
             isShooting=true;
+            
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, transform.rotation);
             bullet.transform.SetParent(transform);
             yield return new WaitForSeconds(_attack_time);
