@@ -156,6 +156,7 @@ MonoBehaviour:
   _speed: 10
   _target: {fileID: 0}
   _agent: {fileID: 1761741056972668185}
+  system: {fileID: 8545720791329920018, guid: 2270d1ffd0f2579468ab88fa6d7d342d, type: 3}
 --- !u!195 &1761741056972668185
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +11,7 @@ public class KlostridiyController : MonoBehaviour
     [SerializeField] private Wall _target;
     [SerializeField] private NavMeshAgent _agent;
     bool isAttacked = false;
+    public ParticleSystem system;
 
     private void Awake()
     {
@@ -27,13 +29,20 @@ public class KlostridiyController : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        _target.TakeDamage(_damage);
+        Destroy(this.gameObject);
+        isAttacked = true;
+        Destroy(transform.parent.gameObject);
+    }
+
     private void Update()
     {
         if(_agent.remainingDistance <0.5f && !isAttacked)
         {
-            _target.TakeDamage(_damage);
-            Destroy(this.gameObject);
-            isAttacked = true;
+            Attack();
+            Instantiate(system, transform.position, system.transform.rotation);
         }
         if(_target == null)
         {

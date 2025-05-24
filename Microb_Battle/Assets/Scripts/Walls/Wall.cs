@@ -29,6 +29,7 @@ public class Wall : MonoBehaviour, IDamageable
 
         Vector3 direction = nodeB.position - nodeA.position;
         transform.rotation = Quaternion.LookRotation(direction);
+        transform.Rotate(0, 180, 0);
         float length = direction.magnitude;
         transform.localScale = new Vector3(
             0.5f,
