@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class KlostridiyController : MonoBehaviour
+{
+    [SerializeField] float _damage;
+    [SerializeField] float _speed;
+    [SerializeField] private Wall _target;
+    [SerializeField] private NavMeshAgent _agent;
+    bool isAttacked = false;
+
+    private void Awake()
+    {
+        SetupTarget();
+    }
+
+    void SetupTarget()
+    {
+        var walls = GameObject.Find("WallsBuilder").GetComponent<BuildWalls>();
+        if (walls.walls.Count != 0)
+        {
+            int index = Random.Range(0, walls.walls.Count);
+            _target = walls.GetComponent<BuildWalls>().walls[index];
+            _agent.SetDestination(_target.transform.position);
+        }
+    }
+
+    private void Update()
+    {
+        if(_agent.remainingDistance <0.5f && !isAttacked)
+        {
+            _target.TakeDamage(_damage);
+            Destroy(this.gameObject);
+            isAttacked = true;
+        }
+        if(_target == null)
+        {
+            SetupTarget();
+        }
+    }
+}

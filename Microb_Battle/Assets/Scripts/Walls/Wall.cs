@@ -11,8 +11,10 @@ public class Wall : MonoBehaviour, IDamageable
     {
         HP -= damage;
         if (HP <= 0)
+        {
             GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
-            Destroy(gameObject);
+            Die();
+        }
     }
     public void Setup(Transform a, Transform b)
     {
@@ -35,7 +37,9 @@ public class Wall : MonoBehaviour, IDamageable
         );
     }
 
-    void Update()
-    { 
+    void Die()
+    {
+            GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
+            Destroy(gameObject);
     }
 }
