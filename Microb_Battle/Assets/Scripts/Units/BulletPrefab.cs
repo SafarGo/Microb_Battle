@@ -13,6 +13,10 @@ public class BulletPrefab : MonoBehaviour
         {
             gameObject.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
         
     }
 
