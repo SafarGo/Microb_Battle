@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Unit
   - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Units
   - Nodes
-  - 
+  - Storm
   - 
   - 
   - 
