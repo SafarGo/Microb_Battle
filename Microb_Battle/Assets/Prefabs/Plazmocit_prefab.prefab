@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 6539299540215855385}
   - component: {fileID: 972838172800024136}
   - component: {fileID: 8373965625752149396}
+  - component: {fileID: 2806479327256145517}
   m_Layer: 0
   m_Name: Plazmocit_prefab
   m_TagString: Untagged
@@ -362,6 +363,27 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!95 &2806479327256145517
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527130300419300208}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4cda0db29f41a294cac7381d63542f4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7031786354811348617
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Unit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743172023005896539, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

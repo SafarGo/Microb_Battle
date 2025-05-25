@@ -53,6 +53,7 @@ public class StafiloccocsController : MonoBehaviour
         if(lives<=0)
         {
             GameManager.Glukoza += 10;
+            GameManager.count_of_dead_enemies++;
             Destroy(this.gameObject);
             
         }

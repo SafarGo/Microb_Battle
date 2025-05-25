@@ -8,7 +8,10 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 {
     public static float speed_of_development;
     public Slider slider;
-    //public TMP_Text text;
+    public TMP_Text level_text;
+    public int level = 1;
+    public TMP_Text text;
+    public Button upgrade_button;
     public float HP { get; set; } = 100f;
 
     public void TakeDamage(float damage)
@@ -26,13 +29,43 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     private void Awake()
     {
         GameManager.towers.Add(this.gameObject);
+        upgrade_button.onClick.AddListener(UpgradeeButton);
+        
+    }
+
+    private void Start()
+    {
+        InvokeRepeating("Develop", 0,1);
     }
 
     void Update()
     {
-        GameManager.Glukoza += speed_of_development * HP;
         slider.value = HP;
-        //text.text = $"Ãëþêîçà {GameManager.Glukoza}";
-        ;
+        text.text = $"Ãëþêîçà {GameManager.Glukoza}";
+        level_text.text = $"Óð. {level}";
+        Upgrade();
+    }
+
+    void Upgrade()
+    {
+        if (GameManager.count_of_dead_enemies > level * 10)
+        {
+            upgrade_button.gameObject.SetActive(true);
+        }
+        else
+        {
+            upgrade_button.gameObject.SetActive(false);
+        }
+    }
+
+    public void UpgradeeButton()
+    {
+        level++;
+        GameManager.count_of_dead_enemies = 0;
+    }
+
+    void Develop()
+    {
+        GameManager.Glukoza += Mathf.Floor(HP/100 * level);
     }
 }

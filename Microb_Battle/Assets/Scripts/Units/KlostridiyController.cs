@@ -27,6 +27,10 @@ public class KlostridiyController : MonoBehaviour
             _target = walls.GetComponent<BuildWalls>().walls[index];
             _agent.SetDestination(_target.transform.position);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Attack()
