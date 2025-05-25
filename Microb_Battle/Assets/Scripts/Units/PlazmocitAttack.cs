@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlazmocitAttack : PlazmocitController
 {
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] protected GameObject _bulletPrefab;
     private bool isShooting = false;
 
 
@@ -18,10 +18,10 @@ public class PlazmocitAttack : PlazmocitController
         if (_target != null && !isShooting)
         {
             isShooting=true;
-            
+            float time = _attack_time;
             GameObject bullet = Instantiate(_bulletPrefab, transform.position, transform.rotation);
             bullet.transform.SetParent(transform);
-            yield return new WaitForSeconds(_attack_time);
+            yield return new WaitForSeconds(time);
             isShooting=!isShooting;
         }
     }

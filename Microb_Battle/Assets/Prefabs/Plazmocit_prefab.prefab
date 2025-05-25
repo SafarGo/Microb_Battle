@@ -575,6 +575,7 @@ MonoBehaviour:
   parent: {fileID: 3527130300419300208}
   level: 1
   button: {fileID: 4541701856014912040}
+  text: {fileID: 0}
   _bulletPrefab: {fileID: 1891967372587060619, guid: cab94182c5a33da4fae0e92cf74bc62f,
     type: 3}
 --- !u!1 &8018358845723525209
@@ -822,8 +823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -310}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 0, y: -565}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4561072142112373597
 CanvasRenderer:
@@ -1239,9 +1240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65c5d2eb53f38649981bdf33674ddeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attack_time: 1
+  _attack_time: 3
   _target: {fileID: 0}
   slider: {fileID: 2569728758653264930}
   parent: {fileID: 3527130300419300208}
   level: 1
   button: {fileID: 4541701856014912040}
+  text: {fileID: 1326530142311352924, guid: 44adb8349b3fd564286e8e58d88f3344, type: 3}
