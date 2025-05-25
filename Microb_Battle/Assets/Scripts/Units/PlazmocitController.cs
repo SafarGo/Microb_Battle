@@ -48,6 +48,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void OnMouseDown()
     {
+        if(gameObject.layer == LayerMask.NameToLayer("Clickable"))
         ShowInformation();
     }
 
@@ -75,16 +76,13 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     public void Upgrade()
     {
-        if (GameManager.Glukoza >= 10)
-        {
             level++;
             _attack_time -= 0.3f;
-            button.gameObject.SetActive(false);
             GameManager.Glukoza -= 10;
-        }
+        button.gameObject.SetActive(false);
     }
 
-    public void ShowInformation()
+    private void ShowInformation()
     {
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = "Плазмоцит.\n" +
