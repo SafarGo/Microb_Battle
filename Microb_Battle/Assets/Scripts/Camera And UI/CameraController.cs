@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public float panSpeed = 20f;
-    public float panBorderTikness = 20f;
+    public float panBorderTikness = 30f;
     public Vector2 panLimit;
 
 

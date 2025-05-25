@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
+using TMPro;
 
 public class BuildWalls : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class BuildWalls : MonoBehaviour
     public List<Wall> walls = new List<Wall>();
     public List<GameObject> towers = new List<GameObject>();
     private Transform selectedNodeA, selectedNodeB;
+    public TMP_Text text;
 
     void Start()
     {
@@ -58,38 +60,56 @@ public class BuildWalls : MonoBehaviour
 
     void BuildWall()
     {
-        if (selectedNodeA == null || selectedNodeB == null) return;
-
-        float distance = Vector3.Distance(selectedNodeA.position, selectedNodeB.position);
-        if (distance > maxWallLength)
+        if (GameManager.Glukoza >= 5)
         {
-            Debug.Log("Слишком длинная стена!");
-            ClearSelection();
-            return;
-        }
+            if (selectedNodeA == null || selectedNodeB == null) return;
 
-        if (WallExists(selectedNodeA, selectedNodeB))
+            float distance = Vector3.Distance(selectedNodeA.position, selectedNodeB.position);
+            if (distance > maxWallLength)
+            {
+                Debug.Log("Слишком длинная стена!");
+                ClearSelection();
+                return;
+            }
+
+            if (WallExists(selectedNodeA, selectedNodeB))
+            {
+                Debug.Log("Здесь уже есть стена!");
+                ClearSelection();
+                return;
+            }
+
+            GameObject newWall = Instantiate(wallPrefab);
+            Wall wall = newWall.GetComponent<Wall>();
+            wall.Setup(selectedNodeA, selectedNodeB);
+            walls.Add(wall);
+            surface.BuildNavMesh();
+            GameManager.Glukoza -= 5;
+            ClearSelection();
+        }
+        else
         {
-            Debug.Log("Здесь уже есть стена!");
+            text.text = "Недостаточно Глюкозы";
             ClearSelection();
-            return;
         }
-
-        GameObject newWall = Instantiate(wallPrefab);
-        Wall wall = newWall.GetComponent<Wall>();
-        wall.Setup(selectedNodeA, selectedNodeB);
-        walls.Add(wall);
-        surface.BuildNavMesh();
-        ClearSelection();
     }
 
     public void BuildTower()
     {
-        if (selectedNodeA == null) return;
-        GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
-        newTower.transform.position = selectedNodeA.position;   
-        ClearSelection();
-        surface.BuildNavMesh();
+        if (GameManager.Glukoza >= 10)
+        {
+            if (selectedNodeA == null) return;
+            GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
+            newTower.transform.position = selectedNodeA.position;
+            ClearSelection();
+            surface.BuildNavMesh();
+            GameManager.Glukoza -= 10;
+        }
+        else
+        {
+            text.text = "Недостаточно Глюкозы";
+            ClearSelection();
+        }
     }
 
     void ClearSelection()

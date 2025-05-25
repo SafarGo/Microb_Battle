@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlazmocitController : MonoBehaviour, IDamageable
 {
@@ -9,10 +10,14 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     public GameObject _target;
     public Slider slider;
     public GameObject parent;
+    public int level = 1;
+    [SerializeField] private Button button;
     void Awake()
     {
         GameManager.towers.Add(this.gameObject);
         slider.value = HP;
+        button.onClick.AddListener(Upgrade);
+        button.gameObject.SetActive(false);
     }
     public float HP { get; set; } = 100f;
 
@@ -26,6 +31,24 @@ public class PlazmocitController : MonoBehaviour, IDamageable
             Destroy(parent);
             GameManager.towers.Remove(this.gameObject);
         }
+    }
+
+    private void Update()
+    {
+        if(GameManager.Glukoza>=10)
+        {
+            button.gameObject.SetActive(true);
+        }
+        else
+        {
+            button.gameObject.SetActive(false);
+        }
+
+    }
+
+    private void OnMouseDown()
+    {
+        ShowInformation();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,7 +73,24 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         }
     }
 
-    void Update()
+    public void Upgrade()
     {
+        if (GameManager.Glukoza >= 10)
+        {
+            level++;
+            _attack_time -= 0.3f;
+            button.gameObject.SetActive(false);
+            GameManager.Glukoza -= 10;
+        }
+    }
+
+    public void ShowInformation()
+    {
+        TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
+        text.text = "Плазмоцит.\n" +
+            $"Уровень {level}\n" +
+            $"Урон {level * 20}\n" +
+            $"Скорость аттаки {_attack_time} сек\n" +
+            $"Наносит урон Стафилококкам и клостридиям";
     }
 }
