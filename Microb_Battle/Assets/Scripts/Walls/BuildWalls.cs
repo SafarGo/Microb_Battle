@@ -19,11 +19,12 @@ public class BuildWalls : MonoBehaviour
     private Transform selectedNodeA, selectedNodeB;
     public TMP_Text text;
     public Material Material1, Material2;
+    public GameObject error;
 
     void Start()
     {
-        buildButton.gameObject.SetActive(false);
-        buildTurelbutton.gameObject.SetActive(false);
+        buildButton.interactable = false;
+        buildTurelbutton.interactable = false;
         buildButton.onClick.AddListener(BuildWall);
         buildTurelbutton.onClick.AddListener(BuildTower);
     }
@@ -40,22 +41,26 @@ public class BuildWalls : MonoBehaviour
                 {
                     selectedNodeA = hit.transform;
                     HighlightNode(selectedNodeA, true);
-                    buildTurelbutton.gameObject.SetActive(true);
+                    buildTurelbutton.interactable = true;
                 }
                 else if (selectedNodeB == null && hit.transform != selectedNodeA)
                 {
                     selectedNodeB = hit.transform;
                     HighlightNode(selectedNodeB, true);
-                    buildButton.gameObject.SetActive(true);
-                    buildTurelbutton.gameObject.SetActive(false);
+                    buildButton.interactable = true;
+                    buildTurelbutton.interactable = false;
                 }
             }
+            error.SetActive(false);
+            text.text = "";
         }
 
         // Отмена по ESC
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ClearSelection();
+            error.SetActive(false);
+            text.text = "";
         }
     }
 
@@ -69,6 +74,8 @@ public class BuildWalls : MonoBehaviour
             if (distance > maxWallLength)
             {
                 Debug.Log("Слишком длинная стена!");
+                text.text = "Слишком длинная стена!";
+                error.SetActive(true);
                 ClearSelection();
                 return;
             }
@@ -76,6 +83,8 @@ public class BuildWalls : MonoBehaviour
             if (WallExists(selectedNodeA, selectedNodeB))
             {
                 Debug.Log("Здесь уже есть стена!");
+                text.text = "Здесь уже есть стена!";
+                error.SetActive(true);
                 ClearSelection();
                 return;
             }
@@ -91,6 +100,7 @@ public class BuildWalls : MonoBehaviour
         else
         {
             text.text = "Недостаточно Глюкозы";
+            error.SetActive(true);
             ClearSelection();
         }
     }
@@ -109,6 +119,7 @@ public class BuildWalls : MonoBehaviour
         else
         {
             text.text = "Недостаточно Глюкозы";
+            error.SetActive(true);
             ClearSelection();
         }
     }
@@ -119,8 +130,8 @@ public class BuildWalls : MonoBehaviour
         if (selectedNodeB != null) HighlightNode(selectedNodeB, false);
         selectedNodeA = null;
         selectedNodeB = null;
-        buildButton.gameObject.SetActive(false);
-        buildTurelbutton.gameObject.SetActive(false);
+        buildButton.interactable = false;
+        buildTurelbutton.interactable = false;
     }
 
     bool WallExists(Transform nodeA, Transform nodeB)

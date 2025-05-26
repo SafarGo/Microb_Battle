@@ -39,7 +39,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if(GameManager.Glukoza>=10)
+        if(GameManager.Glukoza>=10 && level<5)
         {
             button.gameObject.SetActive(true);
         }
