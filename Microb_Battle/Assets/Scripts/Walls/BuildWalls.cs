@@ -18,6 +18,7 @@ public class BuildWalls : MonoBehaviour
     public List<GameObject> towers = new List<GameObject>();
     private Transform selectedNodeA, selectedNodeB;
     public TMP_Text text;
+    public Material Material1, Material2;
 
     void Start()
     {
@@ -135,7 +136,7 @@ public class BuildWalls : MonoBehaviour
 
     void HighlightNode(Transform node, bool highlight)
     {
-        node.GetComponent<Renderer>().material.color =
-            highlight ? Color.yellow : Color.white;
+        node.GetComponent<Renderer>().material =
+            highlight ? Material1 : Material2;
     }
 }
