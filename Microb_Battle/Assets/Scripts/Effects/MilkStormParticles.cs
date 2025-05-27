@@ -10,22 +10,21 @@ public class MilkStormParticles : MonoBehaviour
 
     private void Start()
     {
-        ParticleSystem = GetComponent<ParticleSystem>();
-        ParticleSystem.Pause();
-        ParticleSystem.Clear();
         button.onClick.AddListener(Storm);
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
-        {
+            Debug.Log("Collision");
             Destroy(other.gameObject);
-        }
+        
     }
+
+    
 
     void Storm()
     {
         ParticleSystem.Play();
+        GameManager.AttackAllStaf();
     }
 }

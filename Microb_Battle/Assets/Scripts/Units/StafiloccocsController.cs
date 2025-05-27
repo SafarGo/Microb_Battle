@@ -14,11 +14,13 @@ public class StafiloccocsController : MonoBehaviour
     public float lives = 100f;
     public NavMeshAgent agent;
     private bool isAttacking = false;
+    public AudioSource attackSound;
 
     private void Start()
     {
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         agent.SetDestination(GameManager.towers[index].transform.position);
+        GameManager.enemies.Add(this.gameObject);
 
     }
 
@@ -28,6 +30,7 @@ public class StafiloccocsController : MonoBehaviour
         IDamageable dama = obj.GetComponent<IDamageable>();
         if (dama != null)
         {
+            attackSound.Play();
             dama.TakeDamage(_damage);
         }
         else
@@ -45,6 +48,16 @@ public class StafiloccocsController : MonoBehaviour
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
             }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Storm"))
+        {
+            GameManager.count_of_dead_enemies++;
+            GameManager.enemies.Remove(this.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 
     private void Update()

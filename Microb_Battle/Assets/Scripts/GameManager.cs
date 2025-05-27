@@ -9,4 +9,13 @@ public class GameManager : MonoBehaviour
     public static int i = 0;
     public static List<GameObject> towers = new List<GameObject>();
     public static int count_of_dead_enemies = 0;
+    public static List<GameObject> enemies = new List<GameObject>();
+
+    public static void AttackAllStaf()
+    {
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            Destroy(enemies[i]);
+        }
+    }
 }

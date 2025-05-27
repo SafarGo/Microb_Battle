@@ -12,10 +12,12 @@ public class KlostridiyController : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     bool isAttacked = false;
     public ParticleSystem system;
+    public AudioSource source;
 
     private void Awake()
     {
         SetupTarget();
+        GameManager.enemies.Add(this.gameObject);
     }
 
     void SetupTarget()
@@ -29,12 +31,15 @@ public class KlostridiyController : MonoBehaviour
         }
         else
         {
+            GameManager.enemies.Remove(this.gameObject);
             Destroy(gameObject);
+
         }
     }
 
     void Attack()
     {
+        
         _target.TakeDamage(_damage);
         Destroy(this.gameObject);
         isAttacked = true;
@@ -45,12 +50,22 @@ public class KlostridiyController : MonoBehaviour
     {
         if(_agent.remainingDistance <0.5f && !isAttacked)
         {
+            Instantiate(source);
             Attack();
             Instantiate(system, transform.position, system.transform.rotation);
+            
         }
         if(_target == null)
         {
             SetupTarget();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Storm"))
+        {
+            Destroy(gameObject);
         }
     }
 }

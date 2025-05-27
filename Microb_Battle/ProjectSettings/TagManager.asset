@@ -9,6 +9,7 @@ TagManager:
   - Unit
   - Wall
   - Ground
+  - Storm
   layers:
   - Default
   - TransparentFX
