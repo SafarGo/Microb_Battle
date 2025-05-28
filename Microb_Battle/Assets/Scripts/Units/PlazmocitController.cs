@@ -54,10 +54,14 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseEnter()
     {
         if(gameObject.layer == LayerMask.NameToLayer("Clickable"))
         ShowInformation();
+    }
+    private void OnMouseExit()
+    {
+        text.text = "";
     }
 
     private void OnTriggerEnter(Collider other)

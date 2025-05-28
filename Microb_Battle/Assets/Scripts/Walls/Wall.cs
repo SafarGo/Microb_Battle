@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,5 +43,30 @@ public class Wall : MonoBehaviour, IDamageable
     {
             GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
             Destroy(gameObject);
+    }
+
+
+    private void OnMouseExit()
+    {
+        ClearInfo();
+    }
+
+    private void OnMouseEnter()
+    {
+        ShowInfo();
+    }
+    void ShowInfo()
+    {
+        TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
+        text.text = $"Коллагеновая стенка\n" +
+            $"Преграждает стафилоккокам путь\n" +
+            $"Уязвима для клостридий";
+    }
+    
+
+    void ClearInfo()
+    {
+        TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
+        text.text = "";
     }
 }

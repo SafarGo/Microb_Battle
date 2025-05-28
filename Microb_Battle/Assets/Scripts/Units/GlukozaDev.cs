@@ -33,6 +33,16 @@ public class GlukozaDev : MonoBehaviour, IDamageable
         
     }
 
+    private void OnMouseEnter()
+    {
+        ShowInfo();
+    }
+
+    private void OnMouseExit()
+    {
+        ClearInfo();
+    }
+
     private void Start()
     {
         InvokeRepeating("Develop", 0,1);
@@ -67,5 +77,19 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     void Develop()
     {
         GameManager.Glukoza += Mathf.Floor(HP/100 * level);
+    }
+
+    void ShowInfo()
+    {
+        TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
+        text.text = $"Выроботка глюкозы\n" +
+            $"Уровень {level}\n"+
+            $"Производительность: {Mathf.Floor(HP / 100 * level)} сек";
+    }
+
+    void ClearInfo()
+    {
+        TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
+        text.text = "";
     }
 }

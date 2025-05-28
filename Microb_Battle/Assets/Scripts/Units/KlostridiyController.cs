@@ -13,6 +13,7 @@ public class KlostridiyController : MonoBehaviour
     bool isAttacked = false;
     public ParticleSystem system;
     public AudioSource source;
+    public int lives = 10;
 
     private void Awake()
     {
