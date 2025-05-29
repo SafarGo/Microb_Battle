@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && count_of_esc %2 ==0)
+        if(Input.GetKeyDown(KeyCode.M) && count_of_esc %2 ==0)
         {
             pauseMenu.SetActive(true);
             count_of_esc++;
             Time.timeScale = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && count_of_esc % 2 != 0)
+        else if (Input.GetKeyDown(KeyCode.M) && count_of_esc % 2 != 0)
         {
             pauseMenu.SetActive(false);
             count_of_esc++;
