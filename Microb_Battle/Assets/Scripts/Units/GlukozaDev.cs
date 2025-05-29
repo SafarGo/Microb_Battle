@@ -71,7 +71,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     public void UpgradeeButton()
     {
         level++;
-        GameManager.count_of_dead_enemies = 0;
+        GameManager.count_of_dead_enemies -= level * 10;
     }
 
     void Develop()

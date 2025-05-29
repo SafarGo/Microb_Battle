@@ -9,6 +9,11 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMP_Text text;
     public GameObject manu;
     public GameObject text1;
+
+    private void Start()
+    {
+        time = 300f;
+    }
     private void Update()
     {
         time -= Time.deltaTime;

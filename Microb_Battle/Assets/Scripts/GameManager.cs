@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         Time.timeScale = 1;
+        Glukoza = 15;
     }
     private void Start()
     {

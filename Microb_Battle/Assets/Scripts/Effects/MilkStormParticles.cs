@@ -22,9 +22,10 @@ public class MilkStormParticles : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.Glukoza >= 30)
+        if(GameManager.count_of_dead_enemies >= 20)
         {
             button.interactable = true;
+            
         }
         else
         {
@@ -36,6 +37,7 @@ public class MilkStormParticles : MonoBehaviour
     void Storm()
     {
         ParticleSystem.Play();
+        GameManager.count_of_dead_enemies -= 20;
         GameManager.AttackAllStaf();
     }
 }
