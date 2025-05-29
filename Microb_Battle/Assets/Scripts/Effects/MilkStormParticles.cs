@@ -20,7 +20,18 @@ public class MilkStormParticles : MonoBehaviour
         
     }
 
-    
+    private void Update()
+    {
+        if(GameManager.Glukoza >= 30)
+        {
+            button.interactable = true;
+        }
+        else
+        {
+            button.interactable = false;
+        }
+    }
+
 
     void Storm()
     {

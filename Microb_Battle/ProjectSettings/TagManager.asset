@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Ground
   - Storm
+  - Klost
   layers:
   - Default
   - TransparentFX

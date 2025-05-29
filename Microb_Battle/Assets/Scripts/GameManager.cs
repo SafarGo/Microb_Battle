@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,20 @@ public class GameManager : MonoBehaviour
     public static List<GameObject> towers = new List<GameObject>();
     public static int count_of_dead_enemies = 0;
     public static List<GameObject> enemies = new List<GameObject>();
+    public GameObject pauseMenu;
+    public int count_of_esc = 0;
+    public Slider volume;
+    public AudioSource heart;
+    public static GameManager instance;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    private void Start()
+    {
+    }
 
     public static void AttackAllStaf()
     {
@@ -17,5 +32,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(enemies[i]);
         }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) && count_of_esc %2 ==0)
+        {
+            pauseMenu.SetActive(true);
+            count_of_esc++;
+            Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && count_of_esc % 2 != 0)
+        {
+            pauseMenu.SetActive(false);
+            count_of_esc++;
+            Time.timeScale = 1;
+        }
+        heart.volume = volume.value;
     }
 }

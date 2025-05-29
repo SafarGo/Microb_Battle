@@ -72,6 +72,10 @@ public class PlazmocitController : MonoBehaviour, IDamageable
             {
                 _target = other.gameObject;
             }
+            if (other.gameObject.CompareTag("Klost"))
+            {
+                _target = other.gameObject;
+            }
         }
     }
 

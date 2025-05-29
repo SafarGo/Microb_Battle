@@ -30,6 +30,7 @@ public class StafiloccocsController : MonoBehaviour
         IDamageable dama = obj.GetComponent<IDamageable>();
         if (dama != null)
         {
+            attackSound.volume = GameManager.instance.volume.value;
             attackSound.Play();
             dama.TakeDamage(_damage);
         }

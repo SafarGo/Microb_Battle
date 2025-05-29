@@ -42,16 +42,19 @@ public class KlostridiyController : MonoBehaviour
     {
         
         _target.TakeDamage(_damage);
+        AudioSource s = Instantiate(source);
+        s.volume = GameManager.instance.volume.value;
         Destroy(this.gameObject);
         isAttacked = true;
+        
         Destroy(transform.parent.gameObject);
     }
 
     private void Update()
     {
-        if(_agent.remainingDistance <0.5f && !isAttacked)
+        if(_agent.remainingDistance <0.5f && !isAttacked && _target !=null)
         {
-            Instantiate(source);
+            
             Attack();
             Instantiate(system, transform.position, system.transform.rotation);
             
