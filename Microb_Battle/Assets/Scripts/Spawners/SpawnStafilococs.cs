@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpawnStafilococs : MonoBehaviour
 {
     public GameObject prefab;
-    public int dist1, dist2;
+    public float dist1;
+    public float dist2 = 5;
     private void Start()
     {
         InvokeRepeating("Spawn", dist1, dist2);
@@ -14,5 +15,6 @@ public class SpawnStafilococs : MonoBehaviour
     public void Spawn()
     {
         Instantiate(prefab, transform.position, transform.rotation);
+        dist2 -= 0.005f;
     }
 }

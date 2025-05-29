@@ -12,7 +12,6 @@ public class KlostridiyController : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     bool isAttacked = false;
     public ParticleSystem system;
-    public AudioSource source;
     public int lives = 10;
 
     private void Awake()
@@ -26,7 +25,7 @@ public class KlostridiyController : MonoBehaviour
         var walls = GameObject.Find("WallsBuilder").GetComponent<BuildWalls>();
         if (walls.walls.Count != 0)
         {
-            int index = Random.Range(0, walls.walls.Count);
+            int index = Random.Range(0, walls.walls.Count-1);
             _target = walls.GetComponent<BuildWalls>().walls[index];
             _agent.SetDestination(_target.transform.position);
         }
@@ -42,8 +41,6 @@ public class KlostridiyController : MonoBehaviour
     {
         
         _target.TakeDamage(_damage);
-        AudioSource s = Instantiate(source);
-        s.volume = GameManager.instance.volume.value;
         Destroy(this.gameObject);
         isAttacked = true;
         
@@ -52,7 +49,7 @@ public class KlostridiyController : MonoBehaviour
 
     private void Update()
     {
-        if(_agent.remainingDistance <0.5f && !isAttacked && _target !=null)
+        if(_agent.remainingDistance <0.1f && !isAttacked && _target !=null)
         {
             
             Attack();
@@ -65,11 +62,4 @@ public class KlostridiyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Storm"))
-        {
-            Destroy(gameObject);
-        }
-    }
 }

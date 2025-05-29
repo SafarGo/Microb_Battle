@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static float Glukoza = 10;
+    public static float Glukoza = 20;
     public static List<Vector3> points = new List<Vector3>();
     public static int i = 0;
     public static List<GameObject> towers = new List<GameObject>();
@@ -16,14 +17,17 @@ public class GameManager : MonoBehaviour
     public Slider volume;
     public AudioSource heart;
     public static GameManager instance;
-
+    public static bool isGameOver = false;
+    public Button button;
 
     private void Awake()
     {
         instance = this;
+        Time.timeScale = 1;
     }
     private void Start()
     {
+        button.onClick.AddListener(MainMenu);
     }
 
     public static void AttackAllStaf()
@@ -49,5 +53,10 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
         heart.volume = volume.value;
+    }
+
+    void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

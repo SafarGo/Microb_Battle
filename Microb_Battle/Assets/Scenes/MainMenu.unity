@@ -377,10 +377,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 12051913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38870835, y: 0.21933335}
-  m_AnchorMax: {x: 0.6102709, y: 0.39714816}
-  m_AnchoredPosition: {x: -689.5, y: 0.5}
-  m_SizeDelta: {x: -266, y: -162}
+  m_AnchorMin: {x: 0.030875003, y: 0.21400002}
+  m_AnchorMax: {x: 0.25114584, y: 0.3938148}
+  m_AnchoredPosition: {x: -0.5, y: 5.5}
+  m_SizeDelta: {x: -264, y: -164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409181089
 MonoBehaviour:
@@ -561,6 +561,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &745168066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745168068}
+  - component: {fileID: 745168067}
+  m_Layer: 0
+  m_Name: UIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &745168067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745168066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945ae5846cf34544480e86cf7b80a928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  b1: {fileID: 1215022961}
+  b2: {fileID: 409181089}
+--- !u!4 &745168068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745168066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1248.88, y: 516.5833, z: 21.680489}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057808726
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,10 +769,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 12051913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38870835, y: 0.572}
-  m_AnchorMax: {x: 0.61600006, y: 0.7491482}
-  m_AnchoredPosition: {x: -691, y: -1.6000061}
-  m_SizeDelta: {x: -277, y: -161}
+  m_AnchorMin: {x: 0.030875003, y: 0.56648153}
+  m_AnchorMax: {x: 0.26416668, y: 0.75551856}
+  m_AnchoredPosition: {x: -9.5, y: -2.100006}
+  m_SizeDelta: {x: -288, y: -174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215022961
 MonoBehaviour:
@@ -1303,7 +1349,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: af5664ac58ddd834db6149275f16597e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.282
+  m_Volume: 0.042
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1755,3 +1801,4 @@ SceneRoots:
   - {fileID: 590435104}
   - {fileID: 1357586682}
   - {fileID: 1057808728}
+  - {fileID: 745168068}

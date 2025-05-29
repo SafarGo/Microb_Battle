@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class MainTowerController : MonoBehaviour, IDamageable
 {
-    public float HP { get; set; } = 100f;
-    public AudioSource sound; 
+    public float HP { get; set; } = 200f;
+    public AudioSource sound;
+    public GameObject menu;
+    public GameObject text;
     void Awake()
     {
         GameManager.towers.Add(this.gameObject);
@@ -20,10 +22,10 @@ public class MainTowerController : MonoBehaviour, IDamageable
     void Update()
     {
         if(HP<=0) {Destroy(this.gameObject); GameManager.towers.Remove(this.gameObject); }
-        if (HP >= 75) { sound.pitch = 0.8f; }
-        if (HP < 75 && HP >= 50) { sound.pitch = 1f; }
-        if (HP < 50 && HP >= 30) { sound.pitch = 1.2f; }
+        if (HP >= 150) { sound.pitch = 0.8f; }
+        if (HP < 150 && HP >= 75) { sound.pitch = 1f; }
+        if (HP < 75 && HP >= 30) { sound.pitch = 1.2f; }
         if(HP < 30) { sound.pitch = 1.5f; }
-
+        if (HP <= 0) { menu.SetActive(true);  text.SetActive(true); GameManager.isGameOver = true; }
     }
 }

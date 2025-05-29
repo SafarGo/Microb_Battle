@@ -30,7 +30,7 @@ public class BulletPrefab : MonoBehaviour
         if(other.CompareTag("Klost"))
         {
             Destroy(other.gameObject);
-            GameManager.Glukoza += 5;
+            GameManager.Glukoza += 2;
             GameManager.count_of_dead_enemies++;
             Destroy(gameObject);
         }
