@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -29,9 +30,21 @@ public class CameraController : MonoBehaviour
         {
             pos.x += panSpeed * Time.deltaTime;
         }
-        pos.x = Mathf.Clamp(pos.x,-panLimit.x, panLimit.x);
+            pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
         pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y);
         transform.position = pos;
         
+    }
+    void FixedUpdate()
+    {
+        if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
+            || Input.mousePosition.x <= Screen.width / 5.5f)
+        {
+            GameManager.isCanSelectTower = false;
+        }
+        else
+        {
+            GameManager.isCanSelectTower = true;
+        }
     }
 }

@@ -19,8 +19,9 @@ public class StafiloccocsController : MonoBehaviour
     private void Start()
     {
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
-        agent.SetDestination(GameManager.towers[index].transform.position);
         GameManager.enemies.Add(this.gameObject);
+
+        SetDestination();
 
     }
 
@@ -61,20 +62,34 @@ public class StafiloccocsController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         _slider.value = lives;
         if(lives<=0)
         {
             GameManager.Glukoza += 5;
             GameManager.count_of_dead_enemies++;
-            Destroy(this.gameObject);
-            
+            Destroy(this.gameObject);           
         }
         if(!agent.hasPath)
         {
-            int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
-            agent.SetDestination(GameManager.towers[index].transform.position);
+            SetDestination();
+        }
+
+    }
+    void SetDestination()
+    {
+        if (!agent.hasPath)
+        {
+            int destination_index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+            if (GameManager.towers[destination_index] != null)
+            {
+                agent.SetDestination(GameManager.towers[destination_index].transform.position);
+            }
+            else
+            {
+                SetDestination();
+            }
         }
     }
 }

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool isGameOver = false;
     public Button button;
+    public static bool isCanSelectTower = true;
 
     private void Awake()
     {
@@ -28,7 +29,8 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        button.onClick.AddListener(MainMenu);
+        if(button!=null)
+            button.onClick.AddListener(MainMenu);
     }
 
     public static void AttackAllStaf()
