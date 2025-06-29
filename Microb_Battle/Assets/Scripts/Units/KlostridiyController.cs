@@ -33,7 +33,6 @@ public class KlostridiyController : MonoBehaviour
         {
             GameManager.enemies.Remove(this.gameObject);
             Destroy(gameObject);
-
         }
     }
 

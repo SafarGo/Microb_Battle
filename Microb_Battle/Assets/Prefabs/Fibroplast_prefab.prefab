@@ -201,6 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f575ad9dd383ca548a4a8c9942bd7c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 3889185132786886855}
-  wallSegmentPrefab: {fileID: 188899689682572114, guid: 94b8a93d8dc8d6c4ea4ae1ba789ecee2,
-    type: 3}
+  _agent: {fileID: 3889185132786886855}
