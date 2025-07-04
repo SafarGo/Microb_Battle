@@ -11,11 +11,13 @@ TagManager:
   - Ground
   - Storm
   - Klost
+  - Ketogenez
+  - Defend
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Zone
   - Water
   - UI
   - Units

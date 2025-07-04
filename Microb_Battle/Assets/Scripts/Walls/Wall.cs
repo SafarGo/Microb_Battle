@@ -60,17 +60,6 @@ public class Wall : MonoBehaviour, IDamageable
     }
 
 
-    private void OnMouseExit()
-    {
-        ClearInfo();
-        //_create_button.SetActive(false);
-    }
-
-    private void OnMouseEnter()
-    {
-        ShowInfo();
-        _create_button.SetActive(true);
-    }
     void ShowInfo()
     {
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
@@ -94,4 +83,22 @@ public class Wall : MonoBehaviour, IDamageable
         instance.GetComponentInChildren<FibroplastController>().SetupTarget(this);
     }
     
+    void Update()
+    {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit[] hits = Physics.RaycastAll(ray);
+                foreach (RaycastHit hit in hits)
+                {
+                    Wall wall = hit.collider.GetComponent<Wall>();
+                    if (wall != null)
+                    {
+                        wall.ShowInfo();
+                        wall._create_button.SetActive(true);
+                        break;
+                    }
+                }
+            }
+    }
 }

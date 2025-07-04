@@ -19,7 +19,10 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool isGameOver = false;
     public Button button;
-
+    public static bool isKetognez1 = false;
+    public static bool isKetognez2 = false;
+    public static bool isKetognez3 = false;
+    public static bool isKetognez4 = false;
     private void Awake()
     {
         instance = this;
@@ -60,6 +63,5 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-
 
 }

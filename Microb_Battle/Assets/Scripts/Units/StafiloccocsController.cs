@@ -15,13 +15,14 @@ public class StafiloccocsController : MonoBehaviour
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
+    float _new_speed;
 
     private void Start()
     {
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         agent.SetDestination(GameManager.towers[index].transform.position);
         GameManager.enemies.Add(this.gameObject);
-
+        _new_speed = agent.speed * 0.75f;
     }
 
 
@@ -48,6 +49,10 @@ public class StafiloccocsController : MonoBehaviour
             { 
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
+            }
+            if(other.CompareTag("Ketogenez") && GameManager.isKetognez1)
+            {
+                
             }
     }
 
@@ -77,4 +82,5 @@ public class StafiloccocsController : MonoBehaviour
             agent.SetDestination(GameManager.towers[index].transform.position);
         }
     }
+
 }
