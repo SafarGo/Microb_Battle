@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public static bool isKetognez2 = false;
     public static bool isKetognez3 = false;
     public static bool isKetognez4 = false;
+    public static bool isCanSelectTower = true;
     private void Awake()
     {
         instance = this;
