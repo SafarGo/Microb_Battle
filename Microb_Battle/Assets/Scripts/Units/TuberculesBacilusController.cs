@@ -2,20 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
-public class DamageFog : MonoBehaviour
+public class TuberculesBacilusController : MonoBehaviour
 {
     //[SerializeField] private Transform _target;
-    [SerializeField] private float fogTime = 15;
+    [SerializeField] private string enemyType;
     [SerializeField] private float _attackTime;
+    [SerializeField] private float _attackTimeKof = 0.085f;
     [SerializeField] private float _damage;
+    [SerializeField] private Slider _slider;
+    public float lives = 100f;
+    public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
 
     protected virtual void Start()
     {
+        int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
-        Destroy(gameObject, fogTime);
+
+        SetDestination();
+
     }
 
 
@@ -33,6 +41,7 @@ public class DamageFog : MonoBehaviour
             Debug.LogError("Объект не реализует IDamageable: " + obj.name);
         }
         yield return new WaitForSeconds(_attackTime);
+        _attackTime *= _attackTimeKof ;
         isAttacking = false;
         Debug.Log("Attack");
     }
@@ -54,4 +63,45 @@ public class DamageFog : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void LateUpdate()
+    {
+        CheckState();
+    }
+
+    protected void SetDestination()
+    {
+        if (!agent.hasPath)
+        {
+            int destination_index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+            if (GameManager.towers[destination_index] != null)
+            {
+                agent.SetDestination(GameManager.towers[destination_index].transform.position);
+            }
+            else
+            {
+                SetDestination();
+            }
+        }
+    }
+
+    private void CheckState()
+    {
+        _slider.value = lives;
+        if (lives <= 0)
+        {
+            AtackUnitsBehaviour.AUB.Death(gameObject, enemyType);
+            GameManager.Glukoza += 5;
+            GameManager.count_of_dead_enemies++;
+            Destroy(this.gameObject);
+        }
+        if (!agent.hasPath)
+        {
+            SetDestination();
+        }
+
+    }
+
+
+
 }
