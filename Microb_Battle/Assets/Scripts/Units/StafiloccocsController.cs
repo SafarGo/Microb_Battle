@@ -15,14 +15,14 @@ public class StafiloccocsController : MonoBehaviour
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
-    float _new_speed;
 
     private void Start()
     {
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
-        agent.SetDestination(GameManager.towers[index].transform.position);
         GameManager.enemies.Add(this.gameObject);
-        _new_speed = agent.speed * 0.75f;
+
+        SetDestination();
+
     }
 
 
@@ -50,10 +50,6 @@ public class StafiloccocsController : MonoBehaviour
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
             }
-            if(other.CompareTag("Ketogenez") && GameManager.isKetognez1)
-            {
-                
-            }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -66,21 +62,34 @@ public class StafiloccocsController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         _slider.value = lives;
         if(lives<=0)
         {
             GameManager.Glukoza += 5;
             GameManager.count_of_dead_enemies++;
-            Destroy(this.gameObject);
-            
+            Destroy(this.gameObject);           
         }
         if(!agent.hasPath)
         {
-            int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
-            agent.SetDestination(GameManager.towers[index].transform.position);
+            SetDestination();
+        }
+
+    }
+    void SetDestination()
+    {
+        if (!agent.hasPath)
+        {
+            int destination_index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+            if (GameManager.towers[destination_index] != null)
+            {
+                agent.SetDestination(GameManager.towers[destination_index].transform.position);
+            }
+            else
+            {
+                SetDestination();
+            }
         }
     }
-
 }
