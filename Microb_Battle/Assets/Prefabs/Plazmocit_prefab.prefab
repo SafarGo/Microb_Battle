@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3630849854459692908}
   - component: {fileID: 7743962310635031576}
   - component: {fileID: 2293566683964744718}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3883325227910177477}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 929837524882458910}
   - component: {fileID: 402771898298120266}
   - component: {fileID: 7265394095258112658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1083383231861321790}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 710276751934098712}
   - component: {fileID: 5760024187655582291}
   - component: {fileID: 2806479327256145517}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plazmocit_prefab
   m_TagString: Defend
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4216914562962816505}
   - component: {fileID: 2569728758653264930}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 8159187962909690008}
   - component: {fileID: 8259494452485076627}
   - component: {fileID: 8691725038010116146}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 8688088121946206745}
   - component: {fileID: 1565163830383979272}
   - component: {fileID: 7456775835247548625}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 4561072142112373597}
   - component: {fileID: 5122962571256841382}
   - component: {fileID: 4541701856014912040}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,10 +875,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4156058613374357168, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -789483065158912528, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -567235260555229845, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
         type: 3}
       propertyPath: m_Name
       value: Blood_cells
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1247595047329230282, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
         type: 3}
@@ -940,10 +960,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5732438801453726196, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7322170881802557050, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7322170881802557050, guid: b49ba07f3bf7a2741b64b46fa6c9aa24,
         type: 3}
