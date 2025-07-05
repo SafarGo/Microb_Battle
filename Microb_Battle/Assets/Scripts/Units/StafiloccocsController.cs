@@ -90,9 +90,6 @@ public class StafiloccocsController : MonoBehaviour
         if (lives <= 0)
         {
             AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
-            GameManager.Glukoza += 5;
-            GameManager.count_of_dead_enemies++;
-            Destroy(this.gameObject);
         }
         if (!agent.hasPath)
         {

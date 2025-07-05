@@ -90,10 +90,8 @@ public class TuberculesBacilusController : MonoBehaviour
         _slider.value = lives;
         if (lives <= 0)
         {
-            AtackUnitsBehaviour.AUB.Death(gameObject, enemyType);
-            GameManager.Glukoza += 5;
-            GameManager.count_of_dead_enemies++;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+            AtackUnitsBehaviour.AUB.Death(gameObject, "Stafilococ");
         }
         if (!agent.hasPath)
         {
