@@ -24,7 +24,10 @@ public class BulletPrefab : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            other.GetComponent<StafiloccocsController>().lives -= 20 * GetComponentInParent<PlazmocitAttack>().level;
+            if(other.GetComponent<StafiloccocsController>() != null)
+                other.GetComponent<StafiloccocsController>().lives -= 20 * GetComponentInParent<PlazmocitAttack>().level;
+            else
+                other.GetComponent<TuberculesBacilusController>().lives -= 20 * GetComponentInParent<PlazmocitAttack>().level;
             Destroy(gameObject);
         }
         if(other.CompareTag("Klost"))

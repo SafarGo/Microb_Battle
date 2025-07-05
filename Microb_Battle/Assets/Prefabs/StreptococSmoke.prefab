@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d118a0fd7a1084fbef66956c319525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: Fog
-  _attackTime: 1
-  _damage: 20
+  fogTime: 15
+  _attackTime: 0.5
+  _damage: 3
   attackSound: {fileID: 2007648874118714775}
 --- !u!1 &7528447985693664044
 GameObject:
