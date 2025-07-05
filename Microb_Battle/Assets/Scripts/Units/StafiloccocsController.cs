@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class StafiloccocsController : MonoBehaviour
 {
     //[SerializeField] private Transform _target;
+    [SerializeField] private string enemyType;
     [SerializeField] private float _attackTime;
     [SerializeField] private float _damage;
     [SerializeField] private Slider _slider;
@@ -16,7 +17,7 @@ public class StafiloccocsController : MonoBehaviour
     private bool isAttacking = false;
     public AudioSource attackSound;
 
-    private void Start()
+    protected virtual void Start()
     {
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
@@ -64,20 +65,10 @@ public class StafiloccocsController : MonoBehaviour
 
     private void LateUpdate()
     {
-        _slider.value = lives;
-        if(lives<=0)
-        {
-            GameManager.Glukoza += 5;
-            GameManager.count_of_dead_enemies++;
-            Destroy(this.gameObject);           
-        }
-        if(!agent.hasPath)
-        {
-            SetDestination();
-        }
-
+        CheckState();
     }
-    void SetDestination()
+
+    protected void SetDestination()
     {
         if (!agent.hasPath)
         {
@@ -92,4 +83,24 @@ public class StafiloccocsController : MonoBehaviour
             }
         }
     }
+
+    private void CheckState()
+    {
+        _slider.value = lives;
+        if (lives <= 0)
+        {
+            AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
+            GameManager.Glukoza += 5;
+            GameManager.count_of_dead_enemies++;
+            Destroy(this.gameObject);
+        }
+        if (!agent.hasPath)
+        {
+            SetDestination();
+        }
+        
+    }
+
+
+
 }
