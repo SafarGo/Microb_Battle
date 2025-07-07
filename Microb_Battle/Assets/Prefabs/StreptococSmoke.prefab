@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7545634559082553204}
   - component: {fileID: 5646019577191956485}
   - component: {fileID: 7988443792283547805}
+  - component: {fileID: 5159581994586762019}
+  - component: {fileID: 3910755521705381281}
   m_Layer: 0
   m_Name: StreptococSmoke
   m_TagString: Untagged
@@ -151,6 +153,57 @@ MonoBehaviour:
   _attackTime: 0.5
   _damage: 3
   attackSound: {fileID: 2007648874118714775}
+--- !u!114 &5159581994586762019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7163329376091061304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 3686406244
+  serverOnly: 0
+  visibility: 0
+  hasSpawned: 0
+--- !u!114 &3910755521705381281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7163329376091061304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 438807070628544214}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  timelineOffset: 1
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  bufferResetMultiplier: 3
+  useFixedUpdate: 0
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
 --- !u!1 &7528447985693664044
 GameObject:
   m_ObjectHideFlags: 0

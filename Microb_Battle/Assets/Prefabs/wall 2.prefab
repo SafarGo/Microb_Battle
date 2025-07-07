@@ -505,6 +505,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 220337303215321529}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231363592526848753}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1878467575939745258}
   m_SourcePrefab: {fileID: 100100000, guid: 1898cb685b628a044af1285fb13dd5ed, type: 3}
 --- !u!1 &6323746397073679861 stripped
 GameObject:
@@ -578,6 +586,57 @@ MonoBehaviour:
   canvas: {fileID: 3854897266040257182}
   _fibroplast: {fileID: 953140342499281657, guid: 4bdbf53449069cc4da9389bffb8cae2a,
     type: 3}
+--- !u!114 &1231363592526848753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 3485012710
+  serverOnly: 0
+  visibility: 0
+  hasSpawned: 0
+--- !u!114 &1878467575939745258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a553cb17010b2403e8523b558bffbc14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 1
+  syncMode: 0
+  syncInterval: 0
+  target: {fileID: 6668042672970399567}
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 1
+  onlySyncOnChange: 1
+  compressRotation: 1
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 1
+  coordinateSpace: 0
+  timelineOffset: 1
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+  bufferResetMultiplier: 3
+  useFixedUpdate: 0
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
 --- !u!4 &6668042672970399567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1898cb685b628a044af1285fb13dd5ed,

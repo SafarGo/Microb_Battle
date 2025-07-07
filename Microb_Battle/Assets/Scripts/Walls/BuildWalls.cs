@@ -110,8 +110,9 @@ public class BuildWalls : MonoBehaviour
         if (GameManager.Glukoza >= 10)
         {
             if (selectedNodeA == null) return;
-            GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
-            newTower.transform.position = selectedNodeA.position;
+            NetworkSpawnManager.instance.NetworkSpawn(towerPrefab, selectedNodeA);
+            //GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
+            //newTower.transform.position = selectedNodeA.position;
             ClearSelection();
             surface.BuildNavMesh();
             GameManager.Glukoza -= 10;

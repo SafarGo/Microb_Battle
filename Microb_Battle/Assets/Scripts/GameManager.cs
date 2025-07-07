@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using Mirror;
 
-public class GameManager : MonoBehaviour
+public class GameManager : NetworkBehaviour
 {
     public static float Glukoza = 20;
     public static List<Vector3> points = new List<Vector3>();
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
+
     private void Awake()
     {
         instance = this;
@@ -69,5 +71,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 
 }
