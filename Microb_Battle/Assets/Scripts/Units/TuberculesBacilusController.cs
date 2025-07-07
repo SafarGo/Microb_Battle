@@ -19,9 +19,6 @@ public class TuberculesBacilusController : MonoBehaviour
 
     protected virtual void Start()
     {
-        agent.speed *= GameManager.attakUnitsSpeedBonus;
-        lives *= GameManager.attakUnitsHPBonus;
-        _slider.maxValue = _slider.value = lives;
         int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
 
@@ -93,6 +90,7 @@ public class TuberculesBacilusController : MonoBehaviour
         _slider.value = lives;
         if (lives <= 0)
         {
+            Destroy(gameObject);
             AtackUnitsBehaviour.AUB.Death(gameObject, "Stafilococ");
         }
         if (!agent.hasPath)

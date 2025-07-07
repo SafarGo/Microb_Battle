@@ -15,7 +15,7 @@ public class DamageFog : MonoBehaviour
     protected virtual void Start()
     {
         GameManager.enemies.Add(this.gameObject);
-        Destroy(gameObject, fogTime * GameManager.streptoFogLifetimeBonus);
+        Destroy(gameObject, fogTime);
     }
 
 

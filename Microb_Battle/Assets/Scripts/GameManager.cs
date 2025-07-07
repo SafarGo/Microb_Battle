@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+<<<<<<< HEAD
 using UnityEditor;
 using Mirror;
+=======
+>>>>>>> parent of 3e2dca2 (14_57_Sasha_Commit)
 
 public class GameManager : NetworkBehaviour
 {
@@ -26,11 +29,14 @@ public class GameManager : NetworkBehaviour
     public static bool isKetognez3 = false;
     public static bool isKetognez4 = false;
     public static bool isCanSelectTower = true;
+<<<<<<< HEAD
 
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
 
+=======
+>>>>>>> parent of 3e2dca2 (14_57_Sasha_Commit)
     private void Awake()
     {
         instance = this;
