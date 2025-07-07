@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
     public static bool isKetognez3 = false;
     public static bool isKetognez4 = false;
     public static bool isCanSelectTower = true;
+
+    public static float attakUnitsSpeedBonus = 1f;
+    public static float attakUnitsHPBonus = 1f;
+    public static float streptoFogLifetimeBonus = 1f;
     private void Awake()
     {
         instance = this;
