@@ -20,7 +20,7 @@ public class MenuNetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        SceneManager.LoadScene("SampleScene");
+        PhotonNetwork.LoadLevel("SampleScene");
         Debug.Log("joined to game");
     }
 }

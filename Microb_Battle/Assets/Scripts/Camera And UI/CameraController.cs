@@ -1,18 +1,25 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : MonoBehaviourPunCallbacks
 {
     public float panSpeed = 20f;
     public float panBorderTikness = 50f;
     public Vector2 panLimit;
-
+    private PhotonView phtonView;
+    private void Start()
+    {
+        phtonView = gameObject.GetComponent<PhotonView>();
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (!photonView.IsMine) return;
+
         Vector3 pos = transform.position;
         if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height- panBorderTikness)
         {
@@ -37,6 +44,8 @@ public class CameraController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (!photonView.IsMine) return;
+
         if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
             || Input.mousePosition.x <= Screen.width / 5.5f)
         {
