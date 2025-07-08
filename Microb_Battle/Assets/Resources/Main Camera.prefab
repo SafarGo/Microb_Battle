@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photonView: {fileID: 4708732852423017795}
+  controller: {fileID: 5095764541402641837}
 --- !u!1 &8434953411696009780
 GameObject:
   m_ObjectHideFlags: 0

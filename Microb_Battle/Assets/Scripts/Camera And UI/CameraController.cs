@@ -18,8 +18,6 @@ public class CameraController : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        if (!photonView.IsMine) return;
-
         Vector3 pos = transform.position;
         if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height- panBorderTikness)
         {
@@ -39,13 +37,10 @@ public class CameraController : MonoBehaviourPunCallbacks
         }
             pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
         pos.z = Mathf.Clamp(pos.z, -panLimit.y, panLimit.y);
-        transform.position = pos;
-        
+        transform.position = pos;        
     }
     void FixedUpdate()
     {
-        if (!photonView.IsMine) return;
-
         if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
             || Input.mousePosition.x <= Screen.width / 5.5f)
         {

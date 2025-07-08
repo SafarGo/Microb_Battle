@@ -8,13 +8,14 @@ using Photon.Realtime;
 public class isMine : MonoBehaviourPunCallbacks
 {
     [SerializeField] private PhotonView _photonView;
+    [SerializeField] private CameraController controller;
 
-    void Awake()
+    void Start()
     {
-       // _photonView = GetComponent<PhotonView>();
-       // if (!_photonView.IsMine)
-       // {
-       //     gameObject.GetComponent<CameraController>().enabled = false;
-       // }
+        _photonView = GetComponent<PhotonView>();
+        if (!_photonView.IsMine)
+        {
+            controller.enabled = false;
+        }
     }
 }
