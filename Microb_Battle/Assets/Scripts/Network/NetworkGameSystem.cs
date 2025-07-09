@@ -7,6 +7,6 @@ public class NetworkGameSystem : MonoBehaviourPunCallbacks
 
     void Awake()
     {
-        PhotonNetwork.Instantiate(_player.name, Vector3.zero, Quaternion.identity);
+        PhotonNetwork.Instantiate(_player.name, new Vector3(0, 14.5f, 0), Quaternion.Euler(60,0,0));
     }
 }

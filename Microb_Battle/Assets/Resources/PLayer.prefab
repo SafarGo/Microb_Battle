@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 4351520593566807231}
   - component: {fileID: 4708732852423017795}
   - component: {fileID: 1855634225756649549}
+  - component: {fileID: 4280441245997936438}
   m_Layer: 0
   m_Name: PLayer
   m_TagString: MainCamera
@@ -269,6 +270,19 @@ MonoBehaviour:
   _photonView: {fileID: 4708732852423017795}
   controller: {fileID: 5095764541402641837}
   _camera: {fileID: 254513372455405228}
+--- !u!114 &4280441245997936438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221063502223746192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d618b07a38874b499ad0560c1d0783d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAtaker: 0
 --- !u!1 &8434953411696009780
 GameObject:
   m_ObjectHideFlags: 0
