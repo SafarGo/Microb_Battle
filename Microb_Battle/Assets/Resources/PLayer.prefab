@@ -283,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAtaker: 0
+  _photonView: {fileID: 4708732852423017795}
 --- !u!1 &8434953411696009780
 GameObject:
   m_ObjectHideFlags: 0
