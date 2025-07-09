@@ -13,6 +13,10 @@ TagManager:
   - Klost
   - Ketogenez
   - Defend
+  - NatPlayer_1
+  - NatPlayer_2
+  - NatPlayer
+  - UnAtackedZone
   layers:
   - Default
   - TransparentFX
@@ -24,8 +28,8 @@ TagManager:
   - Nodes
   - Storm
   - Clickable
-  - 
-  - 
+  - GroundLayer
+  - UnAttakedLayer
   - 
   - 
   - 

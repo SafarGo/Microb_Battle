@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,20 +13,26 @@ public class StafiloccocsController : MonoBehaviour
     [SerializeField] private float _attackTime;
     [SerializeField] private float _damage;
     [SerializeField] private Slider _slider;
+    //[SerializeField] private PhotonView photonView;
     public float lives = 100f;
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
+    private GameObject target;
 
     protected virtual void Start()
     {
-
+        //photonView = gameObject.GetComponent<PhotonView>();
         agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
-        int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+        //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
         SetDestination();
+
+        //if (GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
+        //    if (GetComponent<PhotonView>().IsMine)
+        //        Destroy(this);
 
     }
 
@@ -62,7 +69,8 @@ public class StafiloccocsController : MonoBehaviour
         {
             GameManager.count_of_dead_enemies++;
             GameManager.enemies.Remove(this.gameObject);
-            Destroy(this.gameObject);
+            //if(photonView.Owner == PhotonNetwork.MasterClient)
+            //    Destroy(this.gameObject);
         }
     }
 
@@ -75,10 +83,11 @@ public class StafiloccocsController : MonoBehaviour
     {
         if (!agent.hasPath)
         {
-            int destination_index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+            int destination_index = FindNearest();
             if (GameManager.towers[destination_index] != null)
             {
-                agent.SetDestination(GameManager.towers[destination_index].transform.position);
+                target = GameManager.towers[destination_index];
+                agent.SetDestination(target.transform.position);
             }
             else
             {
@@ -94,13 +103,39 @@ public class StafiloccocsController : MonoBehaviour
         {
             AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
         }
-        if (!agent.hasPath)
+        if (!agent.hasPath || target == null)
         {
             SetDestination();
         }
         
     }
 
+    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    if(stream.IsWriting)
+    //    {
+    //        stream.SendNext(lives);
+    //    }
+    //    else
+    //    {
+    //        lives = (float)(stream.ReceiveNext());
+    //    }
+    //}
 
+    private int FindNearest()
+    {
+        int result = 0;
+        float startdist = 10 * 10^5;
+        for (int i = 0; i < GameManager.towers.Count; i++)
+        {
+          float dist = Vector3.Distance(GameManager.towers[i].transform.position,gameObject.transform.position);
+            if(dist < startdist && GameManager.towers[i] != null)
+            {
+                startdist = dist;
+                result = i;
+            }
+        }
+        return result;
+    }
 
 }

@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using System;
 using System.Linq;
 using UnityEngine;
@@ -11,10 +12,10 @@ public class PlayerSideController : MonoBehaviour
     private void Start()
     {
         if (!_photonView.IsMine) return;
-            Debug.Log(PhotonNetwork.CountOfPlayers);
+            Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
 
 
-        if (PhotonNetwork.CountOfPlayers == 1)
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
                 isAtaker = false;
         }
@@ -27,7 +28,16 @@ public class PlayerSideController : MonoBehaviour
         {
             if(_photonView.IsMine)
                 DisableScriptsByNames("BuildWalls");
+            gameObject.tag = "NatPlayer_2";
         }
+        else
+        {
+            gameObject.tag = "NatPlayer_1";
+        }
+    }
+    private void Update()
+    {
+        Debug.LogError(gameObject.tag);
     }
 
     /// <summary>

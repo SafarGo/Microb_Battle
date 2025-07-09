@@ -4,6 +4,7 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using TMPro;
+using Photon.Pun;
 
 public class BuildWalls : MonoBehaviour
 {
@@ -110,8 +111,7 @@ public class BuildWalls : MonoBehaviour
         if (GameManager.Glukoza >= 10)
         {
             if (selectedNodeA == null) return;
-            GameObject newTower = Instantiate(towerPrefab, selectedNodeA.position, selectedNodeA.rotation);
-            newTower.transform.position = selectedNodeA.position;
+            PhotonNetwork.Instantiate(towerPrefab.name, selectedNodeA.position, selectedNodeA.rotation);
             ClearSelection();
             surface.BuildNavMesh();
             GameManager.Glukoza -= 10;

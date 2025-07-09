@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class AtackUnitsBehaviour : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class AtackUnitsBehaviour : MonoBehaviour
         GameManager.Glukoza += 5;
         GameManager.count_of_dead_enemies++;
         Destroy(unit);
+        //if (unit.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+        //   NetworkDesnroy(unit);
         switch (unitType)
         {
             default:
@@ -35,5 +38,12 @@ public class AtackUnitsBehaviour : MonoBehaviour
 
 
         }
+    }
+
+    [PunRPC]
+    public void NetworkDesnroy(GameObject obj)
+    {
+        if (obj.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+            PhotonNetwork.Destroy(obj);
     }
 }

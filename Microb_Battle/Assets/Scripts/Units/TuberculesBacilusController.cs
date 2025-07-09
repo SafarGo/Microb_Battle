@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class TuberculesBacilusController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class TuberculesBacilusController : MonoBehaviour
         agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
-        int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
+        //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
 
         SetDestination();
@@ -63,7 +64,7 @@ public class TuberculesBacilusController : MonoBehaviour
         {
             GameManager.count_of_dead_enemies++;
             GameManager.enemies.Remove(this.gameObject);
-            Destroy(this.gameObject);
+           PhotonNetwork.Destroy(this.gameObject);
         }
     }
 

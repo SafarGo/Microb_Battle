@@ -6,10 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class MenuNetworkManager : MonoBehaviourPunCallbacks
 {
+
+    private void Start()
+    {
+        PhotonNetwork.ConnectUsingSettings();
+        
+    }
     public void CreateRoom()
     {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
+        roomOptions.CleanupCacheOnLeave = true;
+        roomOptions.EmptyRoomTtl = 0;
         PhotonNetwork.CreateRoom("Room", roomOptions, TypedLobby.Default);
     }
 

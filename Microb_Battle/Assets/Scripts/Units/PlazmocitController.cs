@@ -1,8 +1,9 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class PlazmocitController : MonoBehaviour, IDamageable
 {
@@ -17,6 +18,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     void Awake()
     {
+
         text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         GameManager.towers.Add(this.gameObject);
         slider.value = HP;
@@ -25,6 +27,13 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     }
     public float HP { get; set; } = 100f;
 
+    //void Start()
+    //{
+    //    if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+    //        if (parent.GetComponent<PhotonView>().IsMine)
+    //            Destroy(this);
+    //}
+
     public void TakeDamage(float damage)
     {
         HP -= damage;
@@ -32,6 +41,10 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         Debug.Log($"Башня получила {damage} урона! Осталось HP: {HP}");
         if (HP <= 0)
         {
+            //if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+            //{
+            //   PhotonNetwork.Destroy(parent);
+            //}
             Destroy(parent);
             GameManager.towers.Remove(this.gameObject);
         }
@@ -111,4 +124,16 @@ public class PlazmocitController : MonoBehaviour, IDamageable
             $"Скорость атаки {_attack_time} сек\n" +
             $"Наносит урон Стафилококкам и клостридиям";
     }
+
+    //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    //{
+    //    if (stream.IsReading)
+    //    {
+    //        stream.SendNext(HP);
+    //    }
+    //    else
+    //    {
+    //        HP = (float)(stream.ReceiveNext());
+    //    }
+    //}
 }

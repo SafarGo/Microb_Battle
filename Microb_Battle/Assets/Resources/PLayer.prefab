@@ -152,9 +152,10 @@ GameObject:
   - component: {fileID: 4708732852423017795}
   - component: {fileID: 1855634225756649549}
   - component: {fileID: 4280441245997936438}
+  - component: {fileID: -7703452026824990811}
   m_Layer: 0
   m_Name: PLayer
-  m_TagString: MainCamera
+  m_TagString: NatPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,6 +285,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAtaker: 0
   _photonView: {fileID: 4708732852423017795}
+--- !u!114 &-7703452026824990811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221063502223746192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2ea68d51924e042ae2bf99c78b589f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  enemies:
+  - {fileID: 5382206904608751854, guid: 754bec2e7ee9ed646a653f1d8d39dc12, type: 3}
+  - {fileID: 5382206904608751854, guid: 18feb2d938495b7438d2aad770603b5f, type: 3}
+  - {fileID: 5382206904608751854, guid: 048955e087444a946aeb26ae38006965, type: 3}
 --- !u!1 &8434953411696009780
 GameObject:
   m_ObjectHideFlags: 0

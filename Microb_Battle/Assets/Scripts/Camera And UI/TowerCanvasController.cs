@@ -9,6 +9,10 @@ public class TowerCanvasController : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private GameObject tower;
 
+    private void Start()
+    {
+        _player_cam = GameObject.FindGameObjectWithTag("NatPlayer_1");
+    }
     private void Update()
     {
         slider.value = tower.GetComponent<IDamageable>().HP;
