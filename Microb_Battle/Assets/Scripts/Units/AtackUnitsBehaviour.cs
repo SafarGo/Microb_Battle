@@ -19,7 +19,8 @@ public class AtackUnitsBehaviour : MonoBehaviour
     {
         GameManager.Glukoza += 5;
         GameManager.count_of_dead_enemies++;
-        Destroy(unit);
+        unit.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
+        PhotonNetwork.Destroy(unit);
         //if (unit.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
         //   NetworkDesnroy(unit);
         switch (unitType)

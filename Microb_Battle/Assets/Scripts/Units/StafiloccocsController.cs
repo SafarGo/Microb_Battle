@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class StafiloccocsController : MonoBehaviour
+public class StafiloccocsController : MonoBehaviourPunCallbacks
 {
     //[SerializeField] private Transform _target;
     [SerializeField] private string enemyType;
@@ -19,15 +19,23 @@ public class StafiloccocsController : MonoBehaviour
     private bool isAttacking = false;
     public AudioSource attackSound;
     private GameObject target;
-
+    //[SerializeField]private bool isAtacPlayer = false;
     protected virtual void Start()
     {
-        //photonView = gameObject.GetComponent<PhotonView>();
-        agent.speed *= GameManager.attakUnitsSpeedBonus;
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+            //if(gameObject.GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
+            //    if(gameObject.GetComponent<PhotonView>().IsMine)
+            //        isAtacPlayer = true;
+            //photonView = gameObject.GetComponent<PhotonView>();
+            agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
         //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
+        //if (!isAtacPlayer) return;
         SetDestination();
 
         //if (GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
@@ -56,7 +64,8 @@ public class StafiloccocsController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-            if (!isAttacking && other.CompareTag("Unit"))
+        //if (!isAtacPlayer) return;
+        if (!isAttacking && other.CompareTag("Unit"))
             { 
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
@@ -65,7 +74,8 @@ public class StafiloccocsController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Storm"))
+        //if (!isAtacPlayer) return;
+        if (other.gameObject.CompareTag("Storm"))
         {
             GameManager.count_of_dead_enemies++;
             GameManager.enemies.Remove(this.gameObject);
@@ -76,11 +86,16 @@ public class StafiloccocsController : MonoBehaviour
 
     private void LateUpdate()
     {
+
+        if (gameObject.GetComponent<PhotonView>().IsMine)
+            Debug.LogError("Атакующий ли игрок - ");
+        ////if (!isAtacPlayer) return;
         CheckState();
     }
 
     protected void SetDestination()
     {
+        //if (!isAtacPlayer) return;
         if (!agent.hasPath)
         {
             int destination_index = FindNearest();
@@ -98,6 +113,7 @@ public class StafiloccocsController : MonoBehaviour
 
     private void CheckState()
     {
+        //if (!isAtacPlayer) return;
         _slider.value = lives;
         if (lives <= 0)
         {
@@ -107,7 +123,6 @@ public class StafiloccocsController : MonoBehaviour
         {
             SetDestination();
         }
-        
     }
 
     //public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -121,6 +136,20 @@ public class StafiloccocsController : MonoBehaviour
     //        lives = (float)(stream.ReceiveNext());
     //    }
     //}
+    public void SyncHeals()
+    {
+        photonView.RPC("UpdateHealth", RpcTarget.Others, lives);
+    }
+    [PunRPC]
+    public void UpdateHealth(float newHealth)
+    {
+        lives = newHealth;
+        _slider.value = lives;
+        //if (lives <= 0)
+        //{
+        //    AtackUnitsBehaviour.AUB.Death(gameObject, enemyType);
+        //}
+    }
 
     private int FindNearest()
     {
@@ -137,5 +166,6 @@ public class StafiloccocsController : MonoBehaviour
         }
         return result;
     }
+
 
 }

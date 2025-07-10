@@ -15,10 +15,10 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     [SerializeField] private Button button;
     private TMP_Text text;
     bool isUpgraded = false;
+    //bool isProtactorPlayer = false;
 
     void Awake()
     {
-
         text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         GameManager.towers.Add(this.gameObject);
         slider.value = HP;
@@ -27,32 +27,45 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     }
     public float HP { get; set; } = 100f;
 
-    //void Start()
-    //{
-    //    if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
-    //        if (parent.GetComponent<PhotonView>().IsMine)
-    //            Destroy(this);
-    //}
+    ///void Start()
+    ///{
+    ///    if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+    ///        if (parent.GetComponent<PhotonView>().IsMine)
+    ///                isProtactorPlayer = true;
+    ///
+    ///}
 
     public void TakeDamage(float damage)
     {
+        //if (!isProtactorPlayer) return; 
+
         HP -= damage;
         slider.value = HP;
         Debug.Log($"Башня получила {damage} урона! Осталось HP: {HP}");
+        parent.GetComponent<PhotonView>().RPC("SyncHP", RpcTarget.Others, HP);
         if (HP <= 0)
         {
             //if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
             //{
             //   PhotonNetwork.Destroy(parent);
             //}
-            Destroy(parent);
+            PhotonNetwork.Destroy(parent);
             GameManager.towers.Remove(this.gameObject);
         }
     }
 
+    [PunRPC]
+    private void SyncHP(float lives)
+    {
+        HP = lives;
+        slider.value = HP;
+    }
+
     private void Update()
     {
-        if(GameManager.Glukoza>=10 && level<5)
+        //if (!isProtactorPlayer) return;
+
+        if (GameManager.Glukoza>=10 && level<5)
         {
             button.gameObject.SetActive(true);
         }
@@ -69,17 +82,21 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void OnMouseEnter()
     {
-        if(gameObject.layer == LayerMask.NameToLayer("Clickable"))
+        //if (!isProtactorPlayer) return;
+
+        if (gameObject.layer == LayerMask.NameToLayer("Clickable"))
         ShowInformation();
     }
     private void OnMouseExit()
     {
+        //if (!isProtactorPlayer) return;
         text.text = "";
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(_target == null)
+        //if (!isProtactorPlayer) return;
+        if (_target == null)
         {
             if(other.gameObject.CompareTag("Enemy"))
             {
@@ -94,6 +111,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void OnTriggerStay(Collider other)
     {
+        //if (!isProtactorPlayer) return;
         if (_target == null)
         {
             if (other.gameObject.CompareTag("Enemy"))
@@ -105,6 +123,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     public void Upgrade()
     {
+        //if (!isProtactorPlayer) return;
         if (level < 5)
         {
             _attack_time  -= 0.3f;
@@ -117,7 +136,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void ShowInformation()
     {
-        
+        //if (!isProtactorPlayer) return;
         text.text = "Плазмоцит.\n" +
             $"Уровень {level}\n" +
             $"Урон {level * 10}\n" +

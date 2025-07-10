@@ -1,14 +1,22 @@
+using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class BulletPrefab : MonoBehaviour
 {
     public float speed;
-
+    public GameObject target;
+    public PlazmocitAttack attack;
+    private void Start()
+    {
+        if (!gameObject.GetComponent<PhotonView>().IsMine)
+        {
+            gameObject.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+    }
     private void Update()
     {
-        GameObject target = GetComponentInParent<PlazmocitAttack>()._target;
         if (target != null)
         {
             gameObject.transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
@@ -24,10 +32,13 @@ public class BulletPrefab : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
-            if(other.GetComponent<StafiloccocsController>() != null)
-                other.GetComponent<StafiloccocsController>().lives -= 20 * GetComponentInParent<PlazmocitAttack>().level;
+            if (other.GetComponent<StafiloccocsController>() != null)
+            {
+                other.GetComponent<StafiloccocsController>().lives -= 20 * attack.level;
+                other.GetComponent<StafiloccocsController>().SyncHeals();
+            }
             else
-                other.GetComponent<TuberculesBacilusController>().lives -= 20 * GetComponentInParent<PlazmocitAttack>().level;
+                other.GetComponent<TuberculesBacilusController>().lives -= 20 * attack.level;
             Destroy(gameObject);
         }
         if(other.CompareTag("Klost"))
