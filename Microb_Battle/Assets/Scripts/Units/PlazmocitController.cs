@@ -15,7 +15,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     [SerializeField] private Button button;
     private TMP_Text text;
     bool isUpgraded = false;
-    //bool isProtactorPlayer = false;
+    bool isProtactorPlayer = false;
 
     void Awake()
     {
@@ -27,13 +27,13 @@ public class PlazmocitController : MonoBehaviour, IDamageable
     }
     public float HP { get; set; } = 100f;
 
-    ///void Start()
-    ///{
-    ///    if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
-    ///        if (parent.GetComponent<PhotonView>().IsMine)
-    ///                isProtactorPlayer = true;
-    ///
-    ///}
+    void Start()
+    {
+        if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
+            if (parent.GetComponent<PhotonView>().IsMine)
+                    isProtactorPlayer = true;
+    
+    }
 
     public void TakeDamage(float damage)
     {
@@ -63,20 +63,21 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        //if (!isProtactorPlayer) return;
-
-        if (GameManager.Glukoza>=10 && level<5)
+        if (isProtactorPlayer)
         {
-            button.gameObject.SetActive(true);
-        }
-        else
-        {
-            button.gameObject.SetActive(false);
-        }
-        if(isUpgraded)
-        {
-            ShowInformation();
-            isUpgraded = false;
+            if (GameManager.Glukoza >= 20 && level < 5)
+            {
+                button.gameObject.SetActive(true);
+            }
+            else
+            {
+                button.gameObject.SetActive(false);
+            }
+            if (isUpgraded)
+            {
+                ShowInformation();
+                isUpgraded = false;
+            }
         }
     }
 
@@ -128,7 +129,6 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         {
             _attack_time  -= 0.3f;
             GameManager.Glukoza -= 10;
-            button.gameObject.SetActive(false);
             level++;
             isUpgraded = true;
         }

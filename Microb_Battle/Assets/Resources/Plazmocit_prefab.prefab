@@ -662,13 +662,14 @@ GameObject:
   - component: {fileID: 4561072142112373597}
   - component: {fileID: 5122962571256841382}
   - component: {fileID: 4541701856014912040}
+  - component: {fileID: 4934130905761118963}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1020642218266266478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -770,6 +771,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4934130905761118963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613939202136885687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af7f1eb816faf446a2ff241dd50a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photonView: {fileID: 3384509256517412032}
 --- !u!1001 &2543456715679390613
 PrefabInstance:
   m_ObjectHideFlags: 0

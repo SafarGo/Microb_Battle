@@ -157,11 +157,14 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         float startdist = 10 * 10^5;
         for (int i = 0; i < GameManager.towers.Count; i++)
         {
-          float dist = Vector3.Distance(GameManager.towers[i].transform.position,gameObject.transform.position);
-            if(dist < startdist && GameManager.towers[i] != null)
+            if(GameManager.towers[i]!=null)
             {
-                startdist = dist;
-                result = i;
+                float dist = Vector3.Distance(GameManager.towers[i].transform.position, gameObject.transform.position);
+                if (dist < startdist)
+                {
+                    startdist = dist;
+                    result = i;
+                }
             }
         }
         return result;
