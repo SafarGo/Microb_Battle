@@ -17,6 +17,7 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
     private void Start()
     {
         agent.speed = speed;
+        GameManager.Glukoza -= 3;
     }
 
     private void Update()
@@ -47,6 +48,8 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
     {
         yield return new WaitForSeconds(1);
         hp = 0;
+        object[] data = new object[] { 2 };
+        PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
         Debug.Log("Die");
     }
 
