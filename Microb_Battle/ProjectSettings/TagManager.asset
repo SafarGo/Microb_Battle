@@ -17,6 +17,8 @@ TagManager:
   - NatPlayer_2
   - NatPlayer
   - UnAtackedZone
+  - Bullet
+  - Palochka
   layers:
   - Default
   - TransparentFX
@@ -30,7 +32,7 @@ TagManager:
   - Clickable
   - GroundLayer
   - UnAttakedLayer
-  - 
+  - Fog
   - 
   - 
   - 
