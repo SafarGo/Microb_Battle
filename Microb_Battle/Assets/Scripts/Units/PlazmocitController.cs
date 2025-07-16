@@ -51,6 +51,8 @@ public class PlazmocitController : MonoBehaviour, IDamageable
             //}
             PhotonNetwork.Destroy(parent);
             GameManager.towers.Remove(this.gameObject);
+            object[] data = new object[] { 7*level };
+            PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f,0,0), Quaternion.identity, 0, data);
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -42,7 +43,8 @@ public class KlostridiyController : MonoBehaviour
         _target.TakeDamage(_damage);
         Destroy(this.gameObject);
         isAttacked = true;
-        
+        object[] data = new object[] { 4 };
+        PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
         Destroy(transform.parent.gameObject);
     }
 
