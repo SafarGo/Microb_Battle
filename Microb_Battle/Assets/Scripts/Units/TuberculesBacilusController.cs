@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Photon.Pun;
+using JetBrains.Annotations;
 
 public class TuberculesBacilusController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class TuberculesBacilusController : MonoBehaviour
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
+    public PhotonView photonView;
 
     protected virtual void Start()
     {
@@ -101,6 +103,17 @@ public class TuberculesBacilusController : MonoBehaviour
             SetDestination();
         }
 
+    }
+
+    public void SyncHeals()
+    {
+        photonView.RPC(nameof(UpdateHealthB), RpcTarget.Others, lives);
+    }
+    [PunRPC]
+    public void UpdateHealthB(float newHealth)
+    {
+        lives = newHealth;
+        _slider.value = lives;
     }
 
 

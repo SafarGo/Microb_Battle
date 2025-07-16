@@ -1,8 +1,9 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class GlukozaDev : MonoBehaviour, IDamageable
 {
@@ -13,21 +14,37 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     public TMP_Text text;
     public Button upgrade_button;
     public float HP { get; set; } = 100f;
-
+    private PhotonView photonView;
     public void TakeDamage(float damage)
     {
         HP -= damage;
         slider.value = HP;
         Debug.Log($"Башня получила {damage} урона! Осталось HP: {HP}");
+
+        photonView.RPC("SyncGlucosDevHP", RpcTarget.Others, HP);
         if (HP <= 0)
         {
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(gameObject);
+            GameManager.towers.Remove(this.gameObject);
+        }
+    }
+
+    [PunRPC]
+    private void SyncGlucosDevHP(float lives)
+    {
+        HP = lives;
+        slider.value = HP;
+        if (HP <= 0)
+        {
+            PhotonNetwork.Destroy(gameObject);
             GameManager.towers.Remove(this.gameObject);
         }
     }
 
     private void Awake()
     {
+         //if (GameManager.isAttacker) return;
+
         GameManager.towers.Add(this.gameObject);
         upgrade_button.onClick.AddListener(UpgradeeButton);
         
@@ -35,21 +52,30 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     private void OnMouseEnter()
     {
+        if (GameManager.isAttacker) return;
         ShowInfo();
     }
 
     private void OnMouseExit()
     {
+        if (GameManager.isAttacker) return;
         ClearInfo();
     }
 
     private void Start()
     {
+        photonView = gameObject.GetComponent<PhotonView>();
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
         InvokeRepeating("Develop", 0,1);
     }
 
     void Update()
     {
+        if (GameManager.isAttacker) return;
         slider.value = HP;
         text.text = $"Глюкоза {GameManager.Glukoza}";
         level_text.text = $"Ур. {level}";
@@ -58,6 +84,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void Upgrade()
     {
+        if (GameManager.isAttacker) return;
         if (GameManager.count_of_dead_enemies > level * 10)
         {
             upgrade_button.gameObject.SetActive(true);
@@ -70,17 +97,21 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     public void UpgradeeButton()
     {
+        if (GameManager.isAttacker) return;
         level++;
         GameManager.count_of_dead_enemies -= level * 10;
     }
 
     void Develop()
     {
+        if (GameManager.isAttacker) return;
+        if (GameManager.isAttacker) return;
         GameManager.Glukoza += Mathf.Floor(HP/100 * level);
     }
 
     void ShowInfo()
     {
+        if (GameManager.isAttacker) return;
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = $"Выроботка глюкозы\n" +
             $"Уровень {level}\n"+
@@ -89,6 +120,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void ClearInfo()
     {
+        if (GameManager.isAttacker) return;
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = "";
     }
