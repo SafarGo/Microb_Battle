@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using Photon.Pun;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,15 +30,23 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
-    private void Awake()
-    {
-        instance = this;
-        Time.timeScale = 1;
-        Glukoza = 15;
-    }
+
+    public static bool isAttacker;
+
+
+
     private void Start()
     {
         button.onClick.AddListener(MainMenu);
+        isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
+    }
+
+    private void Awake()
+    {
+        isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
+        instance = this;
+        Time.timeScale = 1;
+        Glukoza = 15;
     }
 
     public static void AttackAllStaf()
@@ -50,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M) && count_of_esc %2 ==0)
+        if (Input.GetKeyDown(KeyCode.M) && count_of_esc %2 ==0)
         {
             pauseMenu.SetActive(true);
             count_of_esc++;

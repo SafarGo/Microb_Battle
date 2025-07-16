@@ -302,8 +302,9 @@ MonoBehaviour:
     m_Bits: 1024
   enemies:
   - {fileID: 5382206904608751854, guid: 754bec2e7ee9ed646a653f1d8d39dc12, type: 3}
-  - {fileID: 5382206904608751854, guid: 18feb2d938495b7438d2aad770603b5f, type: 3}
   - {fileID: 5382206904608751854, guid: 048955e087444a946aeb26ae38006965, type: 3}
+  - {fileID: 5382206904608751854, guid: 18feb2d938495b7438d2aad770603b5f, type: 3}
+  selektedIndex: 0
 --- !u!1 &8434953411696009780
 GameObject:
   m_ObjectHideFlags: 0

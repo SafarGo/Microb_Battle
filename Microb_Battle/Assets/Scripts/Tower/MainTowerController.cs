@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainTowerController : MonoBehaviour, IDamageable
 {
-    public float HP { get; set; } = 200f;
+    public float HP { get; set; } = 20000f;
     public AudioSource sound;
     public GameObject menu;
     public GameObject text;

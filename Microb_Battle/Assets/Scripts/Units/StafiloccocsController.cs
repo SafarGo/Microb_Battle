@@ -22,14 +22,15 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     //[SerializeField]private bool isAtacPlayer = false;
     protected virtual void Start()
     {
-        if (!photonView.IsMine)
-        {
-            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
-        }
-            //if(gameObject.GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
-            //    if(gameObject.GetComponent<PhotonView>().IsMine)
-            //        isAtacPlayer = true;
-            //photonView = gameObject.GetComponent<PhotonView>();
+            if (!photonView.IsMine)
+            {
+                photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+            }
+        //if(gameObject.GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
+        //    if(gameObject.GetComponent<PhotonView>().IsMine)
+        //        isAtacPlayer = true;
+        //photonView = gameObject.GetComponent<PhotonView>();
+
             agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
@@ -47,6 +48,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
 
     IEnumerator Attack(GameObject obj)
     {
+
         IDamageable dama = obj.GetComponent<IDamageable>();
         if (dama != null)
         {
@@ -64,6 +66,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     }
     private void OnTriggerStay(Collider other)
     {
+        //if (GameManager.isAttacker) { return; }
         //if (!isAtacPlayer) return;
         if (!isAttacking && other.CompareTag("Unit"))
             { 
@@ -86,11 +89,10 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
 
     private void LateUpdate()
     {
-
-        if (gameObject.GetComponent<PhotonView>().IsMine)
-            Debug.LogError("Атакующий ли игрок - ");
-        ////if (!isAtacPlayer) return;
-        CheckState();
+            if (gameObject.GetComponent<PhotonView>().IsMine)
+                Debug.LogError("Атакующий ли игрок - ");
+            ////if (!isAtacPlayer) return;
+            CheckState();
     }
 
     protected void SetDestination()
@@ -113,6 +115,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
 
     private void CheckState()
     {
+
         //if (!isAtacPlayer) return;
         _slider.value = lives;
         if (lives <= 0)

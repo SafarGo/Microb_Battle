@@ -34,7 +34,7 @@ public class AtackUnitsBehaviour : MonoBehaviour
                 break;
             case "Streptococ":
                 Debug.Log("Стрептокок мертв");
-                Instantiate(stafilococFogPrefab, unit.transform.position,Quaternion.identity);
+               PhotonNetwork.Instantiate(stafilococFogPrefab.name, unit.transform.position,Quaternion.identity);
                 break;
 
 
