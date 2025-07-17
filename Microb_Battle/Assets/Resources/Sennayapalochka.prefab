@@ -233,8 +233,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 30.750284
-  m_Center: {x: 0, y: 0, z: 22.710207}
+  m_Radius: 0.5887518
+  m_Center: {x: 0, y: 0, z: 0.00029087067}
 --- !u!114 &6430663077192766236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998287068456489240}
   - component: {fileID: 3964714283091370181}
+  - component: {fileID: 471717742517241334}
   m_Layer: 9
   m_Name: Fire_Point
   m_TagString: Untagged
@@ -432,6 +433,27 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!135 &471717742517241334
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6851028821276115010}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 30
+  m_Center: {x: 0, y: 0, z: 0.00029087067}
 --- !u!1 &8461678673088000058
 GameObject:
   m_ObjectHideFlags: 0

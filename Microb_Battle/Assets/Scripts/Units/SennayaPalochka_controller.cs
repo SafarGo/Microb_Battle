@@ -31,7 +31,9 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
             Destroy(gameObject);
         }
     }
-        void Update()
+
+
+    void Update()
     {
         if (!photonView.IsMine) return; // Только владелец управляет стрельбой и поворотом
 
@@ -45,10 +47,10 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
         {
             transform.LookAt(enemy_position);
         }
-        else
-        {
-            transform.LookAt(transform.position);
-        }
+        //else
+        //{
+        //    transform.LookAt(transform.position);
+        //}
         Slider_hp.value = HP;
     }
 
