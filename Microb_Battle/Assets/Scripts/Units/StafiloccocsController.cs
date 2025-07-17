@@ -121,6 +121,8 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         if (lives <= 0)
         {
             AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
+            object[] data = new object[] { 3 };
+            PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
         }
         if (!agent.hasPath || target == null)
         {

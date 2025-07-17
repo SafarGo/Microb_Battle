@@ -9,6 +9,7 @@ public class Belok_Controller : MonoBehaviourPun
 
     void Start()
     {
+        GameManager.Beloks.Add(this.gameObject);
         if (photonView != null && photonView.InstantiationData != null && photonView.InstantiationData.Length > 0)
         {
             count_of_belok = (int)photonView.InstantiationData[0];

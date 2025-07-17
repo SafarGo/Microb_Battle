@@ -9,4 +9,6 @@ public class Fog_segment_Controller : MonoBehaviour
         if(other.gameObject.CompareTag("Palochka"))
         Destroy(gameObject);
     }
+
+
 }

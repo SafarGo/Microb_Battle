@@ -97,6 +97,8 @@ public class TuberculesBacilusController : MonoBehaviour
         if (lives <= 0)
         {
             AtackUnitsBehaviour.AUB.Death(gameObject, "Stafilococ");
+            object[] data = new object[] { 10 };
+            PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
         }
         if (!agent.hasPath)
         {

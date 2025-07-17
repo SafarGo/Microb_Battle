@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static List<GameObject> towers = new List<GameObject>();
     public static int count_of_dead_enemies = 0;
     public static List<GameObject> enemies = new List<GameObject>();
+    public static List<GameObject> Beloks = new List<GameObject>();
     public GameObject pauseMenu;
     public int count_of_esc = 0;
     public Slider volume;
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
-
+    public static int Count_of_belok;
     public static bool isAttacker;
 
 

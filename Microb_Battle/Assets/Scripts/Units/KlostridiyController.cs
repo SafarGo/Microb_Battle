@@ -45,6 +45,7 @@ public class KlostridiyController : MonoBehaviour
         isAttacked = true;
         object[] data = new object[] { 4 };
         PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
+
         Destroy(transform.parent.gameObject);
     }
 
