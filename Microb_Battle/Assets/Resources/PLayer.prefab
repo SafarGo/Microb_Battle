@@ -131,12 +131,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &2221063502223746192
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +304,8 @@ MonoBehaviour:
   - {fileID: 5382206904608751854, guid: 754bec2e7ee9ed646a653f1d8d39dc12, type: 3}
   - {fileID: 5382206904608751854, guid: 048955e087444a946aeb26ae38006965, type: 3}
   - {fileID: 5382206904608751854, guid: 18feb2d938495b7438d2aad770603b5f, type: 3}
+  - {fileID: 9100827549954107949, guid: 93e647471c316b241b726db0a74ed025, type: 3}
+  - {fileID: 7781943368350306044, guid: 79b1eaf20bbd6a44dae833ab76dadb7c, type: 3}
   selektedIndex: 0
 --- !u!1 &8434953411696009780
 GameObject:
