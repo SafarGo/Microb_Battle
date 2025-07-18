@@ -13,7 +13,7 @@ public class KlostridiyController : MonoBehaviour
     [SerializeField] private NavMeshAgent _agent;
     bool isAttacked = false;
     public ParticleSystem system;
-    public int lives = 10;
+    public int lives = 30;
 
     private void Awake()
     {
@@ -61,6 +61,11 @@ public class KlostridiyController : MonoBehaviour
         if(_target == null)
         {
             SetupTarget();
+        }
+        if(lives<=0)
+        {
+            GameManager.Glukoza += 3;
+            Destroy(gameObject);
         }
     }
 

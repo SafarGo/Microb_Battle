@@ -3,56 +3,84 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
-public class Saprofit_Controller : MonoBehaviourPun
+public class Saprofit_Controller : MonoBehaviour
 {
     public float Speed;
     private NavMeshAgent _agent;
-    public int HP;
+    public int lives;
     private GameObject target;
-    bool isSelected = false;
-    public LayerMask layer;
+    public Slider Slider;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
-        GameManager.Glukoza -= 2;
+        SetDestination();
+        
+    }
+    private void FixedUpdate()
+    {
+        Slider.value = lives; 
+    }
+    private void LateUpdate()
+    {
+        CheckState();
     }
 
-    private void Update()
+    protected void SetDestination()
     {
-        if (!photonView.IsMine) return;
-
-        if (isSelected && Input.GetMouseButtonDown(0))
+        //if (!isAtacPlayer) return;
+        if (!_agent.hasPath)
         {
-            Debug.Log($"{isSelected}");
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit, 100f, layer))
+            int destination_index = FindNearest();
+            if (GameManager.Beloks[destination_index] != null)
             {
-                Debug.Log("Raycast hit: " + hit.transform.name);
-                if (hit.transform != transform && isSelected)
+                target = GameManager.Beloks[destination_index];
+                _agent.SetDestination(target.transform.position);
+            }
+
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Belok"))
+        {
+            int cargo = other.gameObject.GetComponent<Belok_Controller>().count_of_belok;
+            GameManager.Count_of_belok += cargo;
+            Destroy(other.gameObject);
+            Debug.Log($"Захватил {cargo} белка");
+        }
+    }
+
+
+    private int FindNearest()
+    {
+        int result = 0;
+        float startdist = 10 * 10 ^ 5;
+        for (int i = 0; i < GameManager.Beloks.Count; i++)
+        {
+            if (GameManager.Beloks[i] != null)
+            {
+                float dist = Vector3.Distance(GameManager.Beloks[i].transform.position, gameObject.transform.position);
+                if (dist < startdist)
                 {
-                    _agent.SetDestination(hit.point);
-                    Debug.Log("Set destination: " + hit.point);
-                    isSelected = false;
+                    startdist = dist;
+                    result = i;
                 }
             }
-            else
-            {
-                Debug.Log("Raycast missed");
-            }
         }
+        return result;
     }
 
-    private void OnMouseDown()
+    private void CheckState()
     {
-        if (photonView.IsMine)
+
+        if (!_agent.hasPath || target == null)
         {
-            isSelected = true;
-            Debug.Log("Object selected");
+            SetDestination();
         }
     }
-
-
 }

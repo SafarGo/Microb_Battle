@@ -313,10 +313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: Stafilococ
-  _attackTime: 10
-  _damage: 20
+  _attackTime: 2
+  _damage: 15
   _slider: {fileID: 6768289674175658101}
-  lives: 100
+  lives: 35
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
 --- !u!195 &8097620971568598823
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 35
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 35
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

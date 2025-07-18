@@ -12,7 +12,7 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
     public LayerMask layer;
     private bool isSelected = false;
     bool isBoomed = false;
-
+    bool isCanMove = true;
 
     private void Start()
     {
@@ -33,12 +33,11 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
                 {
                     agent.SetDestination(hit.point);
                     isSelected = false;
-                    StartCoroutine(Ding());
-                    
+                    isCanMove = false;
                 }
             }
         }
-        if(hp==0 && !isBoomed)
+        if(hp<=0 && !isBoomed)
         {
             isBoomed=true;
         }
@@ -47,15 +46,11 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
     IEnumerator Ding()
     {
         yield return new WaitForSeconds(1);
-        hp = 0;
-        object[] data = new object[] { 2 };
-        PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
-        Debug.Log("Die");
     }
 
     private void OnMouseDown()
     {
-        if (photonView.IsMine)
+        if (photonView.IsMine && isCanMove)
             isSelected = true;
     }
 

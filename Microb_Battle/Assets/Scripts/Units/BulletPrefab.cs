@@ -34,19 +34,24 @@ public class BulletPrefab : MonoBehaviour
         {
             if (other.GetComponent<StafiloccocsController>() != null)
             {
-                other.GetComponent<StafiloccocsController>().lives -= 20 * attack.level;
+                other.GetComponent<StafiloccocsController>().lives -= 9 * attack.level;
                 other.GetComponent<StafiloccocsController>().SyncHeals();
             }
-            else
-                other.GetComponent<TuberculesBacilusController>().lives -= 20 * attack.level;
+            else if (other.GetComponent<TuberculesBacilusController>() != null)
+            {
+                other.GetComponent<TuberculesBacilusController>().lives -= 9 * attack.level;
                 other.GetComponent<TuberculesBacilusController>().SyncHeals();
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
+            else if (other.GetComponent<Saprofit_Controller>() != null)
+            {
+                other.GetComponent<Saprofit_Controller>().lives -= 9 * attack.level;
+                Destroy(gameObject);
+            }
         }
-        if(other.CompareTag("Klost"))
+        if (other.CompareTag("Klost"))
         {
-            Destroy(other.gameObject);
-            GameManager.Glukoza += 2;
-            GameManager.count_of_dead_enemies++;
+            other.GetComponent<KlostridiyController>().lives -= 9 * attack.level;
             Destroy(gameObject);
         }
     }
