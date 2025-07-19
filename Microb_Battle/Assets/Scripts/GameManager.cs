@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool isGameOver = false;
     public Button button;
+    public GameObject CreateTuberStick_button;
     public static bool isKetognez1 = false;
     public static bool isKetognez2 = false;
     public static bool isKetognez3 = false;
@@ -33,7 +34,12 @@ public class GameManager : MonoBehaviour
     public static float streptoFogLifetimeBonus = 1f;
     public static int Count_of_belok;
     public static bool isAttacker;
-
+    public static bool isAnti1;
+    public static bool isAnti2;
+    public static bool isUpgr1;
+    public static bool isUpgr2;
+    public static bool isUpgr3;
+    public static bool isUpgr4;
 
 
     private void Start()
@@ -73,6 +79,10 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
         heart.volume = volume.value;
+        if(isUpgr3)
+        {
+            CreateTuberStick_button.SetActive(true);
+        }
     }
 
     void MainMenu()

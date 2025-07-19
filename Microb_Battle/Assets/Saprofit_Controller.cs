@@ -9,7 +9,7 @@ public class Saprofit_Controller : MonoBehaviour
 {
     public float Speed;
     private NavMeshAgent _agent;
-    public int lives;
+    public float lives;
     private GameObject target;
     public Slider Slider;
 
@@ -53,6 +53,10 @@ public class Saprofit_Controller : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log($"Захватил {cargo} белка");
         }
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        {
+            lives *= 1.05f;
+        }
     }
 
 
@@ -83,4 +87,6 @@ public class Saprofit_Controller : MonoBehaviour
             SetDestination();
         }
     }
+
+
 }

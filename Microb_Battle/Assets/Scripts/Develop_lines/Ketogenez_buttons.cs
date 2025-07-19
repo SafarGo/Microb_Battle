@@ -7,12 +7,17 @@ public class  Ketogenez_buttons: MonoBehaviour
 {
     public void Ketogenez1(NavMeshAgent _agent)
     {
+        if(!GameManager.isAnti2)
         _agent.speed = _agent.speed*0.5f;
+        else
+            _agent.speed = _agent.speed*0.6f;
     }
     public void Ketogenez2(NavMeshAgent _agent)
     {
-        _agent.speed = _agent.speed * 0.65f;
-        
+        if (!GameManager.isAnti2)
+            _agent.speed = _agent.speed * 0.65f;
+        else
+            _agent.speed = _agent.speed * 0.75f;
     }
     public void Ketogenez3(GameObject obj)
     {

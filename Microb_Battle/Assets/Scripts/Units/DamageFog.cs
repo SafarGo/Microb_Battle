@@ -18,6 +18,13 @@ public class DamageFog : MonoBehaviour
         Destroy(gameObject, fogTime * GameManager.streptoFogLifetimeBonus);
     }
 
+    private void FixedUpdate()
+    {
+        if(GameManager.isUpgr2)
+        {
+            _attackTime *= 1.15f;
+        }
+    }
 
     IEnumerator Attack(GameObject obj)
     {

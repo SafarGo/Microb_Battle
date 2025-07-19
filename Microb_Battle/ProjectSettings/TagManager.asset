@@ -20,6 +20,7 @@ TagManager:
   - Bullet
   - Palochka
   - Belok
+  - StrepFog
   layers:
   - Default
   - TransparentFX

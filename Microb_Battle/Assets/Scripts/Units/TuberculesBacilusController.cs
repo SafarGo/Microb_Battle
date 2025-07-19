@@ -58,6 +58,28 @@ public class TuberculesBacilusController : MonoBehaviour
             isAttacking = true;
             StartCoroutine(Attack(other.gameObject));
         }
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        {
+            lives *= 1.05f;
+        }
+        if(other.CompareTag("StrepFog"))
+        {
+            if(GameManager.isUpgr4)
+            {
+                _damage *= 1.1f;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("StrepFog"))
+        {
+            if (GameManager.isUpgr4)
+            {
+                _damage /= 1.1f;
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -68,6 +90,8 @@ public class TuberculesBacilusController : MonoBehaviour
             GameManager.enemies.Remove(this.gameObject);
            PhotonNetwork.Destroy(this.gameObject);
         }
+        
+
     }
 
     private void LateUpdate()

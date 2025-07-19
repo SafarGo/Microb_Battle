@@ -73,6 +73,10 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
                 isAttacking = true;
                 StartCoroutine(Attack(other.gameObject));
             }
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        {
+            lives *= 1.05f;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -85,6 +89,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             //if(photonView.Owner == PhotonNetwork.MasterClient)
             //    Destroy(this.gameObject);
         }
+        
     }
 
     private void LateUpdate()
