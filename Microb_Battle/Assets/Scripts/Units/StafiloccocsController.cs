@@ -77,6 +77,22 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         {
             lives *= 1.05f;
         }
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
+        {
+            agent.speed *= 1.1f;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        {
+            lives /= 1.05f;
+        }
+        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
+        {
+            agent.speed /= 1.1f;
+        }
     }
 
     private void OnCollisionEnter(Collision other)
