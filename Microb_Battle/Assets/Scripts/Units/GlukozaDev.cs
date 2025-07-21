@@ -15,6 +15,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     public Button upgrade_button;
     public float HP { get; set; } = 100f;
     private PhotonView photonView;
+    public int Efficiency = 3;
     public void TakeDamage(float damage)
     {
         HP -= damage;
@@ -85,7 +86,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     void Upgrade()
     {
         if (GameManager.isAttacker) return;
-        if (GameManager.count_of_dead_enemies > level * 10)
+        if (GameManager.count_of_dead_enemies > level * 10 && level<3)
         {
             upgrade_button.gameObject.SetActive(true);
         }
@@ -106,7 +107,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     {
         if (GameManager.isAttacker) return;
         if (GameManager.isAttacker) return;
-        GameManager.Glukoza += Mathf.Floor(HP/100 * level);
+        GameManager.Glukoza += Mathf.Floor(1/level);
     }
 
     void ShowInfo()

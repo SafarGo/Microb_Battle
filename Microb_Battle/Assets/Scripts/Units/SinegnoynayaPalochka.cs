@@ -37,15 +37,20 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
                 }
             }
         }
-        if(hp<=0 && !isBoomed)
+        if(hp<=0)
         {
-            isBoomed=true;
+            object[] data = new object[] { 2 };
+            PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
+            Destroy(gameObject);
         }
-    }
+        else if(isBoomed)
+        {
+            object[] data = new object[] { 2 };
+            PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
+            Destroy(gameObject);
+        }
 
-    IEnumerator Ding()
-    {
-        yield return new WaitForSeconds(1);
+        
     }
 
     private void OnMouseDown()
@@ -73,6 +78,30 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
             // Плавно двигаем объект к полученной позиции
             if (!photonView.IsMine)
                 transform.position = Vector3.Lerp(transform.position, receivedPosition, Time.deltaTime * 10);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            if(other.gameObject.GetComponent<StafiloccocsController>() != null)
+            {
+                other.gameObject.GetComponent<StafiloccocsController>().lives -= damage;
+            }
+            else if(other.gameObject.GetComponent<TuberculesBacilusController>() != null)
+            {
+                other.gameObject.GetComponent<StafiloccocsController>().lives -= damage;
+            }
+            else if(other.gameObject.GetComponent<KlostridiyController>() != null)
+            {
+                other.gameObject.GetComponent<StafiloccocsController>().lives -= damage;
+            }
+            else if (other.gameObject.GetComponent<Saprofit_Controller>() != null)
+            {
+                other.gameObject.GetComponent<Saprofit_Controller>().lives -= damage;
+            }
+            isBoomed = true;
         }
     }
 }
