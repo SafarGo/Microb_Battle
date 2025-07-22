@@ -18,7 +18,7 @@ public class MenuNetworkManager : MonoBehaviourPunCallbacks
         roomOptions.MaxPlayers = 2;
         roomOptions.CleanupCacheOnLeave = true;
         roomOptions.EmptyRoomTtl = 0;
-        PhotonNetwork.CreateRoom("Room", roomOptions, TypedLobby.Default);
+        PhotonNetwork.CreateRoom((PhotonNetwork.CountOfRooms + 1).ToString(), roomOptions, TypedLobby.Default);
     }
 
     public void JoinRandomRoom()

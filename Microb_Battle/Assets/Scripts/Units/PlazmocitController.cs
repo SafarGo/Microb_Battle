@@ -129,7 +129,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         //if (!isProtactorPlayer) return;
         if (level < 5)
         {
-            _attack_time  -= 0.3f;
+            _attack_time  -= 0.2f;
             GameManager.Glukoza -= 10;
             level++;
             isUpgraded = true;

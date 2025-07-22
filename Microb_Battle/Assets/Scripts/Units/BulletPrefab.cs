@@ -34,52 +34,16 @@ public class BulletPrefab : MonoBehaviour
         {
             if (other.GetComponent<StafiloccocsController>() != null)
             {
-                other.GetComponent<StafiloccocsController>().lives -= 9 * attack.level;
+                other.GetComponent<StafiloccocsController>().lives -= 20 * attack.level;
                 other.GetComponent<StafiloccocsController>().SyncHeals();
             }
-            else if (other.GetComponent<TuberculesBacilusController>() != null)
-            {
-                other.GetComponent<TuberculesBacilusController>().lives -= 9 * attack.level;
-                other.GetComponent<TuberculesBacilusController>().SyncHeals();
-                Destroy(gameObject);
-            }
-            else if (other.GetComponent<Saprofit_Controller>() != null)
-            {
-                other.GetComponent<Saprofit_Controller>().lives -= 9 * attack.level;
-                Destroy(gameObject);
-            }
-        }
-        if (other.CompareTag("Klost"))
-        {
-            other.GetComponent<KlostridiyController>().lives -= 9 * attack.level;
             Destroy(gameObject);
         }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
+        if(other.CompareTag("Klost"))
         {
-            if (other.gameObject.GetComponent<StafiloccocsController>() != null)
-            {
-                other.gameObject.GetComponent<StafiloccocsController>().lives -= 9 * attack.level;
-                other.gameObject.GetComponent<StafiloccocsController>().SyncHeals();
-            }
-            else if (other.gameObject.GetComponent<TuberculesBacilusController>() != null)
-            {
-                other.gameObject.GetComponent<TuberculesBacilusController>().lives -= 9 * attack.level;
-                other.gameObject.GetComponent<TuberculesBacilusController>().SyncHeals();
-                Destroy(gameObject);
-            }
-            else if (other.gameObject.GetComponent<Saprofit_Controller>() != null)
-            {
-                other.gameObject.GetComponent<Saprofit_Controller>().lives -= 9 * attack.level;
-                Destroy(gameObject);
-            }
-        }
-        if (other.gameObject.CompareTag("Klost"))
-        {
-            other.gameObject.GetComponent<KlostridiyController>().lives -= 9 * attack.level;
+            Destroy(other.gameObject);
+            GameManager.Glukoza += 2;
+            GameManager.count_of_dead_enemies++;
             Destroy(gameObject);
         }
     }

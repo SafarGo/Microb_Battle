@@ -272,9 +272,9 @@ GameObject:
   - component: {fileID: 6397929764938923930}
   - component: {fileID: 8097620971568598823}
   - component: {fileID: 1846949123588836150}
-  - component: {fileID: 1576506815275194230}
   - component: {fileID: 6671428280469654653}
   - component: {fileID: 4894483158982967204}
+  - component: {fileID: 7279617443794007801}
   m_Layer: 6
   m_Name: Enemy_Palochka
   m_TagString: Enemy
@@ -338,34 +338,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.1735797, y: 1.2539285, z: 1.9460104}
   m_Center: {x: -0.08448767, y: 0.12696412, z: -0.021706527}
---- !u!114 &1576506815275194230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5382206904608751854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5867cf06136a62458ba37221d04037d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyType: Paluchka
-  _attackTime: 13
-  _attackTimeKof: 0.085
-  _damage: 20
-  _slider: {fileID: 6768289674175658101}
-  lives: 100
-  agent: {fileID: 8097620971568598823}
-  attackSound: {fileID: 3781839202906134668}
-  photonView: {fileID: 0}
-  price: 12
 --- !u!114 &6671428280469654653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,6 +400,26 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &7279617443794007801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5382206904608751854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8282d37550543948a6040ee58c38863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: Bacillus
+  _attackTime: 10
+  _damage: 20
+  AtkKof: 0.085
+  _slider: {fileID: 6768289674175658101}
+  lives: 100
+  agent: {fileID: 8097620971568598823}
+  attackSound: {fileID: 3781839202906134668}
 --- !u!1 &7562177278522077664
 GameObject:
   m_ObjectHideFlags: 0

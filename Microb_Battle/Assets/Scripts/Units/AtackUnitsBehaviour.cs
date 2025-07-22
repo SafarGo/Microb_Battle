@@ -17,6 +17,8 @@ public class AtackUnitsBehaviour : MonoBehaviour
 
     public void Death(GameObject unit,string unitType)
     {
+       // if(!PhotonNetwork.IsMasterClient) { return; }
+
         GameManager.Glukoza += 5;
         GameManager.count_of_dead_enemies++;
         unit.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.LocalPlayer);
@@ -36,8 +38,6 @@ public class AtackUnitsBehaviour : MonoBehaviour
                 Debug.Log("Стрептокок мертв");
                PhotonNetwork.Instantiate(stafilococFogPrefab.name, unit.transform.position,Quaternion.identity);
                 break;
-
-
         }
     }
 

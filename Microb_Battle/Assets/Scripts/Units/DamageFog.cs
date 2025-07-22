@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Pun;
 
-public class DamageFog : MonoBehaviour
+public class DamageFog : MonoBehaviourPunCallbacks
 {
     //[SerializeField] private Transform _target;
     [SerializeField] private float fogTime = 15;
@@ -11,9 +12,17 @@ public class DamageFog : MonoBehaviour
     [SerializeField] private float _damage;
     private bool isAttacking = false;
     public AudioSource attackSound;
+    private PhotonView photonView;
 
     protected virtual void Start()
     {
+        photonView = gameObject.GetComponent<PhotonView>();
+
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
         GameManager.enemies.Add(this.gameObject);
         Destroy(gameObject, fogTime * GameManager.streptoFogLifetimeBonus);
     }
@@ -45,20 +54,21 @@ public class DamageFog : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        if(!PhotonNetwork.IsMasterClient) return;
+
         if (!isAttacking && other.CompareTag("Unit"))
         {
             isAttacking = true;
             StartCoroutine(Attack(other.gameObject));
         }
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Storm"))
-        {
-            GameManager.count_of_dead_enemies++;
-            GameManager.enemies.Remove(this.gameObject);
-            Destroy(this.gameObject);
-        }
-    }
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    if (other.gameObject.CompareTag("Storm"))
+    //    {
+    //        GameManager.count_of_dead_enemies++;
+    //        GameManager.enemies.Remove(this.gameObject);
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 }
