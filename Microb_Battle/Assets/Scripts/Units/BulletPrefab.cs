@@ -55,4 +55,32 @@ public class BulletPrefab : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (other.gameObject.GetComponent<StafiloccocsController>() != null)
+            {
+                other.gameObject.GetComponent<StafiloccocsController>().lives -= 9 * attack.level;
+                other.gameObject.GetComponent<StafiloccocsController>().SyncHeals();
+            }
+            else if (other.gameObject.GetComponent<TuberculesBacilusController>() != null)
+            {
+                other.gameObject.GetComponent<TuberculesBacilusController>().lives -= 9 * attack.level;
+                other.gameObject.GetComponent<TuberculesBacilusController>().SyncHeals();
+                Destroy(gameObject);
+            }
+            else if (other.gameObject.GetComponent<Saprofit_Controller>() != null)
+            {
+                other.gameObject.GetComponent<Saprofit_Controller>().lives -= 9 * attack.level;
+                Destroy(gameObject);
+            }
+        }
+        if (other.gameObject.CompareTag("Klost"))
+        {
+            other.gameObject.GetComponent<KlostridiyController>().lives -= 9 * attack.level;
+            Destroy(gameObject);
+        }
+    }
 }

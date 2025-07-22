@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4807459850158900417}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237879481905843945}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 4128223085052343310}
   - component: {fileID: 3522232854619750649}
   - component: {fileID: 5321605286598361633}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1652233495382322444}
   - component: {fileID: 6898620926977350260}
   - component: {fileID: 4131818395904613211}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 1846949123588836150}
   - component: {fileID: 4766400212728403275}
   - component: {fileID: 8764580791658871616}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Enemy_Stafiloccocs
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -429,7 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375708507613443142}
   - component: {fileID: 6768289674175658101}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 4661157058051876181}
   - component: {fileID: 7423149373185013121}
   - component: {fileID: 4703852747509412438}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -670,7 +670,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9d4502a430ec34a45906c5df84d58758,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -785,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 7101651803791971221, guid: 556e26f31b67f484e904d027ceab37d4,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

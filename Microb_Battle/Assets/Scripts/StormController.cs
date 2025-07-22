@@ -32,7 +32,7 @@ public class StormController : MonoBehaviour
         LayerMask desiredLayers = LayerMask.GetMask("DefendUnits", "Units", "Clickable");
         collisionModule.collidesWith = desiredLayers;
         GameManager.Glukoza -= price;
-        ParticleSystem.gravityModifier -= 2;
+        ParticleSystem.gravityModifier -= 1;
     }
 
     public void Storm3(int price)
@@ -42,7 +42,7 @@ public class StormController : MonoBehaviour
         LayerMask desiredLayers = LayerMask.GetMask("DefendUnits", "Units", "Clickable", "Nodes");
         collisionModule.collidesWith = desiredLayers;
         GameManager.Glukoza -= price;
-        ParticleSystem.gravityModifier -= 2;
+        ParticleSystem.gravityModifier = 1;
     }
 
     public void Check_Button(int index, int price, bool ket)

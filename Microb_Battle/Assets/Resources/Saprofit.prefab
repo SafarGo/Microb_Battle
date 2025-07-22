@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555068497927199616}
   - component: {fileID: 1321566431793728224}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 7738304706921484007}
   - component: {fileID: 6648483931295734309}
   - component: {fileID: 9153586650206131583}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5724026490251373183}
   - component: {fileID: 3486674299675962846}
   - component: {fileID: 6227179884057752508}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 6279203121633964377}
   - component: {fileID: 3981436261046884672}
   - component: {fileID: 2698339233179672114}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 9175781811649127967}
   - component: {fileID: 8155767036398491718}
   - component: {fileID: 8081435014048017188}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Saprofit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8770956159734571213}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

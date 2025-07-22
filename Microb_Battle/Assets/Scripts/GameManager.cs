@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         Time.timeScale = 1;
         Glukoza = 15;
+        Count_of_belok = 15;
     }
 
     public static void AttackAllStaf()
