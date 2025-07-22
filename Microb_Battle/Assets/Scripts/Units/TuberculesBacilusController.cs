@@ -19,6 +19,7 @@ public class TuberculesBacilusController : MonoBehaviour
     private bool isAttacking = false;
     public AudioSource attackSound;
     public PhotonView photonView;
+    public float price;
 
     protected virtual void Start()
     {
@@ -27,7 +28,7 @@ public class TuberculesBacilusController : MonoBehaviour
         _slider.maxValue = _slider.value = lives;
         //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
-
+        GameManager.Count_of_belok -= price;
         SetDestination();
 
     }

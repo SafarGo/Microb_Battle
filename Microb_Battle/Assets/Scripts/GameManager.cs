@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
-    public static int Count_of_belok;
+    public static float Count_of_belok;
     public static bool isAttacker;
     public static bool isAnti1;
     public static bool isAnti2;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public static bool isUpgr2;
     public static bool isUpgr3;
     public static bool isUpgr4;
-
+    
 
     private void Start()
     {

@@ -16,6 +16,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     public float HP { get; set; } = 100f;
     private PhotonView photonView;
     public int Efficiency = 3;
+    public Slider Slider_Glukoza;
     public void TakeDamage(float damage)
     {
         HP -= damage;
@@ -78,9 +79,10 @@ public class GlukozaDev : MonoBehaviour, IDamageable
     {
         if (GameManager.isAttacker) return;
         slider.value = HP;
-        text.text = $"Глюкоза {GameManager.Glukoza}";
+        text.text = $"{GameManager.Glukoza}";
         level_text.text = $"Ур. {level}";
         Upgrade();
+        Slider_Glukoza.value = GameManager.Glukoza;
     }
 
     void Upgrade()

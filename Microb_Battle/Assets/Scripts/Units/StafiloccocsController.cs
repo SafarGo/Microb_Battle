@@ -19,6 +19,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     private bool isAttacking = false;
     public AudioSource attackSound;
     private GameObject target;
+    public float Price;
     //[SerializeField]private bool isAtacPlayer = false;
     protected virtual void Start()
     {
@@ -26,6 +27,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             {
                 photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
             }
+        GameManager.Count_of_belok -= Price;
         //if(gameObject.GetComponent<PhotonView>().Owner != PhotonNetwork.MasterClient)
         //    if(gameObject.GetComponent<PhotonView>().IsMine)
         //        isAtacPlayer = true;

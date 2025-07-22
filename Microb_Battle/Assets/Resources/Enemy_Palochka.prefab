@@ -365,6 +365,7 @@ MonoBehaviour:
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
   photonView: {fileID: 0}
+  price: 12
 --- !u!114 &6671428280469654653
 MonoBehaviour:
   m_ObjectHideFlags: 0

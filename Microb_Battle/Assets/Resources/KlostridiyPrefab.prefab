@@ -119,6 +119,7 @@ MonoBehaviour:
   _agent: {fileID: 7338754489573477135}
   system: {fileID: 8545720791329920018, guid: 2270d1ffd0f2579468ab88fa6d7d342d, type: 3}
   lives: 30
+  price: 5
 --- !u!195 &7338754489573477135
 NavMeshAgent:
   m_ObjectHideFlags: 0

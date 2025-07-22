@@ -4,6 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class Saprofit_Controller : MonoBehaviour
 {
@@ -12,17 +13,25 @@ public class Saprofit_Controller : MonoBehaviour
     public float lives;
     private GameObject target;
     public Slider Slider;
+    public float price;
 
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         SetDestination();
+        GameManager.Count_of_belok -= price;
         
     }
     private void FixedUpdate()
     {
         Slider.value = lives; 
+        if(lives<=0)
+        {
+            object[] data = new object[] { 1 };
+            PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity, 0, data);
+            Destroy(gameObject);
+        }
     }
     private void LateUpdate()
     {

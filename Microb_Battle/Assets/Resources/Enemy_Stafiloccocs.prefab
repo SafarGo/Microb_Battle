@@ -319,6 +319,7 @@ MonoBehaviour:
   lives: 35
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
+  Price: 4
 --- !u!195 &8097620971568598823
 NavMeshAgent:
   m_ObjectHideFlags: 0

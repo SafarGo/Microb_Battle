@@ -14,11 +14,13 @@ public class KlostridiyController : MonoBehaviour
     bool isAttacked = false;
     public ParticleSystem system;
     public float lives = 30;
+    public float price;
 
     private void Awake()
     {
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
+        GameManager.Count_of_belok -= price;
     }
 
     void SetupTarget()

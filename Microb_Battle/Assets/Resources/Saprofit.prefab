@@ -467,6 +467,7 @@ MonoBehaviour:
   Speed: 3
   lives: 15
   Slider: {fileID: 1321566431793728224}
+  price: 2
 --- !u!195 &8155767036398491718
 NavMeshAgent:
   m_ObjectHideFlags: 0
