@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Photon.Pun;
-using JetBrains.Annotations;
 
-public class TuberculesBacilusController : MonoBehaviour
+public class TuberculesBacilusController : MonoBehaviourPunCallbacks
 {
     //[SerializeField] private Transform _target;
     [SerializeField] private string enemyType;
@@ -22,13 +20,18 @@ public class TuberculesBacilusController : MonoBehaviour
 
     protected virtual void Start()
     {
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
         agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
         //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
-
         SetDestination();
+
 
     }
 
@@ -107,7 +110,7 @@ public class TuberculesBacilusController : MonoBehaviour
 
     public void SyncHeals()
     {
-        photonView.RPC(nameof(UpdateHealthB), RpcTarget.Others, lives);
+        photonView.RPC("UpdateHealthB", RpcTarget.Others, lives);
     }
     [PunRPC]
     public void UpdateHealthB(float newHealth)

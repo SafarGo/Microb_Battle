@@ -15,8 +15,7 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {        
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

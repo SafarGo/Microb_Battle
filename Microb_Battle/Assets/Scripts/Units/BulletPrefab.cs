@@ -37,9 +37,6 @@ public class BulletPrefab : MonoBehaviour
                 other.GetComponent<StafiloccocsController>().lives -= 20 * attack.level;
                 other.GetComponent<StafiloccocsController>().SyncHeals();
             }
-            else
-                other.GetComponent<TuberculesBacilusController>().lives -= 20 * attack.level;
-                other.GetComponent<TuberculesBacilusController>().SyncHeals();
             Destroy(gameObject);
         }
         if(other.CompareTag("Klost"))
