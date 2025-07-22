@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9029442416082376344}
   - component: {fileID: 3912070638138683222}
   - component: {fileID: 3965358304572773296}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 8980495093518257556}
   - component: {fileID: 4343774794387745212}
   - component: {fileID: 3933830434518866267}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4917228459296374807}
   - component: {fileID: 1095572755032232104}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7940153186330062884}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 3854897266040257182}
   - component: {fileID: 1139468837825525668}
   - component: {fileID: 2324509010808061693}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,12 +438,12 @@ PrefabInstance:
     - target: {fileID: -8391222552659086748, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -7598737635320538301, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -5109344353496499524, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
@@ -458,7 +458,7 @@ PrefabInstance:
     - target: {fileID: -856115065808701879, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -746431561629737177, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
@@ -473,12 +473,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4802330275749567153, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8446996653474405561, guid: 1898cb685b628a044af1285fb13dd5ed,
         type: 3}

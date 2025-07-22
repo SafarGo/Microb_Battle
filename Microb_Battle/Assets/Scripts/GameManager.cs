@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour
     public static bool isKetognez3 = false;
     public static bool isKetognez4 = false;
     public static bool isCanSelectTower = true;
-
+    public static bool Storm1;
+    public static bool Storm2;
+    public static bool Storm3;
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;

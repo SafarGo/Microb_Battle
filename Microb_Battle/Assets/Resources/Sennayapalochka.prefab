@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7731911884235896065}
   - component: {fileID: 8330014823299873787}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7470116753360154412}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 6430663077192766236}
   - component: {fileID: 4188993673742065942}
   - component: {fileID: 7532300592397623526}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Sennayapalochka
   m_TagString: Unit
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 7450467095846855446}
   - component: {fileID: 2156826950566521597}
   - component: {fileID: 7686063314164602636}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 3964714283091370181}
   - component: {fileID: 471717742517241334}
   - component: {fileID: 1105593445327371366}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Fire_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 8796264096015646221}
   - component: {fileID: 2567184161686451530}
   - component: {fileID: 5833444873787833265}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 6091619687739593729}
   - component: {fileID: 5304945697238519612}
   - component: {fileID: 2778254895678885463}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
