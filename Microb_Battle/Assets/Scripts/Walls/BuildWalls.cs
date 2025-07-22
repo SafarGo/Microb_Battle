@@ -90,7 +90,7 @@ public class BuildWalls : MonoBehaviour
                 return;
             }
 
-            GameObject newWall = Instantiate(wallPrefab);
+            GameObject newWall = PhotonNetwork.Instantiate(wallPrefab.name,transform.position,Quaternion.identity);
             Wall wall = newWall.GetComponent<Wall>();
             wall.Setup(selectedNodeA, selectedNodeB);
             walls.Add(wall);
