@@ -16,20 +16,23 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
 
     void Update()
     {
-        if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
-            || Input.mousePosition.x <= Screen.width / 5.5f)
+        if (!PhotonNetwork.IsMasterClient)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
+                || Input.mousePosition.x <= Screen.width / 5.5f)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit, 100f, groundLayer))
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    Vector3 spawnPos = hit.point;
-                    float distance = Vector3.Distance(new Vector3(0, 0, 0), spawnPos);
-                    if (distance > 13 && GameManager.Count_of_belok >= enemies[selektedIndex].GetComponent<StafiloccocsController>().EnemyCost)//переделать 1
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    if (Physics.Raycast(ray, out RaycastHit hit, 100f, groundLayer))
                     {
-                        PhotonNetwork.Instantiate(enemies[selektedIndex].name, spawnPos, Quaternion.identity);
-                        Debug.Log(hit.collider.gameObject.layer);
+                        Vector3 spawnPos = hit.point;
+                        float distance = Vector3.Distance(new Vector3(0, 0, 0), spawnPos);
+                        if (distance > 13 && GameManager.Count_of_belok >= enemies[selektedIndex].GetComponent<StafiloccocsController>().EnemyCost)//переделать 1
+                        {
+                            PhotonNetwork.Instantiate(enemies[selektedIndex].name, spawnPos, Quaternion.identity);
+                            Debug.Log(hit.collider.gameObject.layer);
+                        }
                     }
                 }
             }
