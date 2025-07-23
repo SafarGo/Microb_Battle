@@ -37,7 +37,7 @@ public class PlayerSideController : MonoBehaviour
     }
     private void Update()
     {
-        Debug.LogError(gameObject.tag);
+        //Debug.LogError(gameObject.tag);
     }
 
     /// <summary>

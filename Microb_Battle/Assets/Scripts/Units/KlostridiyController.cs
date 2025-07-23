@@ -20,7 +20,11 @@ public class KlostridiyController : MonoBehaviour
     {
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
-        GameManager.Count_of_belok -= price;
+
+        if (GameManager.Count_of_belok >= price)
+            GameManager.Count_of_belok -= price;
+        else
+            Destroy(gameObject);
     }
 
     void SetupTarget()

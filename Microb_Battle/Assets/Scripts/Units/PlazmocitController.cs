@@ -22,8 +22,11 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         GameManager.towers.Add(this.gameObject);
         slider.value = HP;
-        button.onClick.AddListener(Upgrade);
-        button.gameObject.SetActive(false);
+        if (button != null)
+        {
+            button.onClick.AddListener(Upgrade);
+            button.gameObject.SetActive(false);
+        }
     }
     public float HP { get; set; } = 100f;
 
@@ -42,7 +45,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         HP -= damage;
         slider.value = HP;
         Debug.Log($"Башня получила {damage} урона! Осталось HP: {HP}");
-        parent.GetComponent<PhotonView>().RPC("SyncHP", RpcTarget.Others, HP);
+        parent.GetComponent<PhotonView>().RPC(nameof(SyncHP), RpcTarget.Others, HP);
         if (HP <= 0)
         {
             //if (parent.GetComponent<PhotonView>().Owner == PhotonNetwork.MasterClient)
@@ -65,7 +68,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (isProtactorPlayer)
+        if (isProtactorPlayer && button!=null)
         {
             if (GameManager.Glukoza >= 20 && level < 5)
             {

@@ -20,8 +20,11 @@ public class Saprofit_Controller : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         SetDestination();
-        GameManager.Count_of_belok -= price;
-        
+        if (GameManager.Count_of_belok >= price)
+            GameManager.Count_of_belok -= price;
+        else
+            Destroy(gameObject);
+
     }
     private void FixedUpdate()
     {

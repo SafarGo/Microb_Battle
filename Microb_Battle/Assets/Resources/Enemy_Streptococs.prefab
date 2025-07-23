@@ -315,11 +315,12 @@ MonoBehaviour:
   enemyType: Streptococ
   _attackTime: 2
   _damage: 5
+  AtkKof: 0
   _slider: {fileID: 6768289674175658101}
   lives: 35
+  EnemyCost: 5
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
-  Price: 7
 --- !u!195 &8097620971568598823
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -357,7 +358,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

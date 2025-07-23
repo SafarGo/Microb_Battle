@@ -16,6 +16,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     [SerializeField] private Slider _slider;
     //[SerializeField] private PhotonView photonView;
     public float lives = 100f;
+    public int EnemyCost = 100;
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
@@ -27,6 +28,8 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             {
                 photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
             }
+        if (GameManager.Count_of_belok >= EnemyCost)
+            GameManager.Count_of_belok -= EnemyCost;
 
             agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;
@@ -103,8 +106,8 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
 
     private void LateUpdate()
     {
-            if (gameObject.GetComponent<PhotonView>().IsMine)
-                Debug.LogError("Атакующий ли игрок - ");
+            //if (gameObject.GetComponent<PhotonView>().IsMine)
+            //    Debug.LogError("Атакующий ли игрок - ");
             CheckState();
     }
 

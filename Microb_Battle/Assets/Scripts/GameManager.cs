@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
-    public static float Count_of_belok;
+    public static float Count_of_belok = 0;
     public static bool isAttacker;
     public static bool isAnti1;
     public static bool isAnti2;
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         button.onClick.AddListener(MainMenu);
         isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
+            InvokeRepeating(nameof(PlusBelok), 1, 5);
     }
 
     private void Awake()
@@ -56,7 +57,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         Time.timeScale = 1;
         Glukoza = 15;
-        Count_of_belok = 15;
+        Count_of_belok = 0;
     }
 
     public static void AttackAllStaf()
@@ -65,6 +66,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(enemies[i]);
         }
+    }
+
+    private void PlusBelok()
+    {
+            Count_of_belok += 5;
     }
 
     private void Update()
