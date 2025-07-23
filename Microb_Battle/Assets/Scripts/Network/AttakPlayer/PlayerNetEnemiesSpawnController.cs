@@ -16,8 +16,8 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
 
     void Update()
     {
-            if (Input.mousePosition.x <= Screen.width - Screen.width / 5.5f
-                || Input.mousePosition.x >= Screen.width / 5.5f)
+            if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
+                || Input.mousePosition.x <= Screen.width / 5.5f)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {

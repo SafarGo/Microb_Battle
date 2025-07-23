@@ -6,8 +6,8 @@ public class MainTowerController : MonoBehaviour, IDamageable
 {
     public float HP { get; set; } = 20000f;
     public AudioSource sound;
-    public GameObject menu;
-    public GameObject text;
+    public GameObject Player_2_Win;
+    //public GameObject text;
     void Awake()
     {
         GameManager.towers.Add(this.gameObject);
@@ -26,6 +26,6 @@ public class MainTowerController : MonoBehaviour, IDamageable
         if (HP < 150 && HP >= 75) { sound.pitch = 1f; }
         if (HP < 75 && HP >= 30) { sound.pitch = 1.2f; }
         if(HP < 30) { sound.pitch = 1.5f; }
-        if (HP <= 0) { menu.SetActive(true);  text.SetActive(true); GameManager.isGameOver = true; }
+        if (HP <= 0) { Player_2_Win.SetActive(true); GameManager.isGameOver = true; }
     }
 }

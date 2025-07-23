@@ -7,8 +7,7 @@ public class Timer : MonoBehaviour
 {
     public static float time = 300f;
     [SerializeField] private TMP_Text text;
-    public GameObject manu;
-    public GameObject text1;
+    public GameObject Player_1_Win;
 
     private void Start()
     {
@@ -22,8 +21,7 @@ public class Timer : MonoBehaviour
         text.text = $"{minutes:00}:{seconds:00}";
         if(time<=0 && !GameManager.isGameOver)
         {
-            manu.SetActive(true);
-            text1.SetActive(true);
+           Player_1_Win.SetActive(true);
         }
     }
 }
