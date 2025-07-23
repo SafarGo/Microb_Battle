@@ -28,10 +28,11 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             {
                 photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
             }
+
         if (GameManager.Count_of_belok >= EnemyCost)
             GameManager.Count_of_belok -= EnemyCost;
         else
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
 
             agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;

@@ -46,7 +46,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        button.onClick.AddListener(MainMenu);
+        if(button!=null)
+            button.onClick.AddListener(MainMenu);
         isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
             InvokeRepeating(nameof(PlusBelok), 1, 5);
     }
@@ -92,7 +93,8 @@ public class GameManager : MonoBehaviour
         heart.volume = volume.value;
         if(isUpgr3)
         {
-            CreateTuberStick_button.SetActive(true);
+            if (button != null)
+                CreateTuberStick_button.SetActive(true);
         }
     }
 
