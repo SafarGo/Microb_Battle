@@ -15,7 +15,10 @@ public class TowerCanvasController : MonoBehaviour
     }
     private void Update()
     {
-        slider.value = tower.GetComponent<IDamageable>().HP;
-        gameObject.transform.LookAt(_player_cam.transform);
+        if (_player_cam != null && slider != null && tower != null)
+        {
+            slider.value = tower.GetComponent<IDamageable>().HP;
+            gameObject.transform.LookAt(_player_cam.transform);
+        }
     }
 }

@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         heart.volume = volume.value;
         if(isUpgr3)
         {
-            if (button != null)
+            if (CreateTuberStick_button != null)
                 CreateTuberStick_button.SetActive(true);
         }
     }
