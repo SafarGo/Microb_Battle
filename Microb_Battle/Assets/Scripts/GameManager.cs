@@ -70,8 +70,10 @@ public class GameManager : MonoBehaviour
 
     private void PlusBelok()
     {
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
             Count_of_belok += 5;
     }
+
 
     private void Update()
     {

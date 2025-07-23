@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11435633}
   - component: {fileID: 11435634}
+  - component: {fileID: 11435635}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -173,6 +174,28 @@ MonoBehaviour:
   heart: {fileID: 0}
   button: {fileID: 5845863089927482384}
   CreateTuberStick_button: {fileID: 0}
+--- !u!114 &11435635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11435631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 31
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &15598640
 PrefabInstance:
   m_ObjectHideFlags: 0

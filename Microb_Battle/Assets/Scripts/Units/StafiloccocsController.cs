@@ -30,6 +30,8 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             }
         if (GameManager.Count_of_belok >= EnemyCost)
             GameManager.Count_of_belok -= EnemyCost;
+        else
+            Destroy(gameObject);
 
             agent.speed *= GameManager.attakUnitsSpeedBonus;
         lives *= GameManager.attakUnitsHPBonus;

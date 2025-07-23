@@ -16,10 +16,8 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
 
     void Update()
     {
-        if (!PhotonNetwork.IsMasterClient)
-        {
-            if (Input.mousePosition.x >= Screen.width - Screen.width / 5.5f
-                || Input.mousePosition.x <= Screen.width / 5.5f)
+            if (Input.mousePosition.x <= Screen.width - Screen.width / 5.5f
+                || Input.mousePosition.x >= Screen.width / 5.5f)
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
@@ -28,7 +26,7 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
                     {
                         Vector3 spawnPos = hit.point;
                         float distance = Vector3.Distance(new Vector3(0, 0, 0), spawnPos);
-                        if (distance > 13 && GameManager.Count_of_belok >= enemies[selektedIndex].GetComponent<StafiloccocsController>().EnemyCost)//переделать 1
+                        if (distance > 13)//переделать 1
                         {
                             PhotonNetwork.Instantiate(enemies[selektedIndex].name, spawnPos, Quaternion.identity);
                             Debug.Log(hit.collider.gameObject.layer);
@@ -36,7 +34,6 @@ public class PlayerNetEnemiesSpawnController : MonoBehaviour
                     }
                 }
             }
-        }
     }
 
     public void SelectAtackUnit(int index)

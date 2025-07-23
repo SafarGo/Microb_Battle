@@ -45,9 +45,9 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-         //if (GameManager.isAttacker) return;
+            //if (GameManager.isAttacker) return;
 
-        GameManager.towers.Add(this.gameObject);
+            GameManager.towers.Add(this.gameObject);
         upgrade_button.onClick.AddListener(UpgradeeButton);
         
     }
@@ -66,6 +66,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     private void Start()
     {
+
         photonView = gameObject.GetComponent<PhotonView>();
         if (!photonView.IsMine)
         {
@@ -77,6 +78,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void Update()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         slider.value = HP;
         text.text = $"{GameManager.Glukoza}";
@@ -87,6 +90,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void Upgrade()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         if (GameManager.count_of_dead_enemies > level * 10 && level<3)
         {
@@ -100,6 +105,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     public void UpgradeeButton()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         level++;
         GameManager.count_of_dead_enemies -= level * 10;
@@ -107,6 +114,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void Develop()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         if (GameManager.isAttacker) return;
         GameManager.Glukoza += Mathf.Floor(1/level);
@@ -114,6 +123,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void ShowInfo()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = $"Выроботка глюкозы\n" +
@@ -123,6 +134,8 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
     void ClearInfo()
     {
+        if (PhotonNetwork.CurrentRoom.PlayerCount != 2) { return; }
+
         if (GameManager.isAttacker) return;
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = "";
