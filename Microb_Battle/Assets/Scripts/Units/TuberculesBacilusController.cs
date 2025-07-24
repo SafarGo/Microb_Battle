@@ -59,20 +59,14 @@ public class TuberculesBacilusController : MonoBehaviour
             isAttacking = true;
             StartCoroutine(Attack(other.gameObject));
         }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
-        {
-            lives *= 1.05f;
-        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
         if(other.CompareTag("StrepFog"))
         {
-            if(GameManager.isUpgr4)
-            {
-                _damage *= 1.1f;
-            }
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            agent.speed *= 1.1f;
+            _damage *= GameManager.streptoFogLifetimeBonus;
         }
     }
 
@@ -80,18 +74,7 @@ public class TuberculesBacilusController : MonoBehaviour
     {
         if (other.CompareTag("StrepFog"))
         {
-            if (GameManager.isUpgr4)
-            {
-                _damage /= 1.1f;
-            }
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
-        {
-            lives /= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            agent.speed /= 1.1f;
+                _damage /= GameManager.streptoFogLifetimeBonus;
         }
     }
 

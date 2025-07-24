@@ -7,7 +7,7 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
 {
    
     public Slider Slider_hp;
-    
+    public float price;
 
 
     public float HP { get; set; } = 60f;
@@ -15,6 +15,7 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
     void Awake()
     {
         GameManager.towers.Add(this.gameObject);
+        GameManager.Glukoza -= price;
     }
 
     private void FixedUpdate()

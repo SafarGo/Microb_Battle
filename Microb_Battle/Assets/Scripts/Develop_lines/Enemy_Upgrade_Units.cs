@@ -12,14 +12,12 @@ public class Enemy_Upgrade_Units : MonoBehaviour
 
     public void Upgr1(int price)
     {
-        GameManager.isUpgr1 = true;
         but1.interactable = false;
         GameManager.Count_of_belok -= price; 
     }
 
     public void Upgr2(int price)
     {
-        GameManager.isUpgr2 = true;
         but2.interactable = false;
         GameManager.Count_of_belok -= price;
     }

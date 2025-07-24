@@ -34,14 +34,14 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
-    public static float Count_of_belok = 0;
-    public static bool isAttacker;
-    public static bool isAnti1;
-    public static bool isAnti2;
-    public static bool isUpgr1;
-    public static bool isUpgr2;
+    public static float Klostridiy_attack_bonus = 1;
+    public static float AttackHPBouns = 1f;
     public static bool isUpgr3;
     public static bool isUpgr4;
+    public static bool isAnti1;
+    public static bool isAnti2;
+    public static float Count_of_belok= 0;
+    public static bool isAttacker;
     
 
     private void Start()
@@ -57,8 +57,8 @@ public class GameManager : MonoBehaviour
         isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
         instance = this;
         Time.timeScale = 1;
-        Glukoza = 15;
-        Count_of_belok = 0;
+        Glukoza = 200;
+        Count_of_belok = 200;
     }
 
     public static void AttackAllStaf()

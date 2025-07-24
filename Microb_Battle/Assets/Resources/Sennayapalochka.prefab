@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider_hp: {fileID: 8330014823299873787}
+  price: 15
 --- !u!54 &4188993673742065942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -447,8 +448,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 30
-  m_Center: {x: 0, y: 0, z: 0.00029087067}
+  m_Radius: 2.755645
+  m_Center: {x: 0, y: 0.000012633547, z: -0.13618279}
 --- !u!114 &1105593445327371366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +468,7 @@ MonoBehaviour:
   launchForce: 15
   launchAngle: 45
   enemy_position: {fileID: 0}
+  attack_time: 4
 --- !u!1 &8461678673088000058
 GameObject:
   m_ObjectHideFlags: 0

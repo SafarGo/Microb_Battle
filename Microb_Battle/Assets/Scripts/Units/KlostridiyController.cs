@@ -7,8 +7,8 @@ using UnityEngine.AI;
 
 public class KlostridiyController : MonoBehaviour
 {
-    [SerializeField] float _damage;
-    [SerializeField] float _speed;
+    public float _damage;
+    public float _speed;
     [SerializeField] private Wall _target;
     [SerializeField] private NavMeshAgent _agent;
     bool isAttacked = false;
@@ -20,7 +20,7 @@ public class KlostridiyController : MonoBehaviour
     {
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
-
+        _damage *= GameManager.Klostridiy_attack_bonus;
         if (GameManager.Count_of_belok >= price)
             GameManager.Count_of_belok -= price;
         else
@@ -73,34 +73,22 @@ public class KlostridiyController : MonoBehaviour
             GameManager.Glukoza += 3;
             Destroy(gameObject);
         }
-        if(GameManager.isUpgr1)
-        {
-            _damage *= 1.1f;
-        }
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if(other.CompareTag("Ketogenez"))
         {
-            lives *= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed *= 1.1f;
+            lives *= GameManager.AttackHPBouns;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if (other.CompareTag("Ketogenez"))
         {
-            lives /= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed /= 1.1f;
+            lives /= GameManager.AttackHPBouns;
         }
     }
 }

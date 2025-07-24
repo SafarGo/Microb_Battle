@@ -22,12 +22,10 @@ public class GlukozaDev : MonoBehaviour, IDamageable
         HP -= damage;
         slider.value = HP;
         Debug.Log($"Башня получила {damage} урона! Осталось HP: {HP}");
-
         photonView.RPC("SyncGlucosDevHP", RpcTarget.Others, HP);
         if (HP <= 0)
         {
-            PhotonNetwork.Destroy(gameObject);
-            GameManager.towers.Remove(this.gameObject);
+            
         }
     }
 
@@ -118,7 +116,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
 
         if (GameManager.isAttacker) return;
         if (GameManager.isAttacker) return;
-        GameManager.Glukoza += Mathf.Floor(1/level);
+        GameManager.Glukoza += 1;
     }
 
     void ShowInfo()
@@ -129,7 +127,7 @@ public class GlukozaDev : MonoBehaviour, IDamageable
         TMP_Text text = GameObject.Find("InfoText").GetComponent<TMP_Text>();
         text.text = $"Выроботка глюкозы\n" +
             $"Уровень {level}\n"+
-            $"Производительность: {Mathf.Floor(HP / 100 * level)} сек";
+            $"Производительность: 1 в сек";
     }
 
     void ClearInfo()

@@ -13,11 +13,12 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
     private bool isSelected = false;
     bool isBoomed = false;
     bool isCanMove = true;
+    public float price;
 
     private void Start()
     {
         agent.speed = speed;
-        GameManager.Glukoza -= 3;
+        GameManager.Glukoza -= price;
     }
 
     private void Update()

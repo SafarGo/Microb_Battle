@@ -11,6 +11,7 @@ public class SenAttack : MonoBehaviourPun
     public float launchAngle = 45f;
     [SerializeField] Transform enemy_position;
     bool _isCanShoot = true;
+    public float attack_time;
 
     void Update()
     {
@@ -100,7 +101,7 @@ public class SenAttack : MonoBehaviourPun
 
     IEnumerator Perezariadka()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(attack_time);
         _isCanShoot = true;
     }
 }
