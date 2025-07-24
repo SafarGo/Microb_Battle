@@ -20,24 +20,17 @@ public class Attack_UI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        for(int i = 0; i<buttons.Count;i++)
-        {
-            Check(i);
-        }
+        Check(0);
+        Check(1);
+        Check(2);
+        Check(3);
         text_of_beloks.text = GameManager.Count_of_belok.ToString();
         Slider.value = GameManager.Count_of_belok;
     }
 
     void Check(int index)
     {
-        if(index == 1)
-        {
-            if(GameManager.Count_of_belok > prices[index] && GameManager.isUpgr3)
-            {
-                buttons[index].interactable = true;
-            }
-        }
-        else if (GameManager.Count_of_belok > prices[index])
+        if (GameManager.Count_of_belok > prices[index])
         {
             buttons[index].interactable = true;
         }

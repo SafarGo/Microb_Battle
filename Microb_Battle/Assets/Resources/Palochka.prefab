@@ -101,13 +101,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  hp: 10
+  hp: 5
   damage: 4
   agent: {fileID: 2264605825397834071}
   layer:
     serializedVersion: 2
-    m_Bits: 512
-  price: 3
+    m_Bits: 513
 --- !u!65 &4785665199603485366
 BoxCollider:
   m_ObjectHideFlags: 0

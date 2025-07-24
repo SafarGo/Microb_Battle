@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7848,7 +7849,6 @@ MonoBehaviour:
   launchForce: 15
   launchAngle: 45
   enemy_position: {fileID: 0}
-  attack_time: 0
 --- !u!1 &952663311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 198755267136125782, guid: 783d7fd08bc83c247b4eb944055a1d51,
@@ -8022,8 +8022,6 @@ MonoBehaviour:
   Material1: {fileID: 2100000, guid: d4ad64ebc615eaf48a32b5c4c9d5eeaa, type: 2}
   Material2: {fileID: 2100000, guid: 66836266d0be4f44492df2cc56f2be8c, type: 2}
   error: {fileID: 5040263933294612636}
-  WallPrice: 5
-  PlazmocitPrice: 15
 --- !u!4 &1042704534
 Transform:
   m_ObjectHideFlags: 0
@@ -9545,7 +9543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1718019001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11562,7 +11560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1385998695401298995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13282,7 +13280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5496953763182869054
 GameObject:
   m_ObjectHideFlags: 0

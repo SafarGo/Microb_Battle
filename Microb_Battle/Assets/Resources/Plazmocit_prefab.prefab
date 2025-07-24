@@ -467,9 +467,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 60
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1142,7 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65c5d2eb53f38649981bdf33674ddeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attack_time: 2
+  _attack_time: 3
   _target: {fileID: 0}
   slider: {fileID: 2569728758653264930}
   parent: {fileID: 3527130300419300208}

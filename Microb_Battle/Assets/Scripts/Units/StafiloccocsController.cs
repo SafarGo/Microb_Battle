@@ -76,10 +76,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             Debug.LogError("Объект не реализует IDamageable: " + obj.name);
         }
         yield return new WaitForSeconds(_attackTime);
-        if (GameManager.isUpgr4)
-        {
-            _attackTime *= AtkKof;
-        }
+        _attackTime *= AtkKof;
         isAttacking = false;
         Debug.Log("Attack");
     }
@@ -98,23 +95,6 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             {
                 StartCoroutine(PlaochkaAttack(other.gameObject));
             }
-        }
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ketogenez"))
-        {
-            lives *= GameManager.AttackHPBouns;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ketogenez"))
-        {
-            lives /= GameManager.AttackHPBouns;
         }
     }
 
@@ -157,8 +137,6 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         if (lives <= 0 && !PhotonNetwork.IsMasterClient)
         {
             AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
-            object[] data = new object[] { 3 };
-            PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity, 0, data);
             PhotonNetwork.Destroy(gameObject);
         }
         if (!agent.hasPath || target == null)

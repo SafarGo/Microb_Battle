@@ -35,7 +35,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
             button.gameObject.SetActive(false);
         }
     }
-    public float HP { get; set; } = 60f;
+    public float HP { get; set; } = 100f;
 
     void Start()
     {
@@ -143,7 +143,7 @@ public class PlazmocitController : MonoBehaviour, IDamageable
         if (level < 5)
         {
             _attack_time  -= 0.2f;
-            GameManager.Glukoza -= 20;
+            GameManager.Glukoza -= 10;
             level++;
             isUpgraded = true;
         }

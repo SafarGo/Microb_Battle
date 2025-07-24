@@ -1,4 +1,3 @@
-using Photon.Pun;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +9,7 @@ public class Wall : MonoBehaviour, IDamageable
     public Canvas canvas;
     private GameObject _create_button;
     [SerializeField] private GameObject _fibroplast;
-    public float HP { get; set; } = 50f;
+    public float HP { get; set; } = 100f;
 
     void Start()
     {
@@ -57,7 +56,7 @@ public class Wall : MonoBehaviour, IDamageable
     void Die()
     {
             GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
-            PhotonNetwork.Destroy(gameObject);
+            Destroy(gameObject);
     }
 
 

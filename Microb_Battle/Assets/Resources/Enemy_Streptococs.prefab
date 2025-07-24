@@ -318,7 +318,7 @@ MonoBehaviour:
   AtkKof: 0
   _slider: {fileID: 6768289674175658101}
   lives: 35
-  EnemyCost: 7
+  EnemyCost: 5
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
 --- !u!195 &8097620971568598823

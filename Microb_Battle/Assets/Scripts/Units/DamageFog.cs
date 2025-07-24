@@ -16,7 +16,6 @@ public class DamageFog : MonoBehaviourPunCallbacks
 
     protected virtual void Start()
     {
-        _damage *= GameManager.streptoFogLifetimeBonus;
         photonView = gameObject.GetComponent<PhotonView>();
 
         if (!photonView.IsMine)
@@ -30,6 +29,10 @@ public class DamageFog : MonoBehaviourPunCallbacks
 
     private void FixedUpdate()
     {
+        if(GameManager.isUpgr2)
+        {
+            _attackTime *= 1.15f;
+        }
     }
 
     IEnumerator Attack(GameObject obj)

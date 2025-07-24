@@ -21,8 +21,6 @@ public class BuildWalls : MonoBehaviour
     public TMP_Text text;
     public Material Material1, Material2;
     public GameObject error;
-    public float WallPrice;
-    public float PlazmocitPrice;
 
     void Start()
     {
@@ -69,7 +67,7 @@ public class BuildWalls : MonoBehaviour
 
     void BuildWall()
     {
-        if (GameManager.Glukoza >= WallPrice)
+        if (GameManager.Glukoza >= 5)
         {
             if (selectedNodeA == null || selectedNodeB == null) return;
 
@@ -110,7 +108,7 @@ public class BuildWalls : MonoBehaviour
 
     public void BuildTower()
     {
-        if (GameManager.Glukoza >= PlazmocitPrice)
+        if (GameManager.Glukoza >= 10)
         {
             if (selectedNodeA == null) return;
             PhotonNetwork.Instantiate(towerPrefab.name, selectedNodeA.position, selectedNodeA.rotation);
