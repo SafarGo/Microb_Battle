@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider_hp: {fileID: 8330014823299873787}
+  count_of_spawn_belok: 11
 --- !u!54 &4188993673742065942
 Rigidbody:
   m_ObjectHideFlags: 0

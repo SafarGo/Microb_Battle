@@ -7,7 +7,7 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
 {
    
     public Slider Slider_hp;
-    
+    public int count_of_spawn_belok;
 
 
     public float HP { get; set; } = 60f;
@@ -29,7 +29,7 @@ public class SennayaPalochka_controller : MonoBehaviourPun, IDamageable
         if(HP<=0)
         {
             GameManager.towers.Remove(this.gameObject);
-            object[] data = new object[] { 10 };
+            object[] data = new object[] { count_of_spawn_belok };
             PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
             Destroy(gameObject);
         }

@@ -51,8 +51,8 @@ public class GameManager : MonoBehaviour
         isAttacker = PhotonNetwork.CurrentRoom.PlayerCount > 1;
         instance = this;
         Time.timeScale = 1;
-        Glukoza = 200;
-        Count_of_belok = 200;
+        Glukoza = 15;
+        Count_of_belok = 20;
     }
 
     //public static void EmotionP1(GameObject emo)

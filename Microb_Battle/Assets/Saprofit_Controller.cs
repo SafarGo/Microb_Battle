@@ -14,6 +14,7 @@ public class Saprofit_Controller : MonoBehaviour
     private GameObject target;
     public Slider Slider;
     public float price;
+    public int count_of_spawn_belok;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class Saprofit_Controller : MonoBehaviour
         Slider.value = lives; 
         if(lives<=0)
         {
-            object[] data = new object[] { 1 };
+            object[] data = new object[] { count_of_spawn_belok };
             PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity, 0, data);
             Destroy(gameObject);
         }

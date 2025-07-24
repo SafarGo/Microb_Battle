@@ -11,6 +11,7 @@ public class KlostridiyController : MonoBehaviour
     [SerializeField] float _speed;
     [SerializeField] private Wall _target;
     [SerializeField] private NavMeshAgent _agent;
+    public int count_of_spawn_belok;
     bool isAttacked = false;
     public ParticleSystem system;
     public float lives = 30;
@@ -50,7 +51,7 @@ public class KlostridiyController : MonoBehaviour
         _target.TakeDamage(_damage);
         Destroy(this.gameObject);
         isAttacked = true;
-        object[] data = new object[] { 4 };
+        object[] data = new object[] { count_of_spawn_belok };
         PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
 
         Destroy(transform.parent.gameObject);

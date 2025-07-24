@@ -413,14 +413,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: Bacillus
-  _attackTime: 10
+  _attackTime: 4
   _damage: 20
   AtkKof: 0.085
   _slider: {fileID: 6768289674175658101}
-  lives: 100
-  EnemyCost: 10
+  lives: 40
+  EnemyCost: 12
   agent: {fileID: 8097620971568598823}
   attackSound: {fileID: 3781839202906134668}
+  count_of_spawn_belok: 8
 --- !u!1 &7562177278522077664
 GameObject:
   m_ObjectHideFlags: 0

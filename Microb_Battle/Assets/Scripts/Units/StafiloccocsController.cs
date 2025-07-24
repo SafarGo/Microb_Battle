@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class StafiloccocsController : MonoBehaviourPunCallbacks
 {
@@ -23,6 +24,7 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     public AudioSource attackSound;
     private GameObject target;
     private float timer;
+    public int count_of_spawn_belok;
     //[SerializeField]private bool isAtacPlayer = false;
     protected virtual void Start()
     {
@@ -173,6 +175,9 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         if (lives <= 0 && !PhotonNetwork.IsMasterClient)
         {
             AtackUnitsBehaviour.AUB.Death(gameObject,enemyType);
+
+            object[] data = new object[] { count_of_spawn_belok};
+            PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity, 0, data);
             PhotonNetwork.Destroy(gameObject);
         }
         if (!agent.hasPath || target == null)
