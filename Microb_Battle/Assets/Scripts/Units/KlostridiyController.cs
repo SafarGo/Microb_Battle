@@ -18,6 +18,7 @@ public class KlostridiyController : MonoBehaviour
 
     private void Awake()
     {
+        _damage *= GameManager.klostrydyy_attack_bonus;
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
 

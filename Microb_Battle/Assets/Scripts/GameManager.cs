@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
+    public static float klostrydyy_attack_bonus = 1f;
+    public static float Bacillus_attack_in_fog_bonus = 1.1f;
+    public static float AttackUnits_speedBonus = 1.1f;
+    public static float AttackUnits_HPBonus = 0.2f;
     public static float Count_of_belok = 0;
     public static bool isAttacker;
     public static bool isAnti1;
@@ -44,7 +48,17 @@ public class GameManager : MonoBehaviour
     public static bool isUpgr4;
     //public GameObject P1_Emoton;
     //public GameObject P2_Emoton;
+
+
+    public static void ChandgeKlostAttackBunus(float bonus)
+    {
+        klostrydyy_attack_bonus += bonus;
+    }
     
+    public static void ChandgeFogLifeTime(float bonus)
+    {
+        streptoFogLifetimeBonus += bonus;
+    }
 
     private void Start()
     {

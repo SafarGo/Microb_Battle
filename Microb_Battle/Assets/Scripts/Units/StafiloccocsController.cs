@@ -16,11 +16,13 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
     [SerializeField] private Slider _slider;
     //[SerializeField] private PhotonView photonView;
     public float lives = 100f;
+    const float const_lives = 100f;
     public int EnemyCost = 100;
     public NavMeshAgent agent;
     private bool isAttacking = false;
     public AudioSource attackSound;
     private GameObject target;
+    private float timer;
     //[SerializeField]private bool isAtacPlayer = false;
     protected virtual void Start()
     {
@@ -94,6 +96,22 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
             else 
             {
                 StartCoroutine(PlaochkaAttack(other.gameObject));
+            }
+        }
+
+        if(enemyType == "Bacillus" && other.CompareTag("StrepFog"))
+        {
+            _damage *= GameManager.Bacillus_attack_in_fog_bonus;
+        }
+
+        if(other.CompareTag("Ketogenez"))
+        {
+            timer += Time.deltaTime;
+            agent.speed *= GameManager.AttackUnits_speedBonus;
+            if (timer >= 3)
+            {
+                lives += const_lives * GameManager.AttackUnits_HPBonus;
+                timer = 0;
             }
         }
     }
