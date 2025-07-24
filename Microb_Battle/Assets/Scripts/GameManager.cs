@@ -1,10 +1,11 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using UnityEditor;
-using Photon.Pun;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,8 +37,8 @@ public class GameManager : MonoBehaviour
     public static float streptoFogLifetimeBonus = 1f;
     public static float klostrydyy_attack_bonus = 1f;
     public static float Bacillus_attack_in_fog_bonus = 1.1f;
-    public static float AttackUnits_speedBonus = 1.1f;
-    public static float AttackUnits_HPBonus = 0.2f;
+    public static float AttackUnits_speedBonus = 1f;
+    public static float AttackUnits_HPBonus = 0f;
     public static float Count_of_belok = 0;
     public static bool isAttacker;
     public static bool isAnti1;
@@ -59,6 +60,17 @@ public class GameManager : MonoBehaviour
     {
         streptoFogLifetimeBonus += bonus;
     }
+
+    public static void ChandgeAtatck_HP_Bonus(float bonusHP)
+    {
+        AttackUnits_HPBonus += bonusHP;
+    }
+
+    public static void ChandgeAtatck_Speed_Bonus(float bonusSpeed)
+    {
+        AttackUnits_speedBonus += bonusSpeed;
+    }
+
 
     private void Start()
     {
