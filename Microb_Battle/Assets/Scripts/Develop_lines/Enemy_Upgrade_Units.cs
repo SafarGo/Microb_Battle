@@ -12,6 +12,7 @@ public class Enemy_Upgrade_Units : MonoBehaviour
     public  float PriceOfUpgr2;
     public  float PriceOfUpgr3;
     public  float PriceOfUpgr4;
+    public List<Button> buttons = new List<Button>();
     public static float attakUnitsSpeedBonus = 1f;
     public static float attakUnitsHPBonus = 1f;
     public static float streptoFogLifetimeBonus = 1f;
@@ -24,25 +25,28 @@ public class Enemy_Upgrade_Units : MonoBehaviour
     {
         klostrydyy_attack_bonus += bonus;
         GameManager.Count_of_belok -= PriceOfAnti1;
-
+        buttons[0].GetComponent<Button>().interactable = false;
     }
 
     public  void ChandgeFogLifeTime(float bonus)
     {
         streptoFogLifetimeBonus += bonus;
         GameManager.Count_of_belok -= PriceOfAnti2;
+        buttons[1].GetComponent<Button>().interactable = false;
     }
 
     public  void ChandgeAtatck_HP_Bonus(float bonusHP)
     {
         AttackUnits_HPBonus += bonusHP;
         GameManager.Count_of_belok -= PriceOfUpgr1;
+        buttons[4].GetComponent<Button>().interactable = false;
     }
 
     public  void ChandgeAtatck_Speed_Bonus(float bonusSpeed)
     {
         AttackUnits_speedBonus += bonusSpeed;
         GameManager.Count_of_belok -= PriceOfUpgr2;
+        buttons[5].GetComponent<Button>().interactable = false;
     }
 
     public void TuberStick_Spawn_Button()
@@ -50,11 +54,13 @@ public class Enemy_Upgrade_Units : MonoBehaviour
         if (CreateTuberStick_button != null)
             CreateTuberStick_button.SetActive(true);
         GameManager.Count_of_belok -= PriceOfUpgr3;
+        buttons[2].GetComponent<Button>().interactable = false;
     }
 
     public void TuberStick_Bonus(float bonus)
     {
         Bacillus_attack_in_fog_bonus += bonus;
         GameManager.Count_of_belok -= PriceOfUpgr4;
+        buttons[3].GetComponent<Button>().interactable = false;
     }
 }

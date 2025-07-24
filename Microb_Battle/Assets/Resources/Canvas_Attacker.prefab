@@ -652,6 +652,13 @@ MonoBehaviour:
   PriceOfUpgr2: 40
   PriceOfUpgr3: 55
   PriceOfUpgr4: 70
+  buttons:
+  - {fileID: 9097883634155110388}
+  - {fileID: 2957380852079892760}
+  - {fileID: 8380926994695450023}
+  - {fileID: 1391093114781040386}
+  - {fileID: 476026146829360169}
+  - {fileID: 8698251991128520531}
   CreateTuberStick_button: {fileID: 7014424025303819465}
 --- !u!1 &2911804749335747999
 GameObject:
