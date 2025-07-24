@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public static bool isUpgr2;
     public static bool isUpgr3;
     public static bool isUpgr4;
+    //public GameObject P1_Emoton;
+    //public GameObject P2_Emoton;
     
 
     private void Start()
@@ -60,6 +62,12 @@ public class GameManager : MonoBehaviour
         Glukoza = 15;
         Count_of_belok = 0;
     }
+
+    //public static void EmotionP1(GameObject emo)
+    //{
+    //    //P1_Emoton.GetComponent<MeshRenderer>() = emo.GetComponent<MeshRenderer>();
+    //}
+
 
     public static void AttackAllStaf()
     {
