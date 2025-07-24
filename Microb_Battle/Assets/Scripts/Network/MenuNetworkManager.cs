@@ -1,9 +1,10 @@
-using UnityEngine;
 using Photon;
-using Photon.Realtime;
 using Photon.Pun;
-using UnityEngine.SceneManagement;
+using Photon.Realtime;
+using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuNetworkManager : MonoBehaviourPunCallbacks
 {
@@ -36,5 +37,17 @@ public class MenuNetworkManager : MonoBehaviourPunCallbacks
     public void SetRoomName(TMP_InputField input)
     {
         roomName = (input.text).ToString();
+    }
+
+    public override void OnRoomListUpdate(List<Photon.Realtime.RoomInfo> roomList)
+    {
+
+        foreach (Photon.Realtime.RoomInfo game in roomList)
+        {
+            Debug.Log(game.Name);
+            //Instantiate(buttonToLaunchServer, transform.position, Quaternion.identity);
+            //buttonToLaunchServer.transform.Find("RoomID").GetComponent<TMPro.TMP_Text>().text = game.Name;
+        }
+
     }
 }
