@@ -444,15 +444,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6409935272829114819}
-        m_TargetAssemblyTypeName: AntiKetogenezController, Assembly-CSharp
-        m_MethodName: Anti1
-        m_Mode: 3
+      - m_Target: {fileID: 6137396376256649813}
+        m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
+        m_MethodName: ChandgeAtatck_HP_Bonus
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 40
-          m_FloatArgument: 0
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -467,12 +467,11 @@ GameObject:
   - component: {fileID: 2334596021481595225}
   - component: {fileID: 4570658289048545161}
   - component: {fileID: 1811549148910180351}
-  - component: {fileID: 5839426907297906853}
   - component: {fileID: 5201967498907996183}
-  - component: {fileID: 6409935272829114819}
   - component: {fileID: 1152528183454988393}
   - component: {fileID: 633616217760169713}
   - component: {fileID: 1500102593157843310}
+  - component: {fileID: 6137396376256649813}
   m_Layer: 0
   m_Name: Canvas_Attacker
   m_TagString: Untagged
@@ -555,22 +554,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 67
   m_TargetDisplay: 0
---- !u!114 &5839426907297906853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2886072742659085871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53db096688b7dd64d8f084755371e4ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  but1: {fileID: 9097883634155110388}
-  but2: {fileID: 2957380852079892760}
-  but3: {fileID: 8380926994695450023}
-  but4: {fileID: 1391093114781040386}
 --- !u!114 &5201967498907996183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,20 +577,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &6409935272829114819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2886072742659085871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9a1e7da5d5e8d34f8c5850866277c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  b1: {fileID: 476026146829360169}
-  b2: {fileID: 8698251991128520531}
 --- !u!114 &1152528183454988393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +628,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b426643ff72a7cd4b8a53bf71f57f75f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6137396376256649813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886072742659085871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53db096688b7dd64d8f084755371e4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PriceOfAnti1: 40
+  PriceOfAnti2: 55
+  PriceOfUpgr1: 25
+  PriceOfUpgr2: 40
+  PriceOfUpgr3: 55
+  PriceOfUpgr4: 70
+  CreateTuberStick_button: {fileID: 7014424025303819465}
 --- !u!1 &2911804749335747999
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,15 +767,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5839426907297906853}
+      - m_Target: {fileID: 6137396376256649813}
         m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
-        m_MethodName: Upgr1
-        m_Mode: 3
+        m_MethodName: ChandgeKlostAttackBunus
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 25
-          m_FloatArgument: 0
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1252,15 +1240,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6409935272829114819}
-        m_TargetAssemblyTypeName: AntiKetogenezController, Assembly-CSharp
-        m_MethodName: Anti2
-        m_Mode: 3
+      - m_Target: {fileID: 6137396376256649813}
+        m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
+        m_MethodName: ChandgeAtatck_Speed_Bonus
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 55
-          m_FloatArgument: 0
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1631,15 +1619,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5839426907297906853}
+      - m_Target: {fileID: 6137396376256649813}
         m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
-        m_MethodName: Upgr2
-        m_Mode: 3
+        m_MethodName: ChandgeFogLifeTime
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 40
-          m_FloatArgument: 0
+          m_FloatArgument: 0.15
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2329,15 +2317,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5839426907297906853}
+      - m_Target: {fileID: 6137396376256649813}
         m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
-        m_MethodName: Upgr4
-        m_Mode: 3
+        m_MethodName: TuberStick_Bonus
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 70
-          m_FloatArgument: 0
+          m_FloatArgument: 0.1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2594,10 +2582,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5839426907297906853}
+      - m_Target: {fileID: 6137396376256649813}
         m_TargetAssemblyTypeName: Enemy_Upgrade_Units, Assembly-CSharp
-        m_MethodName: Upgr3
-        m_Mode: 3
+        m_MethodName: TuberStick_Spawn_Button
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

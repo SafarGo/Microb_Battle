@@ -32,44 +32,10 @@ public class GameManager : MonoBehaviour
     public static bool Storm1;
     public static bool Storm2;
     public static bool Storm3;
-    public static float attakUnitsSpeedBonus = 1f;
-    public static float attakUnitsHPBonus = 1f;
-    public static float streptoFogLifetimeBonus = 1f;
-    public static float klostrydyy_attack_bonus = 1f;
-    public static float Bacillus_attack_in_fog_bonus = 1.1f;
-    public static float AttackUnits_speedBonus = 1f;
-    public static float AttackUnits_HPBonus = 0f;
     public static float Count_of_belok = 0;
     public static bool isAttacker;
-    public static bool isAnti1;
-    public static bool isAnti2;
-    public static bool isUpgr1;
-    public static bool isUpgr2;
-    public static bool isUpgr3;
-    public static bool isUpgr4;
-    //public GameObject P1_Emoton;
-    //public GameObject P2_Emoton;
 
-
-    public static void ChandgeKlostAttackBunus(float bonus)
-    {
-        klostrydyy_attack_bonus += bonus;
-    }
     
-    public static void ChandgeFogLifeTime(float bonus)
-    {
-        streptoFogLifetimeBonus += bonus;
-    }
-
-    public static void ChandgeAtatck_HP_Bonus(float bonusHP)
-    {
-        AttackUnits_HPBonus += bonusHP;
-    }
-
-    public static void ChandgeAtatck_Speed_Bonus(float bonusSpeed)
-    {
-        AttackUnits_speedBonus += bonusSpeed;
-    }
 
 
     private void Start()
@@ -125,11 +91,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
         }
         heart.volume = volume.value;
-        if(isUpgr3)
-        {
-            if (CreateTuberStick_button != null)
-                CreateTuberStick_button.SetActive(true);
-        }
+
     }
 
     void MainMenu()

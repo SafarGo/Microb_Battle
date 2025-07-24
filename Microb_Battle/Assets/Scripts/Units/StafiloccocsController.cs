@@ -36,8 +36,8 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
         else
             PhotonNetwork.Destroy(gameObject);
 
-            agent.speed *= GameManager.attakUnitsSpeedBonus;
-        lives *= GameManager.attakUnitsHPBonus;
+            agent.speed *= Enemy_Upgrade_Units.attakUnitsSpeedBonus;
+        lives *= Enemy_Upgrade_Units.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
         GameManager.enemies.Add(this.gameObject);
         SetDestination();
@@ -101,18 +101,36 @@ public class StafiloccocsController : MonoBehaviourPunCallbacks
 
         if(enemyType == "Bacillus" && other.CompareTag("StrepFog"))
         {
-            _damage *= GameManager.Bacillus_attack_in_fog_bonus;
+            _damage *= Enemy_Upgrade_Units.Bacillus_attack_in_fog_bonus;
         }
 
         if(other.CompareTag("Ketogenez"))
         {
             timer += Time.deltaTime;
-            agent.speed *= GameManager.AttackUnits_speedBonus;
+            
             if (timer >= 3)
             {
-                lives += const_lives * GameManager.AttackUnits_HPBonus;
+                
                 timer = 0;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ketogenez"))
+        {
+            lives += Enemy_Upgrade_Units.AttackUnits_HPBonus;
+            agent.speed *= Enemy_Upgrade_Units.AttackUnits_speedBonus;
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ketogenez"))
+        {
+            agent.speed /= Enemy_Upgrade_Units.AttackUnits_speedBonus;
         }
     }
 

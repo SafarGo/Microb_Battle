@@ -65,25 +65,21 @@ public class Saprofit_Controller : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log($"Захватил {cargo} белка");
         }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if (other.CompareTag("Ketogenez"))
         {
-            lives *= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed *= 1.1f;
+            lives += Enemy_Upgrade_Units.AttackUnits_HPBonus;
+            _agent.speed *= Enemy_Upgrade_Units.AttackUnits_speedBonus;
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if (other.CompareTag("Ketogenez"))
         {
-            lives /= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed /= 1.1f;
+            lives -= Enemy_Upgrade_Units.AttackUnits_HPBonus;
+            _agent.speed /= Enemy_Upgrade_Units.AttackUnits_speedBonus;
+
         }
     }
 

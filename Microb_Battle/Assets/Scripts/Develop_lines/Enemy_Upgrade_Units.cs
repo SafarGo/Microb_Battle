@@ -5,36 +5,56 @@ using UnityEngine.UI;
 
 public class Enemy_Upgrade_Units : MonoBehaviour
 {
-    public Button but1;
-    public Button but2;
-    public Button but3;
-    public Button but4;
 
-    public void Upgr1(int price)
+    public  float PriceOfAnti1;
+    public  float PriceOfAnti2;
+    public  float PriceOfUpgr1;
+    public  float PriceOfUpgr2;
+    public  float PriceOfUpgr3;
+    public  float PriceOfUpgr4;
+    public static float attakUnitsSpeedBonus = 1f;
+    public static float attakUnitsHPBonus = 1f;
+    public static float streptoFogLifetimeBonus = 1f;
+    public static float klostrydyy_attack_bonus = 1f;
+    public static float Bacillus_attack_in_fog_bonus = 1f;
+    public static float AttackUnits_speedBonus = 1f;
+    public static float AttackUnits_HPBonus = 0f;
+    public GameObject CreateTuberStick_button;
+    public  void ChandgeKlostAttackBunus(float bonus)
     {
-        GameManager.isUpgr1 = true;
-        but1.interactable = false;
-        GameManager.Count_of_belok -= price; 
+        klostrydyy_attack_bonus += bonus;
+        GameManager.Count_of_belok -= PriceOfAnti1;
+
     }
 
-    public void Upgr2(int price)
+    public  void ChandgeFogLifeTime(float bonus)
     {
-        GameManager.isUpgr2 = true;
-        but2.interactable = false;
-        GameManager.Count_of_belok -= price;
+        streptoFogLifetimeBonus += bonus;
+        GameManager.Count_of_belok -= PriceOfAnti2;
     }
 
-    public void Upgr3(int price)
+    public  void ChandgeAtatck_HP_Bonus(float bonusHP)
     {
-        GameManager.isUpgr3 = true;
-        but3.interactable = false;
-        GameManager.Count_of_belok -= price;
+        AttackUnits_HPBonus += bonusHP;
+        GameManager.Count_of_belok -= PriceOfUpgr1;
     }
 
-    public void Upgr4(int price)
+    public  void ChandgeAtatck_Speed_Bonus(float bonusSpeed)
     {
-        GameManager.isUpgr4 = true;
-        but4.interactable = false;
-        GameManager.Count_of_belok -= price;
+        AttackUnits_speedBonus += bonusSpeed;
+        GameManager.Count_of_belok -= PriceOfUpgr2;
+    }
+
+    public void TuberStick_Spawn_Button()
+    {
+        if (CreateTuberStick_button != null)
+            CreateTuberStick_button.SetActive(true);
+        GameManager.Count_of_belok -= PriceOfUpgr3;
+    }
+
+    public void TuberStick_Bonus(float bonus)
+    {
+        Bacillus_attack_in_fog_bonus += bonus;
+        GameManager.Count_of_belok -= PriceOfUpgr4;
     }
 }

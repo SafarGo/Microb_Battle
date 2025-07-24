@@ -23,8 +23,8 @@ public class TuberculesBacilusController : MonoBehaviour
 
     protected virtual void Start()
     {
-        agent.speed *= GameManager.attakUnitsSpeedBonus;
-        lives *= GameManager.attakUnitsHPBonus;
+        agent.speed *= Enemy_Upgrade_Units.attakUnitsSpeedBonus;
+        lives *= Enemy_Upgrade_Units.attakUnitsHPBonus;
         _slider.maxValue = _slider.value = lives;
         //int index = UnityEngine.Random.Range(0, GameManager.towers.Count);
         GameManager.enemies.Add(this.gameObject);
@@ -54,45 +54,10 @@ public class TuberculesBacilusController : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (!isAttacking && other.CompareTag("Unit"))
-        {
-            isAttacking = true;
-            StartCoroutine(Attack(other.gameObject));
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
-        {
-            lives *= 1.05f;
-        }
-        if(other.CompareTag("StrepFog"))
-        {
-            if(GameManager.isUpgr4)
-            {
-                _damage *= 1.1f;
-            }
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            agent.speed *= 1.1f;
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("StrepFog"))
-        {
-            if (GameManager.isUpgr4)
-            {
-                _damage /= 1.1f;
-            }
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
-        {
-            lives /= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            agent.speed /= 1.1f;
-        }
     }
 
     private void OnCollisionEnter(Collision other)

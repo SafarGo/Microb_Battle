@@ -17,23 +17,17 @@ public class DamageFog : MonoBehaviourPunCallbacks
     protected virtual void Start()
     {
         photonView = gameObject.GetComponent<PhotonView>();
-
+        _attackTime *= Enemy_Upgrade_Units.streptoFogLifetimeBonus;
         if (!photonView.IsMine)
         {
             photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
         }
 
         GameManager.enemies.Add(this.gameObject);
-        Destroy(gameObject, fogTime * GameManager.streptoFogLifetimeBonus);
+        Destroy(gameObject, fogTime * Enemy_Upgrade_Units.streptoFogLifetimeBonus);
     }
 
-    private void FixedUpdate()
-    {
-        if(GameManager.isUpgr2)
-        {
-            _attackTime *= 1.15f;
-        }
-    }
+    
 
     IEnumerator Attack(GameObject obj)
     {

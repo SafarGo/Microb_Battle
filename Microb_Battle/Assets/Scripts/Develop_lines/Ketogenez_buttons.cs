@@ -7,14 +7,14 @@ public class  Ketogenez_buttons: MonoBehaviour
 {
     public void Ketogenez1(NavMeshAgent _agent)
     {
-        if(!GameManager.isAnti2)
+        if(Enemy_Upgrade_Units.AttackUnits_speedBonus == 1)
         _agent.speed = _agent.speed*0.5f;
         else
             _agent.speed = _agent.speed*0.6f;
     }
     public void Ketogenez2(NavMeshAgent _agent)
     {
-        if (!GameManager.isAnti2)
+        if (Enemy_Upgrade_Units.AttackUnits_HPBonus == 0)
             _agent.speed = _agent.speed * 0.65f;
         else
             _agent.speed = _agent.speed * 0.75f;

@@ -18,7 +18,7 @@ public class KlostridiyController : MonoBehaviour
 
     private void Awake()
     {
-        _damage *= GameManager.klostrydyy_attack_bonus;
+        _damage *= Enemy_Upgrade_Units.klostrydyy_attack_bonus;
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
 
@@ -74,34 +74,24 @@ public class KlostridiyController : MonoBehaviour
             GameManager.Glukoza += 3;
             Destroy(gameObject);
         }
-        if(GameManager.isUpgr1)
-        {
-            _damage *= 1.1f;
-        }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if (other.CompareTag("Ketogenez"))
         {
-            lives *= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed *= 1.1f;
+            lives += lives * Enemy_Upgrade_Units.AttackUnits_HPBonus;
+            _agent.speed *= Enemy_Upgrade_Units.AttackUnits_speedBonus;
+
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti1)
+        if (other.CompareTag("Ketogenez"))
         {
-            lives /= 1.05f;
-        }
-        if (other.gameObject.CompareTag("Ketogenez") && GameManager.isAnti2)
-        {
-            _agent.speed /= 1.1f;
+            _agent.speed /= Enemy_Upgrade_Units.AttackUnits_speedBonus;
         }
     }
+
 }
