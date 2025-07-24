@@ -20,10 +20,10 @@ public class Attack_UI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Check(0);
-        Check(1);
-        Check(2);
-        Check(3);
+        for(int i = 0; i<buttons.Count; i++)
+        {
+            Check(i);
+        }
         text_of_beloks.text = GameManager.Count_of_belok.ToString();
         Slider.value = GameManager.Count_of_belok;
     }
