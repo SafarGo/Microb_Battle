@@ -30,11 +30,57 @@ public class Attack_UI : MonoBehaviour
 
     void Check(int index)
     {
-        if (GameManager.Count_of_belok > prices[index])
+        if (index < 5)
         {
-            buttons[index].interactable = true;
+            if (GameManager.Count_of_belok >= prices[index])
+            {
+                buttons[index].interactable = true;
+            }
+            else
+                buttons[index].interactable = false;
+
         }
         else
-            buttons[index].interactable = false;
+        {
+            switch (index)
+            {
+                case 5:
+                    if (!Enemy_Upgrade_Units.isUp1 && GameManager.Count_of_belok >= prices[index])
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+                case 6:
+                    if (!Enemy_Upgrade_Units.isUp2 && GameManager.Count_of_belok >= prices[index] && Enemy_Upgrade_Units.isUp1)
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+                case 7:
+                    if (!Enemy_Upgrade_Units.isUp3 && GameManager.Count_of_belok >= prices[index] && Enemy_Upgrade_Units.isUp1)
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+                case 8:
+                    if (!Enemy_Upgrade_Units.isUp4 && GameManager.Count_of_belok >= prices[index] && Enemy_Upgrade_Units.isUp2 && Enemy_Upgrade_Units.isUp3)
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+                case 9:
+                    if (!Enemy_Upgrade_Units.isAnti1 && GameManager.Count_of_belok >= prices[index])
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+                case 10:
+                    if (!Enemy_Upgrade_Units.isAnti2 && GameManager.Count_of_belok >= prices[index])
+                    {
+                        buttons[index].interactable = true;
+                    }
+                    break;
+            }
+        }
     }
 }
