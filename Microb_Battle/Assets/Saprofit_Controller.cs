@@ -24,7 +24,7 @@ public class Saprofit_Controller : MonoBehaviour
         if (GameManager.Count_of_belok >= price)
             GameManager.Count_of_belok -= price;
         else
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
 
     }
     private void FixedUpdate()
@@ -48,10 +48,13 @@ public class Saprofit_Controller : MonoBehaviour
         if (!_agent.hasPath)
         {
             int destination_index = FindNearest();
-            if (GameManager.Beloks[destination_index] != null)
+            if (GameManager.Beloks.Count != 0)
             {
-                target = GameManager.Beloks[destination_index];
-                _agent.SetDestination(target.transform.position);
+                if (GameManager.Beloks[destination_index] != null)
+                {
+                    target = GameManager.Beloks[destination_index];
+                    _agent.SetDestination(target.transform.position);
+                }
             }
 
         }

@@ -9,7 +9,7 @@ public class Wall : MonoBehaviour, IDamageable
     public Canvas canvas;
     private GameObject _create_button;
     [SerializeField] private GameObject _fibroplast;
-    public float HP { get; set; } = 100f;
+    public float HP { get; set; } = 35f;
 
     void Start()
     {

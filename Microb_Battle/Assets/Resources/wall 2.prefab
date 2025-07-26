@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4917228459296374807}
   - component: {fileID: 1095572755032232104}
+  - component: {fileID: 522772027020813022}
   m_Layer: 13
   m_Name: Slider
   m_TagString: Untagged
@@ -239,6 +240,28 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &522772027020813022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598587612734689307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &4226410020448593624
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +310,7 @@ GameObject:
   - component: {fileID: 3854897266040257182}
   - component: {fileID: 1139468837825525668}
   - component: {fileID: 2324509010808061693}
+  - component: {fileID: 2844450744581461349}
   m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
@@ -377,6 +401,28 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2844450744581461349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8552289947977673187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &6558116294665083044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +551,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 220337303215321529}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2096022439188230249}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3459448062211376454}
   m_SourcePrefab: {fileID: 100100000, guid: 1898cb685b628a044af1285fb13dd5ed, type: 3}
 --- !u!1 &6323746397073679861 stripped
 GameObject:
@@ -578,6 +632,62 @@ MonoBehaviour:
   canvas: {fileID: 3854897266040257182}
   _fibroplast: {fileID: 953140342499281657, guid: 4bdbf53449069cc4da9389bffb8cae2a,
     type: 3}
+--- !u!114 &2096022439188230249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 3459448062211376454}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &3459448062211376454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!4 &6668042672970399567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1898cb685b628a044af1285fb13dd5ed,
