@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class Wall : MonoBehaviour, IDamageable
+public class Wall : MonoBehaviourPun, IDamageable
 {
     public Transform nodeA, nodeB;
     public Slider slider;
@@ -20,7 +21,18 @@ public class Wall : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
-        HP -= damage;
+        // Только владелец объекта вызывает RPC
+        if (photonView.IsMine)
+        {
+            float newHP = HP - damage;
+            photonView.RPC("SyncHP", RpcTarget.All, newHP);
+        }
+    }
+
+    [PunRPC]
+    void SyncHP(float newHP)
+    {
+        HP = newHP;
         slider.value = HP;
         if (HP <= 0)
         {
@@ -56,7 +68,7 @@ public class Wall : MonoBehaviour, IDamageable
     void Die()
     {
             GameObject.Find("WallsBuilder").GetComponent<BuildWalls>().walls.Remove(this);
-            Destroy(gameObject);
+        PhotonNetwork.Destroy(gameObject);
     }
 
 
@@ -79,7 +91,7 @@ public class Wall : MonoBehaviour, IDamageable
 
     public void Create_Fibroplast()
     {
-        GameObject instance = Instantiate(_fibroplast, new Vector3(0, 0, 0), transform.rotation);
+        GameObject instance = PhotonNetwork.Instantiate("Fibroplast_prefab (1)", new Vector3(0, 0, 0), transform.rotation);
         instance.GetComponentInChildren<FibroplastController>().SetupTarget(this);
     }
     

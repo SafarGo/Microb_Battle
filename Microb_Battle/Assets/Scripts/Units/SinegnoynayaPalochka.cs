@@ -41,13 +41,13 @@ public class SinegnoynayaPalochka : MonoBehaviourPun, IPunObservable
         {
             object[] data = new object[] { 2 };
             PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
         else if(isBoomed)
         {
             object[] data = new object[] { 2 };
             PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
 
         
