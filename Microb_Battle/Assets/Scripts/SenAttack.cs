@@ -11,6 +11,7 @@ public class SenAttack : MonoBehaviourPun
     public float launchAngle = 45f;
     [SerializeField] Transform enemy_position;
     bool _isCanShoot = true;
+    public AudioSource AudioSource;
 
     void Update()
     {
@@ -30,6 +31,7 @@ public class SenAttack : MonoBehaviourPun
 
     public void Shoot(Transform target)
     {
+        AudioSource.Play();
         if (target == null) return;
 
         // Создаём снаряд через PhotonNetwork.Instantiate

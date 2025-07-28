@@ -95,7 +95,7 @@ public class Wall : MonoBehaviourPun, IDamageable
     public void Create_Fibroplast()
     {
         GameManager.Glukoza -= 3; 
-        GameObject instance = PhotonNetwork.Instantiate("Fibroplast_prefab", new Vector3(0, 1, 0), transform.rotation);
+        GameObject instance = PhotonNetwork.Instantiate("Fibroplast_prefab", new Vector3(0, 0, 1), transform.rotation);
         instance.GetComponentInChildren<FibroplastController>().SetupTarget(this);
         _create_button.SetActive(false);
     }

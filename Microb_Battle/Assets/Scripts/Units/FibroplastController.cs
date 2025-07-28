@@ -16,6 +16,7 @@ public class FibroplastController : MonoBehaviourPun
         {
             photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
         }
+        GameManager.towers.Add(gameObject);
 
     }
 

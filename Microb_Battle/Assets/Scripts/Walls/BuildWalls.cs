@@ -87,7 +87,6 @@ public class BuildWalls : MonoBehaviour
                 ClearSelection();
                 return;
             }
-
             if (WallExists(selectedNodeA, selectedNodeB))
             {
                 Debug.Log("Здесь уже есть стена!");

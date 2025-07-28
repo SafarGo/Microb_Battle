@@ -16,6 +16,7 @@ public class KlostridiyController : MonoBehaviour
     public float lives = 30;
     public float price;
     public PhotonView photonView;
+    public AudioSource Sound;
 
     private void Start()
     {
@@ -48,6 +49,7 @@ public class KlostridiyController : MonoBehaviour
 
     void Attack()
     {
+        Sound.Play();
         PhotonNetwork.Destroy(gameObject);
         _target.TakeDamage(_damage);
         isAttacked = true;

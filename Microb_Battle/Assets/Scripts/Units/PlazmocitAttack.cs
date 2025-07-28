@@ -7,6 +7,7 @@ public class PlazmocitAttack : PlazmocitController
 {
     [SerializeField] protected GameObject _bulletPrefab;
     private bool isShooting = false;
+    public AudioSource Sound;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlazmocitAttack : PlazmocitController
     {
         if (_target != null && !isShooting)
         {
+            Sound.Play();   
             isShooting=true;
             float time = _attack_time;
             GameObject bullet = PhotonNetwork.Instantiate(_bulletPrefab.name, transform.position, transform.rotation);
