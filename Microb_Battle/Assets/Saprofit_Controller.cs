@@ -15,9 +15,16 @@ public class Saprofit_Controller : MonoBehaviour
     public Slider Slider;
     public float price;
     public int count_of_spawn_belok;
+    public PhotonView photonView;
 
     private void Start()
     {
+        photonView = gameObject.GetComponent<PhotonView>();
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
         _agent = GetComponent<NavMeshAgent>();
         _agent.speed = Speed;
         SetDestination();
@@ -25,6 +32,7 @@ public class Saprofit_Controller : MonoBehaviour
             GameManager.Count_of_belok -= price;
         else
             PhotonNetwork.Destroy(gameObject);
+
 
     }
     private void FixedUpdate()
@@ -34,7 +42,7 @@ public class Saprofit_Controller : MonoBehaviour
         {
             object[] data = new object[] { count_of_spawn_belok };
             PhotonNetwork.Instantiate("Belok", transform.position + new Vector3(0.5f, 0, 0), Quaternion.identity, 0, data);
-            Destroy(gameObject);
+           PhotonNetwork.Destroy(gameObject);
         }
     }
     private void LateUpdate()

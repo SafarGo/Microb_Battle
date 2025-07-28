@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7325764646634486080}
   - component: {fileID: 2164441866083635578}
   - component: {fileID: 7186109580894952665}
-  - component: {fileID: 5002828232133501697}
-  - component: {fileID: 5663269238356917823}
+  - component: {fileID: 4970003176412676783}
+  - component: {fileID: 7825039228811386696}
   m_Layer: 6
   m_Name: Klost
   m_TagString: Klost
@@ -122,6 +122,7 @@ MonoBehaviour:
   system: {fileID: 8545720791329920018, guid: 2270d1ffd0f2579468ab88fa6d7d342d, type: 3}
   lives: 30
   price: 5
+  photonView: {fileID: 0}
 --- !u!195 &2164441866083635578
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5002828232133501697
+--- !u!114 &4970003176412676783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,11 +191,11 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 5663269238356917823}
+  - {fileID: 7825039228811386696}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &5663269238356917823
+--- !u!114 &7825039228811386696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

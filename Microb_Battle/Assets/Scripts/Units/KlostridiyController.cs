@@ -4,7 +4,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class KlostridiyController : MonoBehaviourPun
+public class KlostridiyController : MonoBehaviour
 {
     [SerializeField] float _damage;
     [SerializeField] float _speed;
@@ -15,20 +15,19 @@ public class KlostridiyController : MonoBehaviourPun
     public ParticleSystem system;
     public float lives = 30;
     public float price;
-
-    private void Awake()
-    {
-        _damage *= Enemy_Upgrade_Units.klostrydyy_attack_bonus;
-        SetupTarget();
-        GameManager.enemies.Add(this.gameObject);
-    }
+    public PhotonView photonView;
 
     private void Start()
     {
+        photonView =gameObject.GetComponent<PhotonView>();
         if (!photonView.IsMine)
         {
             photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
         }
+
+        _damage *= Enemy_Upgrade_Units.klostrydyy_attack_bonus;
+        SetupTarget();
+        GameManager.enemies.Add(this.gameObject);
 
     }
 
@@ -37,8 +36,7 @@ public class KlostridiyController : MonoBehaviourPun
         Wall[] walls = FindObjectsOfType<Wall>();
         if (walls.Length > 0)
         {
-            int index = Random.Range(0, walls.Length);
-            _target = walls[index];
+            _target = walls[FindNearestWalls()];
             _agent.SetDestination(_target.transform.position);
         }
         else
@@ -50,16 +48,19 @@ public class KlostridiyController : MonoBehaviourPun
 
     void Attack()
     {
+        PhotonNetwork.Destroy(gameObject);
         _target.TakeDamage(_damage);
         isAttacked = true;
         object[] data = new object[] { count_of_spawn_belok };
+        Debug.LogError("Клостридия ударила первый раз");
         PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
-        PhotonNetwork.Destroy(transform.parent.gameObject);
+        Debug.LogError("Клостридия ударила после смерти");
     }
 
     private void Update()
     {
-        if (_agent.remainingDistance < 0.1f && !isAttacked && _target != null)
+        float distance = Vector3.Distance(gameObject.transform.position, _target.gameObject.transform.position);
+        if (distance < 2f && !isAttacked && _target != null)
         {
             Attack();
             Instantiate(system, transform.position, system.transform.rotation);
@@ -90,5 +91,25 @@ public class KlostridiyController : MonoBehaviourPun
         {
             _agent.speed /= Enemy_Upgrade_Units.AttackUnits_speedBonus;
         }
+    }
+
+    private int FindNearestWalls()
+    {
+        Wall[] walls = FindObjectsOfType<Wall>();
+        int result = 0;
+        float startdist = 10 * 10 ^ 5;
+        for (int i = 0; i < walls.Length; i++)
+        {
+            if (walls[i] != null)
+            {
+                float dist = Vector3.Distance(walls[i].transform.position, gameObject.transform.position);
+                if (dist < startdist)
+                {
+                    startdist = dist;
+                    result = i;
+                }
+            }
+        }
+        return result;
     }
 }

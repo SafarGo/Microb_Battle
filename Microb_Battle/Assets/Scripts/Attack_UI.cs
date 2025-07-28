@@ -9,7 +9,9 @@ public class Attack_UI : MonoBehaviour
     public List<Button> buttons = new List<Button>();
     public List<int> prices = new List<int>();
     public TMP_Text text_of_beloks;
-    public Slider Slider;
+    [Header("Настройки слайдера белка")]
+    public Image countSlider;
+    public int maxBelok = 60;
     private void Start()
     {
         for(int i = 0; i<buttons.Count; i++) 
@@ -25,7 +27,7 @@ public class Attack_UI : MonoBehaviour
             Check(i);
         }
         text_of_beloks.text = GameManager.Count_of_belok.ToString();
-        Slider.value = GameManager.Count_of_belok;
+        countSlider.fillAmount = GameManager.Count_of_belok / maxBelok;
     }
 
     void Check(int index)

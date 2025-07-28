@@ -27,11 +27,12 @@ public class FibroplastController : MonoBehaviourPun
 
     private void Update()
     {
-       if(_agent.remainingDistance <1f)
+        float distance = Vector3.Distance(gameObject.transform.position, _wall.gameObject.transform.position);
+       if(distance < 2f)
         {
             _wall.HP += 20f;
             _wall.slider.value += 20f;
-            PhotonNetwork.Destroy(transform.parent.gameObject);
+            //PhotonNetwork.Destroy(transform.parent.gameObject);
             PhotonNetwork.Destroy(gameObject);
         }
     }

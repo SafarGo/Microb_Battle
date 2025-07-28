@@ -15,18 +15,21 @@ public class Wall : MonoBehaviourPun, IDamageable
     void Start()
     {
         _create_button = GameObject.Find("Fibr");
-        _create_button.SetActive(false);
-        _create_button.GetComponent<Button>().onClick.AddListener(Create_Fibroplast);
+        if (_create_button != null)
+        {
+            _create_button.SetActive(false);
+            _create_button.GetComponent<Button>().onClick.AddListener(Create_Fibroplast);
+        }
     }
 
     public void TakeDamage(float damage)
     {
         // Только владелец объекта вызывает RPC
-        if (photonView.IsMine)
-        {
+        //if (photonView.IsMine)
+        //{
             float newHP = HP - damage;
             photonView.RPC("SyncHP", RpcTarget.All, newHP);
-        }
+        //}
     }
 
     [PunRPC]
@@ -108,7 +111,7 @@ public class Wall : MonoBehaviourPun, IDamageable
                     if (wall != null)
                     {
                         wall.ShowInfo();
-                        wall._create_button.SetActive(true);
+                        if (_create_button != null) { wall._create_button.SetActive(true); }
                         break;
                     }
                 }
