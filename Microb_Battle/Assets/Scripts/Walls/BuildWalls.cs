@@ -10,10 +10,14 @@ public class BuildWalls : MonoBehaviour
 {
     public GameObject wallPrefab;
     public GameObject towerPrefab;
+    public int Plazmocit_price;
+    public int SenStick_price;
+    public int Walls_price;
     public LayerMask nodeLayer;  
     public float maxWallLength = 2f;
     public Button buildButton;
     public Button buildTurelbutton;
+    public Button BuildSenStick;
     public NavMeshSurface surface;
     public List<Wall> walls = new List<Wall>();
     public List<GameObject> towers = new List<GameObject>();
@@ -28,6 +32,7 @@ public class BuildWalls : MonoBehaviour
         buildTurelbutton.interactable = false;
         buildButton.onClick.AddListener(BuildWall);
         buildTurelbutton.onClick.AddListener(BuildTower);
+        BuildSenStick.onClick.AddListener(BuildStick);
     }
 
     void Update()
@@ -43,6 +48,7 @@ public class BuildWalls : MonoBehaviour
                     selectedNodeA = hit.transform;
                     HighlightNode(selectedNodeA, true);
                     buildTurelbutton.interactable = true;
+                    BuildSenStick.interactable=true;
                 }
                 else if (selectedNodeB == null && hit.transform != selectedNodeA)
                 {
@@ -50,6 +56,7 @@ public class BuildWalls : MonoBehaviour
                     HighlightNode(selectedNodeB, true);
                     buildButton.interactable = true;
                     buildTurelbutton.interactable = false;
+                    BuildSenStick.interactable = false;
                 }
             }
             error.SetActive(false);
@@ -67,7 +74,7 @@ public class BuildWalls : MonoBehaviour
 
     void BuildWall()
     {
-        if (GameManager.Glukoza >= 5)
+        if (GameManager.Glukoza >= Walls_price)
         {
             if (selectedNodeA == null || selectedNodeB == null) return;
 
@@ -95,7 +102,7 @@ public class BuildWalls : MonoBehaviour
             wall.Setup(selectedNodeA, selectedNodeB);
             walls.Add(wall);
             surface.BuildNavMesh();
-            GameManager.Glukoza -= 5;
+            GameManager.Glukoza -= Walls_price;
             ClearSelection();
         }
         else
@@ -108,13 +115,31 @@ public class BuildWalls : MonoBehaviour
 
     public void BuildTower()
     {
-        if (GameManager.Glukoza >= 10)
+        if (GameManager.Glukoza >= Plazmocit_price)
         {
             if (selectedNodeA == null) return;
             PhotonNetwork.Instantiate(towerPrefab.name, selectedNodeA.position, selectedNodeA.rotation);
             ClearSelection();
             surface.BuildNavMesh();
-            GameManager.Glukoza -= 10;
+            GameManager.Glukoza -= Plazmocit_price;
+        }
+        else
+        {
+            text.text = "Недостаточно Глюкозы";
+            error.SetActive(true);
+            ClearSelection();
+        }
+    }
+
+    public void BuildStick()
+    {
+        if (GameManager.Glukoza >= SenStick_price)
+        {
+            if (selectedNodeA == null) return;
+            PhotonNetwork.Instantiate("Sennayapalochka", selectedNodeA.position, selectedNodeA.rotation);
+            ClearSelection();
+            surface.BuildNavMesh();
+            GameManager.Glukoza -= SenStick_price;
         }
         else
         {

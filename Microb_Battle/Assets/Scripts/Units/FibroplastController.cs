@@ -4,10 +4,21 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FibroplastController : MonoBehaviour
+public class FibroplastController : MonoBehaviourPun
 {
     [SerializeField] private NavMeshAgent _agent;
+    public int price;
     private Wall _wall = null;
+
+    private void Start()
+    {
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
+    }
+
     public  void SetupTarget(Wall _target)
     {
         _agent.SetDestination(_target.transform.position);
@@ -20,7 +31,8 @@ public class FibroplastController : MonoBehaviour
         {
             _wall.HP += 20f;
             _wall.slider.value += 20f;
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(transform.parent.gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 

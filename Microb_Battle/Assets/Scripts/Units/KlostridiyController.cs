@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class KlostridiyController : MonoBehaviour
+public class KlostridiyController : MonoBehaviourPun
 {
     [SerializeField] float _damage;
     [SerializeField] float _speed;
@@ -22,58 +21,57 @@ public class KlostridiyController : MonoBehaviour
         _damage *= Enemy_Upgrade_Units.klostrydyy_attack_bonus;
         SetupTarget();
         GameManager.enemies.Add(this.gameObject);
+    }
 
-        if (GameManager.Count_of_belok >= price)
-            GameManager.Count_of_belok -= price;
-        else
-            Destroy(gameObject);
+    private void Start()
+    {
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
+
     }
 
     void SetupTarget()
     {
-        var walls = GameObject.Find("WallsBuilder").GetComponent<BuildWalls>();
-        if (walls.walls.Count != 0)
+        Wall[] walls = FindObjectsOfType<Wall>();
+        if (walls.Length > 0)
         {
-            int index = Random.Range(0, walls.walls.Count-1);
-            _target = walls.GetComponent<BuildWalls>().walls[index];
+            int index = Random.Range(0, walls.Length);
+            _target = walls[index];
             _agent.SetDestination(_target.transform.position);
         }
         else
         {
             GameManager.enemies.Remove(this.gameObject);
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 
     void Attack()
     {
-        
         _target.TakeDamage(_damage);
-        Destroy(this.gameObject);
         isAttacked = true;
         object[] data = new object[] { count_of_spawn_belok };
         PhotonNetwork.Instantiate("Belok", transform.position, Quaternion.identity, 0, data);
-
-        Destroy(transform.parent.gameObject);
+        PhotonNetwork.Destroy(transform.parent.gameObject);
     }
 
     private void Update()
     {
-        if(_agent.remainingDistance <0.1f && !isAttacked && _target !=null)
+        if (_agent.remainingDistance < 0.1f && !isAttacked && _target != null)
         {
-            
             Attack();
             Instantiate(system, transform.position, system.transform.rotation);
-            
         }
-        if(_target == null)
+        if (_target == null)
         {
             SetupTarget();
         }
-        if(lives<=0)
+        if (lives <= 0)
         {
             GameManager.Glukoza += 3;
-            Destroy(gameObject);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 
@@ -83,7 +81,6 @@ public class KlostridiyController : MonoBehaviour
         {
             lives += lives * Enemy_Upgrade_Units.AttackUnits_HPBonus;
             _agent.speed *= Enemy_Upgrade_Units.AttackUnits_speedBonus;
-
         }
     }
 
@@ -94,5 +91,4 @@ public class KlostridiyController : MonoBehaviour
             _agent.speed /= Enemy_Upgrade_Units.AttackUnits_speedBonus;
         }
     }
-
 }

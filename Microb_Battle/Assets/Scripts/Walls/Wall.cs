@@ -9,7 +9,7 @@ public class Wall : MonoBehaviourPun, IDamageable
     public Slider slider;
     public Canvas canvas;
     private GameObject _create_button;
-    [SerializeField] private GameObject _fibroplast;
+    public int Price_of_Fibroplast;
     public float HP { get; set; } = 35f;
 
     void Start()
@@ -91,7 +91,8 @@ public class Wall : MonoBehaviourPun, IDamageable
 
     public void Create_Fibroplast()
     {
-        GameObject instance = PhotonNetwork.Instantiate("Fibroplast_prefab (1)", new Vector3(0, 0, 0), transform.rotation);
+        GameManager.Glukoza -= 3; 
+        GameObject instance = PhotonNetwork.Instantiate("Fibroplast_prefab", new Vector3(0, 0, 0), transform.rotation);
         instance.GetComponentInChildren<FibroplastController>().SetupTarget(this);
     }
     

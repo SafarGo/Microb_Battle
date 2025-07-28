@@ -630,8 +630,7 @@ MonoBehaviour:
   nodeB: {fileID: 0}
   slider: {fileID: 1095572755032232104}
   canvas: {fileID: 3854897266040257182}
-  _fibroplast: {fileID: 953140342499281657, guid: 4bdbf53449069cc4da9389bffb8cae2a,
-    type: 3}
+  Price_of_Fibroplast: 0
 --- !u!114 &2096022439188230249
 MonoBehaviour:
   m_ObjectHideFlags: 0

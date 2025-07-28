@@ -17,7 +17,7 @@ public class Buttons_Player1_Controller : MonoBehaviour
     {
         Create_Fibroplast.interactable = false;
         Create_Sen_Stick.interactable = false;
-        Create_Sen_Stick.interactable = false;
+        Create_Sin_Stick.interactable = false;
     }
 
     private void FixedUpdate()
@@ -37,14 +37,6 @@ public class Buttons_Player1_Controller : MonoBehaviour
         else
         {
             Create_Fibroplast.interactable = false;
-        }
-        if (GameManager.Glukoza > count_of_Gl_Sen)
-        {
-            Create_Sen_Stick.interactable = true;
-        }
-        else
-        {
-            Create_Sen_Stick.interactable = false;
         }
     }
 }

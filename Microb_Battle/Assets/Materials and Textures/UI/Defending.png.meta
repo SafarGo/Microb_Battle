@@ -1,0 +1,3644 @@
+fileFormatVersion: 2
+guid: b227e9bae1c9feb49b1e257af1a57319
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Defending_0
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919849aab3ba1b74db45800a194f7c7e
+      internalID: -2041372018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_1
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 2993
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbead857fcd941a4ca836b27fe1bf475
+      internalID: -110892384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_2
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26420a379cb3a040b2cc2d1a2291ae0
+      internalID: -825327762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_3
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3a5b88ea519ae439e75687e1630968
+      internalID: 1142522457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_4
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27078dc583e79bc47b1870ce00efb71a
+      internalID: -1212601767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_5
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 2993
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08233a885e880dc4aa60d0112c108196
+      internalID: -595363123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_6
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 2993
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3320733de56dce041bc51a95a36ca8f5
+      internalID: -480075122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_7
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c096e6a1c71eb83479a130fef1fc2ded
+      internalID: -1635526380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_11
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 2993
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4bc87a65350804a8fe4331f77f32ab
+      internalID: -2142828275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_13
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36544df6b9b26f341951a4666fbd3831
+      internalID: -1839433041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_14
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 2993
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cf4e6727487c742a5057f968dede93
+      internalID: -1604703673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_15
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781068ce842fb64faea988235e97fc3
+      internalID: -67181274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_17
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2b8f44da362694392bc721ba74531b
+      internalID: 1027711644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_18
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b269ed49f635e841a5a110442a906ca
+      internalID: -359291976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_19
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dd5c2274ce6d84486e4672fef66763
+      internalID: 1231693002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_20
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8ccc4133d7eec43945b0085aed96c2
+      internalID: 838606705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_21
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e493b52e86aac794692d40fbf0af7c19
+      internalID: 85717855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_22
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 2993
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac3d980a1c5f8e4f8524765a839c81a
+      internalID: -613050009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_23
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18504744d5cccd4ca8f360a75c257d0
+      internalID: 645020979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_24
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 2993
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8122802d5d727fc42926bf03cb18c881
+      internalID: -1290646685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_25
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 2993
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d768d8ed31448b4fb3ec9463a68226b
+      internalID: 332808388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_26
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 2993
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648825b631828b14d95481878260b8d1
+      internalID: 224105916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_27
+      rect:
+        serializedVersion: 2
+        x: 2410
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15cc700e6e48cc468ecefa13158855f
+      internalID: 1102299200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_28
+      rect:
+        serializedVersion: 2
+        x: 2445
+        y: 2993
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee51f454260a4b49902033c182e9dee
+      internalID: -82935544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_29
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5933da879f9803a49a3ee6cad52b1aaa
+      internalID: 962347312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_30
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 2993
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe5bb05855ff3040872c9ad6c9b4b3f
+      internalID: -60892750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_31
+      rect:
+        serializedVersion: 2
+        x: 2542
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65afd978ea73c4948bf99ce5a521f224
+      internalID: 18305970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_32
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 2993
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65789813439a7641bac8f151e57e7c5
+      internalID: -1857681284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_33
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 2996
+        width: 13
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee688ed2dc00d34bb926e53ccf681a4
+      internalID: 210700204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_34
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2925
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b417dd5076503447be10821d4995107
+      internalID: -407859700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_35
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2881
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19508a628c5057c4ba55496d1ba86a37
+      internalID: 1885604931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_36
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2295
+        width: 860
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c689c2d03c62045b478828d3579cfd
+      internalID: 1238606952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_37
+      rect:
+        serializedVersion: 2
+        x: 2996
+        y: 2657
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f027989ece3e943b7eb36acc0c75b6
+      internalID: 594277519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_38
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 152
+        width: 180
+        height: 2470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e520c6f226a7fd34a8447a4598421702
+      internalID: -14708785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_39
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2615
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33830f3190a5bab429c3009a28775d4e
+      internalID: -1751848570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_40
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2568
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a98e072cbb5d5499d3a5d3ea05b1fa
+      internalID: 742445807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_41
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2524
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a54a64e4c14224c97acb0ef6a51cb2
+      internalID: -1962829629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_42
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2480
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a523cb1945cda34cb2072accb9caeae
+      internalID: -1640300867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_43
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2439
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d817f3ef9937d448bee67b683c18fd
+      internalID: 895307692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_44
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2392
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bb7337456f6164984a2853af4af323
+      internalID: -1021357567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_45
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2351
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdd2933a2f6ae74da2f08e6feb6704b
+      internalID: 678104172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_46
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2304
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa947267979c914d9a3410068b6161e
+      internalID: 1418000832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_47
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2263
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a2777edafea343a4737c840609d46
+      internalID: 2041814968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_48
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1879
+        width: 860
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e1425f1780b354da232d7067278fb2
+      internalID: -1328839613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_49
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2216
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53639c3b9df0fa0488cc070c364c8fe3
+      internalID: -1723505373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_50
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2175
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ef2bae0fcfb2749885abce85c754cb
+      internalID: 1589152138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_51
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2087
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854fba1ab20055e49bf36d820111dc2c
+      internalID: 1840180646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_52
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2042
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c53e7817c18fd1458a5f5efae16dd1a
+      internalID: 2046012521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_53
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 2000
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39894c8fcc04e544ab19ebe429ee0ed5
+      internalID: -903688685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_54
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1954
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10db32d4d88a26488d2805f6f68afb6
+      internalID: 1241636411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_55
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1912
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e2fd2f84223dc4eadca1413ba5f253
+      internalID: 2044747899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_56
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1866
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada2b166a8553147a01a40178f885dc
+      internalID: 1335673412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_57
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1463
+        width: 860
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba083f95d95877744854de8a95432fd9
+      internalID: 1615853935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_58
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1824
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa3c19dda4233c4b95fa1c0ef37df25
+      internalID: 767731059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_59
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1778
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da2de2a77996bb49a0029cb2e429294
+      internalID: -989413075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_60
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1736
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3220e97c83bc70d468ce4f27436d61e6
+      internalID: -185700795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_61
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1690
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5886a3552e82ab45bd9be4ae8ec1de5
+      internalID: -2094258098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_62
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1648
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a7bb55468f3154fa0cabb4ba7a7459
+      internalID: 963776207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_63
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1604
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f8d465e2691ec49a7f1db268a2bc52
+      internalID: -1582662099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_64
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1560
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10436d0288be98142a0f4282cfd0a9dc
+      internalID: 1466290043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_65
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1515
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b473a3cc80794d478033832dea47988
+      internalID: 40591815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_66
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1472
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df96de6b58a16a0488d1392e0305628e
+      internalID: 76896100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_67
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 1047
+        width: 860
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6006be1831207ca4ab3713f4097e6948
+      internalID: 283115703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_68
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1422
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514edb52eb2e61143b843f1e1f96b7e7
+      internalID: 499186657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_69
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1380
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bf8accd6e582c498a5d7a210bab1cd
+      internalID: -573673727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_70
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1334
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9486471c0a6cde48ac1c389dc7509b4
+      internalID: -327374158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_71
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1292
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580bfe94c082baf4fbe71a6d7546e593
+      internalID: -1866572151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_72
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1247
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f5de86a60ba5a40ad5acf466c065f8
+      internalID: -2041827511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_73
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1204
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d0e2b622179474a99a198ee7ffbdf2
+      internalID: 44780647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_74
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1159
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a748e40c75565d4cb19f419f14afe21
+      internalID: -1399994210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_75
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1116
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443ea98a78e772b4784758f7c43f0e60
+      internalID: -390726308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_76
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1071
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f85ce66838f11c4395b586c36c2e496
+      internalID: -1217098650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_77
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 1028
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fd07cb82014b642bfefc6f67ce0612
+      internalID: -41549764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_78
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 618
+        width: 860
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb83e40820d07aa458f4ca0d01b1f7c3
+      internalID: -39706104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_79
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 983
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb09095c08534144aa1471fbd1dbd0b8
+      internalID: -1169558423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_80
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 940
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b551ff14ce992504c92ffd108405d6d4
+      internalID: -1903431417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_81
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 895
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f636a94af4a7b4b8bcb41a3fb71d49
+      internalID: -199878036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_82
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 853
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76996a3bdc7267d48898fed7054b9efb
+      internalID: 276336302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_83
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 807
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b221a4b92d8334aaa9b7bba9320aa2
+      internalID: 1562816646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_84
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 765
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cddad8c4a29f54eb23d01c05483dde
+      internalID: -151543808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_85
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 712
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7356357a729d1e7499670cc3a4155836
+      internalID: 737836651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_86
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 669
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbe4545987d34543b5c6bed74d5c873
+      internalID: 1858499566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_87
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 624
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79da3f0c1db9e16419868098a715a0ad
+      internalID: 763620413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_88
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 582
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfaddb8751960d4583613e39cf3e7b7
+      internalID: 1307186635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_89
+      rect:
+        serializedVersion: 2
+        x: 1844
+        y: 51
+        width: 1021
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214304ab8df72bf47a2038bbc995ed01
+      internalID: 990695765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_90
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 535
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10800cbec9079f949b1a3acfabe423c4
+      internalID: 1041926446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_91
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 494
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e65fef218846b449602693ca334da2
+      internalID: 1746717080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_92
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 447
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f4e9d35e6679545b041e918c2815fd
+      internalID: -994833968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_93
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 406
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e94e700d5599024bac99b2761dfde2f
+      internalID: -1022331791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_94
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 108
+        width: 296
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46e49e99b11553488812710fd7b4664
+      internalID: 103382480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_95
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 360
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109a3ab34747dab4f839b9113cc21162
+      internalID: 989628001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_96
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 318
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f872021765bb045bc7cb3fb5951587
+      internalID: -635500621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_97
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 272
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad9cf22fa9256f4cb5d556b37f0ce63
+      internalID: 512291455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_98
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 230
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f733262c1fbb34fa12f7e9c454008c
+      internalID: 2081216534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_99
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 185
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056aa6413e899aa4aa90ef7554e32a18
+      internalID: 995438236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_100
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 142
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6942c6d6db0cb2a4f898a81acbff7c41
+      internalID: -1403995500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_101
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 97
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7626fcd309f2ee4da380548c34ac96e
+      internalID: -1092773105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_102
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 54
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d1db259e1e3e241ba8bdd7333e8262
+      internalID: 2071602402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_103
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 0
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d370937322c1814eb0462e26e3959f1
+      internalID: -991446325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_104
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 0
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a27e759b345bb4ca8bd32f9b069650
+      internalID: 321927877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_105
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 0
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650859e065f7afc48858ba9aaa177f07
+      internalID: -440914998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_106
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 0
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e310df7c375c647a9b3ecfad55a419
+      internalID: 167818497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_107
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5637b1970c4e3459781a4b39aa67e1
+      internalID: 1232319724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_108
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 0
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0866612abebae0246b58297e877d488a
+      internalID: 1501672573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_109
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 0
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f621600f985f84f929b4a43aee3422
+      internalID: 340501749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_110
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359b855e1753bea429e832714de340ab
+      internalID: 220521528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_111
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0bf17e15276dc409394ded1be953a5
+      internalID: 1173852300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_112
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c37ae847a6edd4dac617a517fd4416
+      internalID: 1339357766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_113
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1ac7f58bf123a40a1ecd9fb7a336ad
+      internalID: 1513776464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_114
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4cd97f07c1fa439e8aba3de052350
+      internalID: 1626521461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_115
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab87ba7aa3c50094580efde356ff514b
+      internalID: 1774597036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_116
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3633c3da7b7d92546b38565031b64f39
+      internalID: -1562351075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_117
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ee0d49b9975424ba85312def7dcf0c
+      internalID: -471414059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_118
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afb5cfbcd93d8464da54beb164320dcf
+      internalID: 1076108208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_119
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bbdb50e49e77d47b03e7d57e0bfe7b
+      internalID: -1786430724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_120
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506f3c9bf758c814aa8a357f8e7af3b3
+      internalID: 1360129908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_121
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a4599322cce5a498b8640746d77ba6
+      internalID: -2095086853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_122
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4319ae81de8914098766e1d36201d2
+      internalID: -1668109755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_123
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f5bf60b215fce4f9fa4273cc94efbd
+      internalID: 1542831991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_124
+      rect:
+        serializedVersion: 2
+        x: 1686
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723d38267d3872748b7960d7abd88d54
+      internalID: 1611711118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_125
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0152fe8879c5d7f439cf5364e5f14db8
+      internalID: 676525750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_126
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e615d3dc3f493cb49825a5d6a566769b
+      internalID: -754832046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_127
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a341754070259b24eabe99350e456154
+      internalID: 1817456819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_128
+      rect:
+        serializedVersion: 2
+        x: 1818
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570e410c890da7d469040d4ab2107476
+      internalID: 101437772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_129
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45340adf267810648ba93d0353162330
+      internalID: 1079551595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_130
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9b0762041d7034293cfa6d7dc72f2c
+      internalID: -100473227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_131
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a78bd7c5c5d49e43867d5d910ba3e0e
+      internalID: 1479654715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_132
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea8391b1ffa869409eb5ed796c48432
+      internalID: -695451752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_133
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 0
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d972bd80a4d714e865690da88cbd63
+      internalID: 1222529062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_134
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3231395f5497d204d9552e9fc4210a25
+      internalID: 549857559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_135
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3d44c82c874c54e9b3b76855896b7d
+      internalID: -2072957893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_136
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8824761e9a29124aa488d3bac0633f7
+      internalID: 1198517821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_137
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b273602da0f9804294ad163012d2acc
+      internalID: -769024272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_138
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814681cea0c5e5f45ac28a6b5bc89e12
+      internalID: 710913622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_139
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24017eab5f69c34e94081a7b4970307
+      internalID: 601324537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_140
+      rect:
+        serializedVersion: 2
+        x: 2216
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5580a8b987d374fb35de799cc9f700
+      internalID: -1187447839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_141
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db005b331107c8346a10a1b7740dd1e4
+      internalID: 1609612081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_142
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1686caba3c48e84ab62de6aa1e059a3
+      internalID: 2059242148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_143
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1d103537a36094886cc5961f04a943
+      internalID: 496764110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_144
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81aa178916502674fa2b09fbd160eda5
+      internalID: -1576672321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_145
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce1c2e7f48261a419956b615183df18
+      internalID: -502060669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_146
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c07eca0760e454f9f883bb0c732441
+      internalID: -1932133743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_147
+      rect:
+        serializedVersion: 2
+        x: 2452
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81c2aa8f5deb874c91410c6cd33cedf
+      internalID: 1719347517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_148
+      rect:
+        serializedVersion: 2
+        x: 2486
+        y: 0
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd28fa8da4016747b215a0f12faee4f
+      internalID: -1930921830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_149
+      rect:
+        serializedVersion: 2
+        x: 2518
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c123b1c24044b4380358d81a5fb1e5
+      internalID: 1364403522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_150
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9140b68cc0dfa4883849c35ffc79df
+      internalID: -132515984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_151
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569ed0e212e1add4f9bcb502ec75981c
+      internalID: -1766703651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_152
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f9e46e0ced7294db1f97ed66153e59
+      internalID: 842263578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_153
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6399258a7f5484eb6820ef46e863ce
+      internalID: -56814510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_154
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16850c77e92b63b47808b687f16bdd12
+      internalID: 1459193359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_155
+      rect:
+        serializedVersion: 2
+        x: 2714
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63d72a398a443e419656dad52f3083f
+      internalID: -454057021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_156
+      rect:
+        serializedVersion: 2
+        x: 2747
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f613cada2b870e84583d79bd1c09f9bf
+      internalID: 1564036793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_157
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67739631acd79f14e9401257bd0e7bcf
+      internalID: -1181945559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_158
+      rect:
+        serializedVersion: 2
+        x: 2814
+        y: 0
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c2ced607c7c8b4385416d2c1284ae5
+      internalID: 1402039958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_159
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89fd2ceb3abd814381ac0fd68d4dc93
+      internalID: 459242365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_160
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 0
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e33f9cbf3258f42a141b6d13edae37
+      internalID: -2071956375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_161
+      rect:
+        serializedVersion: 2
+        x: 2911
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cb9f7a48e70714bb93764e97e84685
+      internalID: 1251453619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_162
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 0
+        width: 19
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3715458434b2c9947a2704d8982ee3e5
+      internalID: -374592690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Defending_163
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 0
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1dd6fa3a0cba346a45d2da4020dcff
+      internalID: -717702044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Defending_0: -2041372018
+      Defending_1: -110892384
+      Defending_10: -495638123
+      Defending_100: -1403995500
+      Defending_101: -1092773105
+      Defending_102: 2071602402
+      Defending_103: -991446325
+      Defending_104: 321927877
+      Defending_105: -440914998
+      Defending_106: 167818497
+      Defending_107: 1232319724
+      Defending_108: 1501672573
+      Defending_109: 340501749
+      Defending_11: -2142828275
+      Defending_110: 220521528
+      Defending_111: 1173852300
+      Defending_112: 1339357766
+      Defending_113: 1513776464
+      Defending_114: 1626521461
+      Defending_115: 1774597036
+      Defending_116: -1562351075
+      Defending_117: -471414059
+      Defending_118: 1076108208
+      Defending_119: -1786430724
+      Defending_12: -485437286
+      Defending_120: 1360129908
+      Defending_121: -2095086853
+      Defending_122: -1668109755
+      Defending_123: 1542831991
+      Defending_124: 1611711118
+      Defending_125: 676525750
+      Defending_126: -754832046
+      Defending_127: 1817456819
+      Defending_128: 101437772
+      Defending_129: 1079551595
+      Defending_13: -1839433041
+      Defending_130: -100473227
+      Defending_131: 1479654715
+      Defending_132: -695451752
+      Defending_133: 1222529062
+      Defending_134: 549857559
+      Defending_135: -2072957893
+      Defending_136: 1198517821
+      Defending_137: -769024272
+      Defending_138: 710913622
+      Defending_139: 601324537
+      Defending_14: -1604703673
+      Defending_140: -1187447839
+      Defending_141: 1609612081
+      Defending_142: 2059242148
+      Defending_143: 496764110
+      Defending_144: -1576672321
+      Defending_145: -502060669
+      Defending_146: -1932133743
+      Defending_147: 1719347517
+      Defending_148: -1930921830
+      Defending_149: 1364403522
+      Defending_15: -67181274
+      Defending_150: -132515984
+      Defending_151: -1766703651
+      Defending_152: 842263578
+      Defending_153: -56814510
+      Defending_154: 1459193359
+      Defending_155: -454057021
+      Defending_156: 1564036793
+      Defending_157: -1181945559
+      Defending_158: 1402039958
+      Defending_159: 459242365
+      Defending_16: -42626390
+      Defending_160: -2071956375
+      Defending_161: 1251453619
+      Defending_162: -374592690
+      Defending_163: -717702044
+      Defending_164: -1981396282
+      Defending_17: 1027711644
+      Defending_18: -359291976
+      Defending_19: 1231693002
+      Defending_2: -825327762
+      Defending_20: 838606705
+      Defending_21: 85717855
+      Defending_22: -613050009
+      Defending_23: 645020979
+      Defending_24: -1290646685
+      Defending_25: 332808388
+      Defending_26: 224105916
+      Defending_27: 1102299200
+      Defending_28: -82935544
+      Defending_29: 962347312
+      Defending_3: 1142522457
+      Defending_30: -60892750
+      Defending_31: 18305970
+      Defending_32: -1857681284
+      Defending_33: 210700204
+      Defending_34: -407859700
+      Defending_35: 1885604931
+      Defending_36: 1238606952
+      Defending_37: 594277519
+      Defending_38: -14708785
+      Defending_39: -1751848570
+      Defending_4: -1212601767
+      Defending_40: 742445807
+      Defending_41: -1962829629
+      Defending_42: -1640300867
+      Defending_43: 895307692
+      Defending_44: -1021357567
+      Defending_45: 678104172
+      Defending_46: 1418000832
+      Defending_47: 2041814968
+      Defending_48: -1328839613
+      Defending_49: -1723505373
+      Defending_5: -595363123
+      Defending_50: 1589152138
+      Defending_51: 1840180646
+      Defending_52: 2046012521
+      Defending_53: -903688685
+      Defending_54: 1241636411
+      Defending_55: 2044747899
+      Defending_56: 1335673412
+      Defending_57: 1615853935
+      Defending_58: 767731059
+      Defending_59: -989413075
+      Defending_6: -480075122
+      Defending_60: -185700795
+      Defending_61: -2094258098
+      Defending_62: 963776207
+      Defending_63: -1582662099
+      Defending_64: 1466290043
+      Defending_65: 40591815
+      Defending_66: 76896100
+      Defending_67: 283115703
+      Defending_68: 499186657
+      Defending_69: -573673727
+      Defending_7: -1635526380
+      Defending_70: -327374158
+      Defending_71: -1866572151
+      Defending_72: -2041827511
+      Defending_73: 44780647
+      Defending_74: -1399994210
+      Defending_75: -390726308
+      Defending_76: -1217098650
+      Defending_77: -41549764
+      Defending_78: -39706104
+      Defending_79: -1169558423
+      Defending_8: -167266662
+      Defending_80: -1903431417
+      Defending_81: -199878036
+      Defending_82: 276336302
+      Defending_83: 1562816646
+      Defending_84: -151543808
+      Defending_85: 737836651
+      Defending_86: 1858499566
+      Defending_87: 763620413
+      Defending_88: 1307186635
+      Defending_89: 990695765
+      Defending_9: -6468781
+      Defending_90: 1041926446
+      Defending_91: 1746717080
+      Defending_92: -994833968
+      Defending_93: -1022331791
+      Defending_94: 103382480
+      Defending_95: 989628001
+      Defending_96: -635500621
+      Defending_97: 512291455
+      Defending_98: 2081216534
+      Defending_99: 995438236
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

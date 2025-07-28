@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7731911884235896065}
   - component: {fileID: 8330014823299873787}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7470116753360154412}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,10 @@ GameObject:
   - component: {fileID: 6430663077192766236}
   - component: {fileID: 4188993673742065942}
   - component: {fileID: 7532300592397623526}
-  m_Layer: 13
+  - component: {fileID: -7756940549525029026}
+  - component: {fileID: 1074351997399013748}
+  - component: {fileID: 5887153535516846295}
+  m_Layer: 7
   m_Name: Sennayapalochka
   m_TagString: Unit
   m_Icon: {fileID: 0}
@@ -294,10 +297,86 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5887153535516846295}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-7756940549525029026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524267951714206969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!114 &1074351997399013748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524267951714206969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 5887153535516846295}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5887153535516846295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524267951714206969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &6820177056283515668
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +388,7 @@ GameObject:
   - component: {fileID: 7450467095846855446}
   - component: {fileID: 2156826950566521597}
   - component: {fileID: 7686063314164602636}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +464,7 @@ GameObject:
   - component: {fileID: 3964714283091370181}
   - component: {fileID: 471717742517241334}
   - component: {fileID: 1105593445327371366}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Fire_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +558,7 @@ GameObject:
   - component: {fileID: 8796264096015646221}
   - component: {fileID: 2567184161686451530}
   - component: {fileID: 5833444873787833265}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +634,7 @@ GameObject:
   - component: {fileID: 6091619687739593729}
   - component: {fileID: 5304945697238519612}
   - component: {fileID: 2778254895678885463}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
