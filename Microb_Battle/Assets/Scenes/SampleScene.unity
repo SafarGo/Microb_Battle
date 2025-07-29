@@ -7925,7 +7925,7 @@ MonoBehaviour:
   towers: []
   text: {fileID: 1119396196}
   Material1: {fileID: 2100000, guid: d4ad64ebc615eaf48a32b5c4c9d5eeaa, type: 2}
-  Material2: {fileID: 2100000, guid: 66836266d0be4f44492df2cc56f2be8c, type: 2}
+  Material2: {fileID: 2100000, guid: df8b11bd5c761f04bbf8bfd30df43610, type: 2}
   error: {fileID: 5040263933294612636}
 --- !u!4 &1042704534
 Transform:
