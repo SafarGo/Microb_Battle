@@ -2,13 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
+using static Cinemachine.DocumentationSortingAttribute;
 
-public class FibroplastController : MonoBehaviourPun
+public class FibroplastController : MonoBehaviourPun, IDamageable
 {
     [SerializeField] private NavMeshAgent _agent;
     public int price;
     private Wall _wall = null;
+    public Slider Slider;
+
+    public float HP { get; set; } = 25f;
+
+    public void TakeDamage(float damage)
+    {
+
+        HP -= damage;
+        Slider.value = HP;
+        if(HP<0)
+        {
+            PhotonNetwork.Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -29,7 +45,8 @@ public class FibroplastController : MonoBehaviourPun
     private void Update()
     {
         float distance = Vector3.Distance(gameObject.transform.position, _wall.gameObject.transform.position);
-       if(distance < 2f)
+        Slider.value = HP;
+        if (distance < 2f)
         {
             _wall.HP += 20f;
             _wall.slider.value += 20f;
