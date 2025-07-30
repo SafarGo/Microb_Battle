@@ -1,7 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using Photon.Pun;
+using Unity.AI.Navigation;
 
 public class Wall : MonoBehaviourPun, IDamageable
 {
@@ -14,7 +16,12 @@ public class Wall : MonoBehaviourPun, IDamageable
 
     void Start()
     {
+        if (!photonView.IsMine)
+        {
+            photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
+        }
         _create_button = GameObject.Find("Fibr");
+        
         if (_create_button != null)
         {
             _create_button.SetActive(false);

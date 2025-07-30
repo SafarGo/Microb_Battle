@@ -134,10 +134,11 @@ public class BuildWalls : MonoBehaviour
     {
         if (GameManager.Glukoza >= SenStick_price)
         {
+            surface.BuildNavMesh();
             if (selectedNodeA == null) return;
             PhotonNetwork.Instantiate("Sennayapalochka", selectedNodeA.position, selectedNodeA.rotation);
             ClearSelection();
-            surface.BuildNavMesh();
+            
             GameManager.Glukoza -= SenStick_price;
         }
         else

@@ -563,6 +563,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4547430937813651743}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6300595734350984945}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1898cb685b628a044af1285fb13dd5ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6639965729474015702}
   m_SourcePrefab: {fileID: 100100000, guid: 1898cb685b628a044af1285fb13dd5ed, type: 3}
 --- !u!1 &6323746397073679861 stripped
 GameObject:
@@ -787,6 +795,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6300595734350984945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
+--- !u!208 &6639965729474015702
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323746397073679861}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.21, y: 0.385, z: 0.305}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &6668042672970399567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1898cb685b628a044af1285fb13dd5ed,
